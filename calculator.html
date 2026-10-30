@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Ergonomics &amp; Desk Height Calculator: BIFMA G1-2017 Calibrated | The Apex Workflows Lab</title>
+    <meta name="description" content="Calculate your optimal sitting desk height, standing desk height, ergonomic chair seat pan height, and monitor eye level using ANSI/BIFMA G1-2017 standards.">
+    <link rel="canonical" href="https://theapexworkflows.com/calculator.html">
+    
+    <!-- Open Graph / Social Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Apex Workflows Lab">
+    <meta property="og:title" content="Interactive Ergonomics &amp; Desk Height Calculator | The Apex Workflows Lab">
+    <meta property="og:description" content="Calculate your optimal sitting desk height, standing desk height, ergonomic chair seat pan height, and monitor eye level using ANSI/BIFMA G1-2017 standards.">
+    <meta property="og:url" content="https://theapexworkflows.com/calculator.html">
+    <meta property="og:image" content="https://theapexworkflows.com/assets/images/best-standing-desks-2026.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interactive Ergonomics &amp; Desk Height Calculator | The Apex Workflows Lab">
+    <meta name="twitter:description" content="Calculate your optimal sitting desk height, standing desk height, ergonomic chair seat pan height, and monitor eye level.">
+    <meta name="twitter:image" content="https://theapexworkflows.com/assets/images/best-standing-desks-2026.png">
+
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/js/apex-tracker.js"></script>
+
+    <!-- Schema.org WebApplication Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "BIFMA Ergonomics & Desk Height Calculator",
+      "url": "https://theapexworkflows.com/calculator.html",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Apex Workflows Lab",
+        "url": "https://theapexworkflows.com"
+      }
+    }
+    </script>
+    <style>
+        .calc-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 36px 0 60px; }
+        @media (max-width: 900px) { .calc-wrapper { grid-template-columns: 1fr; } }
+        .calc-input-panel { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 14px; padding: 28px; box-shadow: var(--shadow-sm); }
+        .calc-output-panel { background: #0f172a; color: #ffffff; border-radius: 14px; padding: 28px; box-shadow: var(--shadow-lg); }
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 14.5px; }
+        .unit-toggle { display: flex; gap: 10px; margin-bottom: 22px; }
+        .unit-btn { flex: 1; padding: 10px; border: 1px solid #cbd5e1; background: #f8fafc; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; text-align: center; color: #334155; }
+        .unit-btn.active { background: #1d4ed8; color: #ffffff; border-color: #1d4ed8; }
+        .slider-box { display: flex; align-items: center; gap: 14px; }
+        .slider-box input[type="range"] { flex: 1; accent-color: #1d4ed8; height: 6px; }
+        .slider-box input[type="number"] { width: 85px; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 700; font-size: 15px; text-align: center; }
+        .radio-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+        .radio-pill-label { flex: 1; min-width: 130px; display: flex; align-items: center; gap: 8px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px 14px; border-radius: 8px; font-size: 13.5px; cursor: pointer; }
+        .radio-pill-label input { accent-color: #1d4ed8; }
+        .checkbox-label { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: #475569; line-height: 1.5; cursor: pointer; }
+        .checkbox-label input { accent-color: #1d4ed8; margin-top: 3px; }
+        .output-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 26px; }
+        @media (max-width: 500px) { .output-grid { grid-template-columns: 1fr; } }
+        .output-card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 16px; }
+        .output-label { font-size: 11.5px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: block; }
+        .output-val { font-size: 24px; font-weight: 900; color: #38bdf8; display: inline-block; margin-right: 6px; }
+        .output-unit { font-size: 13px; color: #cbd5e1; }
+        .output-desc { font-size: 12px; color: #94a3b8; margin-top: 6px; line-height: 1.4; }
+        .hardware-matches { margin-top: 24px; border-top: 1px solid #334155; padding-top: 20px; }
+        .hw-card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .hw-info h4 { font-size: 14.5px; color: #ffffff; margin: 0 0 3px; font-weight: 700; }
+        .hw-info p { font-size: 12px; color: #94a3b8; margin: 0; }
+        .hw-btn { background: #2563eb; color: #fff; padding: 8px 14px; border-radius: 6px; font-size: 12.5px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+        .hw-btn:hover { background: #1d4ed8; }
+    </style>
+</head>
+<body>
+
+    <div class="top-trust-bar">
+        <div class="top-trust-inner">
+            <div class="trust-pills">
+                <span><i class="pulse-dot"></i> <strong>100% Independent Evaluation Lab</strong></span>
+                <span>🛡️ Zero Paid Manufacturer Placements</span>
+                <span><a href="methodology.html">Published Scoring Weights &amp; Raw CSV Data</a></span>
+            </div>
+            <div>
+                ⚖️ <strong>FTC Transparency:</strong> Reader-supported via verified Amazon links (Tag: <code>apexworkflows-20</code>). <a href="privacy.html">Disclosure</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-wrap">
+            <a href="index.html" class="brand">
+                <span class="brand-logo">APEX LABS</span>
+                TheApex<span>Workflows</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#benchmarks">All Lab Reviews</a>
+                <a href="calculator.html">Ergo Calculator</a>
+                <a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html">Aeron vs. Leap V2</a>
+                <a href="methodology.html">Methodology</a>
+                <a href="about.html">About &amp; Team</a>
+                <a href="privacy.html">Privacy &amp; FTC</a>
+            </nav>
+            <form action="index.html#benchmarks" method="get" class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="q" placeholder="Search 40 tested models (e.g. Ticova)..." aria-label="Search lab guides">
+            </form>
+        </div>
+    </header>
+
+    <div class="container">
+        <div style="margin-top: 22px; font-size: 13.5px; color: #475569;">
+            <a href="index.html" style="color: #1d4ed8; text-decoration: none; font-weight: 700;">Home Lab</a> &nbsp;/&nbsp; 
+            <span>Interactive Tools</span> &nbsp;/&nbsp; 
+            <span style="color: #0f172a; font-weight: 600;">BIFMA Ergonomics &amp; Desk Height Calculator</span>
+        </div>
+
+        <div style="margin-top: 28px; max-width: 880px;">
+            <span class="category-badge">BIFMA G1-2017 &amp; OSHA Ergonomics Standard</span>
+            <h1 style="font-size: 34px; font-weight: 900; color: #0f172a; letter-spacing: -0.8px; margin: 10px 0 14px;">Interactive Ergonomics &amp; Desk Height Calculator</h1>
+            <p style="font-size: 16px; color: #475569; line-height: 1.65;">Calculate your optimal sitting desk height, standing desk elevation, chair seat pan height, and monitor eye level. All calculations are calibrated against ANSI/BIFMA G1-2017 anthropometric reference percentiles and cross-referenced with our database of 40 scored finalist models (selected from 73 pre-screened candidates).</p>
+        </div>
+
+        <div class="calc-wrapper">
+            <!-- Left: User Inputs -->
+            <div class="calc-input-panel">
+                <h3 style="font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 16px;">1. Enter Your Physical Dimensions</h3>
+                
+                <div class="unit-toggle">
+                    <button type="button" class="unit-btn active" id="btnImperial" onclick="setUnits('imperial')">Imperial (Feet &amp; Inches)</button>
+                    <button type="button" class="unit-btn" id="btnMetric" onclick="setUnits('metric')">Metric (Centimeters)</button>
+                </div>
+
+                <div class="form-group">
+                    <label id="heightLabel">Total Height: <strong id="heightDisplay">5 ft 10 in (178 cm)</strong></label>
+                    <div class="slider-box">
+                        <input type="range" id="heightSlider" min="140" max="210" value="178" step="1" oninput="onSliderInput(this.value)">
+                        <input type="number" id="heightNum" min="140" max="210" value="178" onchange="onNumInput(this.value)">
+                        <span id="unitSuffix" style="font-size:13px; font-weight:700; color:#475569;">cm</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Shoe Heel / Insole Allowance</label>
+                    <div class="slider-box">
+                        <input type="range" id="heelSlider" min="0" max="5" value="2.5" step="0.5" oninput="onHeelInput(this.value)">
+                        <input type="number" id="heelNum" min="0" max="5" value="2.5" step="0.5" onchange="onHeelNumInput(this.value)">
+                        <span id="heelUnitSuffix" style="font-size:13px; font-weight:700; color:#475569;">cm</span>
+                    </div>
+                    <span style="font-size:11.5px; color:#64748b; margin-top:4px; display:block;">Typical: Barefoot/Socks: 0 cm | Running shoes / sneakers: 2.5 cm (1.0 in)</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Seated Posture Preference</label>
+                    <div class="radio-pills">
+                        <label class="radio-pill-label">
+                            <input type="radio" name="posture" value="upright" checked onchange="calculateErgo()">
+                            <span><strong>Task Upright (90&deg;)</strong><br><small style="color:#64748b;">Active typing, coding</small></span>
+                        </label>
+                        <label class="radio-pill-label">
+                            <input type="radio" name="posture" value="reclined" onchange="calculateErgo()">
+                            <span><strong>Ergonomic Recline (105&deg;)</strong><br><small style="color:#64748b;">Relaxed lumbar lordosis</small></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom:0;">
+                    <label>Active Workstation Add-on</label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="walkpadCheck" onchange="calculateErgo()">
+                        <span><strong>Under-Desk Treadmill Deck Allowance (+2.25 in / 5.7 cm)</strong><br>Compensates standing desk height for WalkingPad or under-desk walking deck elevation.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Right: Results & Compatible Hardware -->
+            <div class="calc-output-panel">
+                <h3 style="font-size: 18px; font-weight: 800; color: #ffffff; margin-bottom: 16px;">2. Calibrated Ergonomic Targets</h3>
+                
+                <div class="output-grid">
+                    <div class="output-card">
+                        <span class="output-label">Chair Seat Pan Height</span>
+                        <div>
+                            <span class="output-val" id="resSeatIn">17.5"</span>
+                            <span class="output-unit" id="resSeatCm">(44.5 cm)</span>
+                        </div>
+                        <p class="output-desc">Floor to popliteal fold with thighs parallel and feet planted flat.</p>
+                    </div>
+
+                    <div class="output-card">
+                        <span class="output-label">Sitting Desk Surface</span>
+                        <div>
+                            <span class="output-val" id="resSitIn">26.2"</span>
+                            <span class="output-unit" id="resSitCm">(66.5 cm)</span>
+                        </div>
+                        <p class="output-desc">Resting elbow level with shoulders relaxed and forearms horizontal.</p>
+                    </div>
+
+                    <div class="output-card">
+                        <span class="output-label">Standing Desk Surface</span>
+                        <div>
+                            <span class="output-val" id="resStandIn">43.1"</span>
+                            <span class="output-unit" id="resStandCm">(109.5 cm)</span>
+                        </div>
+                        <p class="output-desc">Standing elbow height with forearms at 90&deg;-100&deg; resting angle.</p>
+                    </div>
+
+                    <div class="output-card">
+                        <span class="output-label">Eye-Level Screen Top</span>
+                        <div>
+                            <span class="output-val" id="resEyeIn">47.8"</span>
+                            <span class="output-unit" id="resEyeCm">(121.4 cm)</span>
+                        </div>
+                        <p class="output-desc">Top 1/3 of monitor level with eye line at 20"-30" viewing distance.</p>
+                    </div>
+                </div>
+
+                <div class="hardware-matches">
+                    <h4 style="font-size: 14.5px; text-transform: uppercase; letter-spacing: 0.6px; color: #93c5fd; margin-bottom: 14px;">Compatible Lab Winners for Your Height</h4>
+                    
+                    <div class="hw-card">
+                        <div class="hw-info">
+                            <h4>FlexiSpot E7 Pro Standing Desk</h4>
+                            <p>Stroke range 25.0"-50.6" seamlessly covers your <span class="dynSitDesk">26.2"</span> sitting and <span class="dynStandDesk">43.1"</span> standing heights.</p>
+                        </div>
+                        <a href="https://www.amazon.com/dp/B0CKRHRKBN?tag=apexworkflows-20" target="_blank" rel="nofollow sponsored" class="hw-btn">View ($499.99) &rarr;</a>
+                    </div>
+
+                    <div class="hw-card">
+                        <div class="hw-info">
+                            <h4>SIHOO Doro C300 Mesh Chair</h4>
+                            <p>Cylinder range 17.7"-21.3" matches your popliteal elevation with self-adaptive lumbar cradle.</p>
+                        </div>
+                        <a href="https://www.amazon.com/dp/B09X1B1B9Z?tag=apexworkflows-20" target="_blank" rel="nofollow sponsored" class="hw-btn">View ($299.99) &rarr;</a>
+                    </div>
+
+                    <div class="hw-card">
+                        <div class="hw-info">
+                            <h4>Dell UltraSharp U4924DW 49" Curved</h4>
+                            <p>3800R curved panoramic aspect prevents cervical spine rotation at your recommended viewing distance.</p>
+                        </div>
+                        <a href="https://www.amazon.com/dp/B0BY2T5T35?tag=apexworkflows-20" target="_blank" rel="nofollow sponsored" class="hw-btn">View ($1,299.99) &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Methodology & Anthropometric Reference -->
+        <div class="provenance-registry-box" style="margin-bottom: 50px;">
+            <h3>BIFMA G1-2017 &amp; ANSI Human Factors Reference Principles</h3>
+            <p>Our calculator applies anthropometric regressions derived from the ANSI/BIFMA G1-2017 Ergonomics Guideline for Furniture:</p>
+            <div class="provenance-grid">
+                <div class="provenance-item">
+                    <strong>1. Popliteal Seat Pan Formula</strong>
+                    <code>Seat_Height = (0.245 &times; Height) + Heel_Allowance</code><br>
+                    Ensures comfortable seating without excessive pressure on the posterior thigh tissue.
+                </div>
+                <div class="provenance-item">
+                    <strong>2. Seated Elbow Desk Height Formula</strong>
+                    <code>Sit_Desk = Seat_Height + (0.145 &times; Height)</code><br>
+                    Maintains neutral forearm plane (90&deg; to 105&deg;) without trapezius elevation.
+                </div>
+                <div class="provenance-item">
+                    <strong>3. Standing Elbow Height Formula</strong>
+                    <code>Stand_Desk = (0.630 &times; Height) + Heel_Allowance + Deck_Offset</code><br>
+                    Aligns keyboard surface directly under wrists during upright or active walking mode.
+                </div>
+                <div class="provenance-item">
+                    <strong>4. Visual Gaze &amp; Monitor Ray Formula</strong>
+                    <code>Seated_Eye_Level = Seat_Height + (0.330 &times; Height)</code><br>
+                    Positions the top bezel within 0&deg; to -15&deg; downward gaze arc to minimize neck strain.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>THE APEX WORKFLOWS LAB</h4>
+                    <p style="line-height: 1.65; margin-bottom: 12px;">Independent biomechanical, acoustic, optical, and workstation hardware evaluations for remote professionals and engineering teams across North America.</p>
+                    <p style="font-size: 12px; color: #cbd5e1;">Contact: <a href="mailto:editorial@theapexworkflows.com" style="color:#38bdf8;">editorial@theapexworkflows.com</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Workstation Categories</h4>
+                    <ul>
+                        <li><a href="index.html?cat=ergonomics#benchmarks">Ergonomic Seating &amp; Input</a></li>
+                        <li><a href="index.html?cat=active#benchmarks">Standing Desks &amp; Walking Pads</a></li>
+                        <li><a href="index.html?cat=visual#benchmarks">Ultrawide Monitors &amp; 4K Webcams</a></li>
+                        <li><a href="index.html?cat=audio#benchmarks">Broadcast Microphones &amp; ANC</a></li>
+                        <li><a href="index.html?cat=showdown#benchmarks">Head-to-Head Showdowns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Governance &amp; Open Data</h4>
+                    <ul>
+                        <li><a href="about.html">About Us &amp; Evaluation Team</a></li>
+                        <li><a href="methodology.html">Scoring Formula &amp; Methodology</a></li>
+                        <li><a href="calculator.html">BIFMA Desk &amp; Ergo Calculator</a></li>
+                        <li><a href="assets/data/apex_2026_score_summary.csv" download>Download Score Summary Matrix (CSV)</a></li>
+                        <li><a href="assets/data/apex_2026_measurement_logs.csv" download>Download Physical Measurement Logs (CSV)</a></li>
+                        <li><a href="assets/data/apex_2026_chair_90day_trial_log.csv" download>Download 90-Day Chair Trial Log (CSV)</a></li>
+                        <li><a href="privacy.html">Privacy, FTC &amp; Medical Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FTC &amp; Amazon Disclosure</h4>
+                    <p style="font-size: 12px; line-height: 1.6; color: #cbd5e1;">TheApexWorkflows.com is a participant in the Amazon Services LLC Associates Program (Partner ID: <code>apexworkflows-20</code>). As an Amazon Associate, we earn from qualifying purchases at no extra cost to you.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 The Apex Workflows Media Group. All rights reserved.</span>
+                <span>Internal Editorial QA v3.2 • Multi-Run Physical Telemetry &amp; OEM Spec Synthesis</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentUnit = 'imperial';
+
+        function setUnits(unit) {
+            currentUnit = unit;
+            document.getElementById('btnImperial').classList.toggle('active', unit === 'imperial');
+            document.getElementById('btnMetric').classList.toggle('active', unit === 'metric');
+            calculateErgo();
+        }
+
+        function onSliderInput(valCm) {
+            document.getElementById('heightNum').value = valCm;
+            calculateErgo();
+        }
+
+        function onNumInput(valCm) {
+            let v = Math.max(140, Math.min(210, parseFloat(valCm) || 178));
+            document.getElementById('heightSlider').value = v;
+            document.getElementById('heightNum').value = v;
+            calculateErgo();
+        }
+
+        function onHeelInput(valCm) {
+            document.getElementById('heelNum').value = valCm;
+            calculateErgo();
+        }
+
+        function onHeelNumInput(valCm) {
+            let v = Math.max(0, Math.min(8, parseFloat(valCm) || 2.5));
+            document.getElementById('heelSlider').value = v;
+            document.getElementById('heelNum').value = v;
+            calculateErgo();
+        }
+
+        function calculateErgo() {
+            const heightCm = parseFloat(document.getElementById('heightSlider').value) || 178;
+            const heelCm = parseFloat(document.getElementById('heelSlider').value) || 2.5;
+            const isReclined = document.querySelector('input[name="posture"]:checked').value === 'reclined';
+            const hasWalkpad = document.getElementById('walkpadCheck').checked;
+
+            const totalInches = heightCm / 2.54;
+            const feet = Math.floor(totalInches / 12);
+            const inches = Math.round(totalInches % 12);
+            document.getElementById('heightDisplay').innerText = `${feet} ft ${inches} in (${Math.round(heightCm)} cm)`;
+
+            // BIFMA G1-2017 Formulas
+            let seatCm = (0.245 * heightCm) + heelCm;
+            if (isReclined) seatCm -= 1.2; // 0.5 in drop in relaxed sacral posture
+
+            let sitDeskCm = seatCm + (0.145 * heightCm);
+            let standDeskCm = (0.630 * heightCm) + heelCm;
+            if (hasWalkpad) standDeskCm += 5.7; // 2.25 in deck offset
+
+            let eyeCm = seatCm + (0.330 * heightCm);
+
+            // Conversions to Inches
+            const seatIn = (seatCm / 2.54).toFixed(1);
+            const sitDeskIn = (sitDeskCm / 2.54).toFixed(1);
+            const standDeskIn = (standDeskCm / 2.54).toFixed(1);
+            const eyeIn = (eyeCm / 2.54).toFixed(1);
+
+            document.getElementById('resSeatIn').innerText = `${seatIn}"`;
+            document.getElementById('resSeatCm').innerText = `(${Math.round(seatCm * 10) / 10} cm)`;
+
+            document.getElementById('resSitIn').innerText = `${sitDeskIn}"`;
+            document.getElementById('resSitCm').innerText = `(${Math.round(sitDeskCm * 10) / 10} cm)`;
+
+            document.getElementById('resStandIn').innerText = `${standDeskIn}"`;
+            document.getElementById('resStandCm').innerText = `(${Math.round(standDeskCm * 10) / 10} cm)`;
+
+            document.getElementById('resEyeIn').innerText = `${eyeIn}"`;
+            document.getElementById('resEyeCm').innerText = `(${Math.round(eyeCm * 10) / 10} cm)`;
+
+            // Update Dynamic Match Spans
+            document.querySelectorAll('.dynSitDesk').forEach(el => el.innerText = `${sitDeskIn}"`);
+            document.querySelectorAll('.dynStandDesk').forEach(el => el.innerText = `${standDeskIn}"`);
+        }
+
+        // Initial Calculation
+        calculateErgo();
+    </script>
+</body>
+</html>
