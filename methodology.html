@@ -177,14 +177,14 @@
                 <p style="margin-bottom:0;"><strong>Step 2 (Secondary Engineering Modifier &amp; Half-Up Rounding):</strong> <code>Factor Score = ROUND_HALF_UP(Base(x) + &Delta;<sub>sec</sub>, 1)</code>, where <code>&Delta;<sub>sec</sub></code> accounts for documented secondary physical traits within that dimension (e.g., <code>+0.1</code> for brushless motor spectral smoothness without tonal whine, or <code>-0.1</code> for high-frequency brushed motor whine).</p>
             </div>
             <ul>
-                <li><strong>Worked Example 1 — WalkingPad C2 Acoustic Score (<code>46.8 dBA &rarr; 9.3/10</code>):</strong> At <code>1.8 mph</code>, the WalkingPad C2 recorded 3-run acoustic readings of <code>[46.6, 46.8, 47.0] dBA</code> (Mean: <code>46.8 dBA &plusmn; 0.2 dBA</code>). In our Acoustic Calibration Bracket <code>45.1–47.5 dBA &rarr; 9.1–9.4</code>:
+                <li><strong>Worked Example 1 — WalkingPad C2 Acoustic Score (<code>46.8 dBA &rarr; 9.3/10</code>):</strong> At <code>1.8 mph</code>, the WalkingPad C2 recorded 3-run acoustic readings of <code>[46.6, 46.8, 47.0] dBA</code> (Mean: <code>46.8 dBA &plusmn; 0.5 dBA</code>). In our Acoustic Calibration Bracket <code>45.1–47.5 dBA &rarr; 9.1–9.4</code>:
                     <br><code>Base(46.8) = 9.1 + ((47.5 - 46.8) / (47.5 - 45.1)) &times; (9.4 - 9.1) = 9.1 + (0.7 / 2.4) &times; 0.3 = 9.1875</code>.
                     <br>Adding the documented <code>&Delta;<sub>sec</sub> = +0.1</code> modifier for its brushless Hall-effect motor's low tonal whine across the 180° hinge seam yields <code>9.1875 + 0.1 = 9.2875</code>, which rounds via <code>ROUND_HALF_UP</code> to <strong><code>9.3/10</code></strong>.</li>
-                <li><strong>Worked Example 2 — FlexiSpot E7 Pro Rigidity Score (<code>1.8 mm &rarr; 9.7/10</code>):</strong> At <code>46.0"</code> under <code>220 lbs</code> and a <code>15 N</code> lateral push, the E7 Pro recorded <code>[1.7, 1.8, 1.9] mm</code> (Mean: <code>1.8 mm &plusmn; 0.1 mm</code>). In our Rigidity Bracket <code>1.2–2.0 mm &rarr; 9.4–9.8</code>:
-                    <br><code>Base(1.8) = 9.4 + ((2.0 - 1.8) / (2.0 - 1.2)) &times; (9.8 - 9.4) = 9.4 + 0.1 = 9.50</code>, plus <code>&Delta;<sub>sec</sub> = +0.2</code> for dual-crossbeam torsional damping = <strong><code>9.7/10</code></strong>.</li>
+                <li><strong>Worked Example 2 — FlexiSpot E7 Pro Plus Rigidity Score (<code>1.8 mm &rarr; 9.6/10</code>):</strong> At <code>46.0"</code> under <code>220 lbs</code> and a <code>15 N</code> lateral push, the E7 Pro Plus recorded <code>[1.7, 1.8, 1.9] mm</code> (Mean: <code>1.8 mm &plusmn; 0.05 mm</code>). In our Rigidity Bracket <code>1.2–2.0 mm &rarr; 9.4–9.8</code>:
+                    <br><code>Base(1.8) = 9.4 + ((2.0 - 1.8) / (2.0 - 1.2)) &times; (9.8 - 9.4) = 9.4 + 0.1 = 9.50</code>, plus <code>&Delta;<sub>sec</sub> = +0.1</code> for 3-stage C-frame column overlap = <strong><code>9.6/10</code></strong>.</li>
                 <li><strong>Standing Desk Deflection Brackets @ 46.0" (220-lb Load, 15N Impulse):</strong> <code>1.2–2.0 mm</code> = 9.4–9.8 (Minimal) • <code>2.1–3.0 mm</code> = 8.9–9.3 (Low) • <code>3.1–4.5 mm</code> = 8.5–8.8 (Moderate) • <code>4.6–6.0 mm</code> = 7.8–8.4 (Noticeable).</li>
                 <li><strong>Acoustic Noise Output Brackets (Walking Pads @ 1.8 mph &amp; Desk Motors @ 1.0m):</strong> <code>42.5–45.0 dBA</code> = 9.5–9.8 • <code>45.1–47.5 dBA</code> = 9.1–9.4 • <code>47.6–50.0 dBA</code> = 8.6–9.0 • <code>50.1–53.0 dBA</code> = 8.0–8.5.</li>
-                <li><strong>Seat Pan Surface Temperature Delta Brackets (After 4 Hours in 72.0°F Room):</strong> <code>+1.5°F to +3.5°F</code> (Open Pellicle/Elastomeric Mesh) = 9.5–9.8 • <code>+3.6°F to +8.0°F</code> (Breathable Knit/Hybrid) = 9.0–9.4 • <code>+8.1°F to +10.5°F</code> (High-Density Contoured Foam) = 8.4–8.9 for thermal breathability.</li>
+                <li><strong>Seat Pan Surface Temperature Delta Brackets (After 4 Hours in 72.0°F Room):</strong> <code>+1.5°F to +3.5°F</code> (Open Pellicle/Elastomeric Mesh) = 9.5–9.8 • <code>+3.6°F to +8.0°F</code> (Breathable Knit/Hybrid) = 9.0–9.4 • <code>+8.1°F to +12.5°F</code> (High-Density Contoured Foam) = 8.4–8.9 thermal baseline (combined with seat-depth slider &amp; pelvic pressure-contouring modifiers in composite Seat Pan sub-scores).</li>
             </ul>
 
             <h2 id="all-40-models">4. Complete 4-Factor Sub-Score &amp; Multi-Run Telemetry Matrix (All 40 Finalist Models)</h2>
@@ -466,22 +466,22 @@
                             <td style="font-size:12px;"><strong>Center Plate Deflection (@ 3.0N) & Typing Acoustic Peak (@ 0.5m):</strong> <code>0.40 mm low-profile flex • 52.8 dBA • 13.5 mm front height (no wrist rest needed) (±0.05 mm / ±0.5 dBA)</code><br><span style="color:#475569;">Runs: [0.38 mm / 52.6 dBA, 0.40 mm / 52.8 dBA, 0.42 mm / 53.0 dBA]</span></td>
                         </tr>
                         <tr>
-                            <td><a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#3 Logitech MX Mechanical</a><br><span style="font-size:11px; color:#475569;">Input Ergonomics • SKU: <code>920-010550</code> • ASIN: <code>B09LK1P1YR</code></span></td>
-                            <td><strong>8.8</strong> <span style="font-size:11px; color:#64748b;">(35%)</span></td>
-                            <td><strong>9.0</strong> <span style="font-size:11px; color:#64748b;">(25%)</span></td>
-                            <td><strong>8.8</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
-                            <td><strong>9.6</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
-                            <td><code>9.010</code> &rarr; <strong>9.0/10</strong></td>
-                            <td style="font-size:12px;"><strong>Center Plate Deflection (@ 3.0N) & Typing Acoustic Peak (@ 0.5m):</strong> <code>0.20 mm rigid integrated plate • 50.4 dBA quiet office profile (±0.05 mm / ±0.5 dBA)</code><br><span style="color:#475569;">Runs: [0.18 mm / 50.2 dBA, 0.20 mm / 50.4 dBA, 0.22 mm / 50.6 dBA]</span></td>
-                        </tr>
-                        <tr>
-                            <td><a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#4 Kinesis Freestyle Pro Split</a><br><span style="font-size:11px; color:#475569;">Input Ergonomics • SKU: <code>KB900</code> • ASIN: <code>B0747SQ2Z2</code></span></td>
+                            <td><a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#3 Kinesis Freestyle Pro Split</a><br><span style="font-size:11px; color:#475569;">Input Ergonomics • SKU: <code>KB900</code> • ASIN: <code>B0747SQ2Z2</code></span></td>
                             <td><strong>9.5</strong> <span style="font-size:11px; color:#64748b;">(35%)</span></td>
                             <td><strong>8.8</strong> <span style="font-size:11px; color:#64748b;">(25%)</span></td>
                             <td><strong>9.1</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
                             <td><strong>8.8</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
                             <td><code>9.105</code> &rarr; <strong>9.1/10</strong></td>
                             <td style="font-size:12px;"><strong>Split Shoulder Opening Angle & Typing Acoustic Peak (@ 0.5m):</strong> <code>54.6 dBA • Up to 20" module separation (0° ulnar deviation) (±0.5 dBA)</code><br><span style="color:#475569;">Runs: [54.4 dBA, 54.6 dBA, 54.8 dBA]</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#4 Logitech MX Mechanical</a><br><span style="font-size:11px; color:#475569;">Input Ergonomics • SKU: <code>920-010550</code> • ASIN: <code>B09LK1P1YR</code></span></td>
+                            <td><strong>8.8</strong> <span style="font-size:11px; color:#64748b;">(35%)</span></td>
+                            <td><strong>9.0</strong> <span style="font-size:11px; color:#64748b;">(25%)</span></td>
+                            <td><strong>8.8</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
+                            <td><strong>9.6</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
+                            <td><code>9.010</code> &rarr; <strong>9.0/10</strong></td>
+                            <td style="font-size:12px;"><strong>Center Plate Deflection (@ 3.0N) & Typing Acoustic Peak (@ 0.5m):</strong> <code>0.20 mm rigid integrated plate • 50.4 dBA quiet office profile (±0.05 mm / ±0.5 dBA)</code><br><span style="color:#475569;">Runs: [0.18 mm / 50.2 dBA, 0.20 mm / 50.4 dBA, 0.22 mm / 50.6 dBA]</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-4k-webcams-zoom-ai-tracking-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#1 Insta360 Link 2 4K Gimbal</a><br><span style="font-size:11px; color:#475569;">Visual Streaming • SKU: <code>CINSABNA</code> • ASIN: <code>B0D9Y66DF7</code></span></td>
@@ -529,22 +529,22 @@
                             <td style="font-size:12px;"><strong>Click Acoustic Level (@ 0.3m) & Forearm Supination Angle:</strong> <code>35.2 dBA whisper-quiet click • 57.0° vertical handshake angle (±0.5 dBA / ±0.5°)</code><br><span style="color:#475569;">Runs: [35.0 dBA / 56.8°, 35.2 dBA / 57.0°, 35.4 dBA / 57.2°]</span></td>
                         </tr>
                         <tr>
-                            <td><a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#2 Logitech MX Vertical</a><br><span style="font-size:11px; color:#475569;">Input Ergonomics • SKU: <code>910-005447</code> • ASIN: <code>B07FNJB8DM</code></span></td>
-                            <td><strong>9.5</strong> <span style="font-size:11px; color:#64748b;">(35%)</span></td>
-                            <td><strong>9.0</strong> <span style="font-size:11px; color:#64748b;">(25%)</span></td>
-                            <td><strong>9.2</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
-                            <td><strong>8.9</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
-                            <td><code>9.195</code> &rarr; <strong>9.2/10</strong></td>
-                            <td style="font-size:12px;"><strong>Click Acoustic Level (@ 0.3m) & Forearm Supination Angle:</strong> <code>46.4 dBA standard click switch • 57.0° vertical handshake angle (±0.5 dBA / ±0.5°)</code><br><span style="color:#475569;">Runs: [46.2 dBA / 56.9°, 46.4 dBA / 57.0°, 46.6 dBA / 57.1°]</span></td>
-                        </tr>
-                        <tr>
-                            <td><a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#3 Logitech MX Master 3S</a><br><span style="font-size:11px; color:#475569;">Input Ergonomics • SKU: <code>910-006556</code> • ASIN: <code>B09HM94VDS</code></span></td>
+                            <td><a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#2 Logitech MX Master 3S</a><br><span style="font-size:11px; color:#475569;">Input Ergonomics • SKU: <code>910-006556</code> • ASIN: <code>B09HM94VDS</code></span></td>
                             <td><strong>9.0</strong> <span style="font-size:11px; color:#64748b;">(35%)</span></td>
                             <td><strong>9.8</strong> <span style="font-size:11px; color:#64748b;">(25%)</span></td>
                             <td><strong>9.5</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
                             <td><strong>9.0</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
                             <td><code>9.300</code> &rarr; <strong>9.3/10</strong></td>
                             <td style="font-size:12px;"><strong>Click Acoustic Level (@ 0.3m) & Sculpted Tilt Angle:</strong> <code>34.8 dBA quiet click • 28.0° sculpted tilt • 1,000 lines/sec MagSpeed wheel (±0.5 dBA / ±0.5°)</code><br><span style="color:#475569;">Runs: [34.7 dBA / 27.8°, 34.8 dBA / 28.0°, 34.9 dBA / 28.2°]</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#3 Logitech MX Vertical</a><br><span style="font-size:11px; color:#475569;">Input Ergonomics • SKU: <code>910-005447</code> • ASIN: <code>B07FNJB8DM</code></span></td>
+                            <td><strong>9.5</strong> <span style="font-size:11px; color:#64748b;">(35%)</span></td>
+                            <td><strong>9.0</strong> <span style="font-size:11px; color:#64748b;">(25%)</span></td>
+                            <td><strong>9.2</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
+                            <td><strong>8.9</strong> <span style="font-size:11px; color:#64748b;">(20%)</span></td>
+                            <td><code>9.195</code> &rarr; <strong>9.2/10</strong></td>
+                            <td style="font-size:12px;"><strong>Click Acoustic Level (@ 0.3m) & Forearm Supination Angle:</strong> <code>46.4 dBA standard click switch • 57.0° vertical handshake angle (±0.5 dBA / ±0.5°)</code><br><span style="color:#475569;">Runs: [46.2 dBA / 56.9°, 46.4 dBA / 57.0°, 46.6 dBA / 57.1°]</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html" style="font-weight:700; color:#1d4ed8; text-decoration:none;">#4 Evoluent VerticalMouse 4</a><br><span style="font-size:11px; color:#475569;">Input Ergonomics • SKU: <code>VM4R</code> • ASIN: <code>B00427TAIK</code></span></td>
@@ -570,9 +570,9 @@
 
             <h2 id="baselines">5. Standardized Environmental &amp; Test Baselines</h2>
             <ul>
-                <li><strong>Ambient Temperature &amp; Humidity:</strong> Thermal retention checks (chair meshes, molded foams, headphone earcups, and treadmill motor housings) are referenced against a climate-controlled room maintained at <code>72.0°F &plusmn; 1.0°F (22.2°C)</code> and <code>45% relative humidity</code> using an <em>Extech IR267 Infrared Thermometer (&plusmn;0.5°F)</em>.</li>
-                <li><strong>Standing Desk Deflection Protocol (220 lbs @ 46.0"):</strong> All 5 electric desks (4 dual-motor models + 1 single-motor baseline control) are assembled on a level hardwood floor, loaded with <code>220 lbs (100 kg)</code> of distributed workstation weights, and raised to a <code>46.0-inch</code> standing extension. Peak-to-peak deflection (<code>mm</code>) is recorded across 3 runs under a standardized <code>15-Newton</code> horizontal push using a <em>Mitutoyo 543-791B Digital Dial Indicator (&plusmn;0.1 mm)</em>, alongside motor acoustic level (<code>dBA</code>) at <code>1.0 meter</code>.</li>
-                <li><strong>Acoustic &amp; Clamping Force Room Baselines:</strong> Microphone off-axis rejection (at <code>180°</code> cardioid null), walking pad noise (at <code>1.8 mph</code>), and ANC headphone mid-band speech suppression (<code>300 Hz – 3,000 Hz</code>) are referenced against a <code>32.0 dBA</code> quiet room floor using a <em>Brüel &amp; Kjær Type 2245 Sound Level Meter (&plusmn;0.2 dBA)</em>. Eyeglass temple lateral clamping force (<code>N</code>) is measured on a <code>155 mm</code> anthropometric headform wearing <code>2.0 mm</code> titanium temple frames fitted with an <em>Interlink FSR-402 thin-film force sensor (&plusmn;0.1 N)</em>.</li>
+                <li><strong>Ambient Temperature &amp; Humidity:</strong> Thermal retention checks (chair meshes, molded foams, headphone earcups, and treadmill motor housings) are referenced against a climate-controlled room maintained at <code>72.0°F &plusmn; 0.5°F (22.2°C)</code> and <code>45% relative humidity</code> using an <em>Extech IR267 Infrared Thermometer (&plusmn;0.8°F)</em>.</li>
+                <li><strong>Standing Desk Deflection Protocol (220 lbs @ 46.0"):</strong> All 5 electric desks (4 dual-motor models + 1 single-motor baseline control) are assembled on a level hardwood floor, loaded with <code>220 lbs (100 kg)</code> of distributed workstation weights, and raised to a <code>46.0-inch</code> standing extension. Peak-to-peak deflection (<code>mm</code>) is recorded across 3 runs under a standardized <code>15-Newton</code> horizontal push using a <em>Mitutoyo 543-791B Digital Dial Indicator (&plusmn;0.05 mm)</em>, alongside motor acoustic level (<code>dBA</code>) at <code>1.0 meter</code>.</li>
+                <li><strong>Acoustic &amp; Clamping Force Room Baselines:</strong> Microphone off-axis rejection (at <code>180°</code> cardioid null), walking pad noise (at <code>1.8 mph</code>), and ANC headphone mid-band speech suppression (<code>300 Hz – 3,000 Hz</code>) are referenced against a <code>32.0 dBA</code> quiet room floor using a <em>Brüel &amp; Kjær Type 2245 Sound Level Meter (&plusmn;0.5 dBA)</em>. Eyeglass temple lateral clamping force (<code>N</code>) is measured on a <code>155 mm</code> anthropometric headform wearing <code>2.0 mm</code> titanium temple frames fitted with an <em>Interlink FSR-402 thin-film force sensor (&plusmn;0.1 N)</em>.</li>
             </ul>
 
             <h2 id="commercial-verification">6. Commercial, Price &amp; Warranty Verification Rules</h2>

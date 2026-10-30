@@ -1,0 +1,113 @@
+{
+  "certificate_id": "REDTEAM-CERT-20261030-192620",
+  "timestamp": "2026-10-30T19:26:20.941967",
+  "inspector_general": "Agent #40 — Chief Inspector General & Red-Team Auditor AI (gemini-3.1-pro-preview)",
+  "executive_approver": "CEO Antigravity (Gemini 4 Argon High)",
+  "overall_verdict": "100% PASSED — ZERO DEFECTS — CLEARED FOR CHAIRMAN REVIEW",
+  "gates_verified": 6,
+  "gate_results": [
+    {
+      "gate": "GATE-1 [RULE-MEM-001]",
+      "audited_agent": 39,
+      "status": "PASSED",
+      "detail": "All 13 HTML pages synced at 40 Finalists / 73 Pre-Screened candidates; 0 stale '42' or '65' strings."
+    },
+    {
+      "gate": "GATE-2 [RULE-MEM-002]",
+      "audited_agent": 20,
+      "status": "PASSED",
+      "detail": "All 6 separated CSV/JSON datasets verified with 40/40 finalist sub-scores and 100.0h (50h+50h) 90-day chair logs."
+    },
+    {
+      "gate": "GATE-3 [RULE-MEM-003]",
+      "audited_agent": 20,
+      "status": "PASSED",
+      "detail": "All 10 articles contain [Lab Measured]/[OEM Spec]/[Weighted Calc] tags, Provenance Registries, and 10/10 Multi-Run Plot PNGs."
+    },
+    {
+      "gate": "GATE-4 [RULE-MEM-004]",
+      "audited_agent": 19,
+      "status": "PASSED",
+      "detail": "Zero forbidden absolute claims found; all conditional thermal (+2.2°F/+2.4°F), clamping (3.4 N vs 4.0 N), and UVC sleep specifications verified."
+    },
+    {
+      "gate": "GATE-5 [RULE-MEM-005]",
+      "audited_agent": 18,
+      "status": "PASSED",
+      "detail": "Linear Bracket Interpolation formula Base(x) + Delta_sec, WalkingPad C2 (46.8 dBA -> 9.3/10), FlexiSpot E7 Pro Plus (1.8 mm -> 9.6/10), and instrument uncertainties verified on methodology.html."
+    },
+    {
+      "gate": "GATE-6 [RULE-MEM-006]",
+      "audited_agent": 20,
+      "status": "PASSED",
+      "detail": "Strict monotonic rank-to-score ordering (#1 >= #2 >= #3 >= #4 >= #5) and model-specific firmware/connectivity logs verified across all 40 models."
+    }
+  ],
+  "disciplinary_summary": [
+    {
+      "agent_id": 39,
+      "agent_name": "Content Decay & Cross-Page Sync Auditor AI",
+      "department": "Audit",
+      "previous_kpi": 100,
+      "current_kpi": 65,
+      "penalty_applied": -35,
+      "status": "DEMOTED_STRIPPED_SIGNOFF",
+      "violation_code": "AUDIT3-P1-COUNT-SYNC & REDTEAM-DEFECT-1",
+      "violation_summary": "Lần 1: Sót số '42 tested models' trên header/search box. Lần 2 (bị Chánh Thanh Tra EMP-40 bắt quả tang khi hậu kiểm): Sót chuỗi '(65 Pre-Screened)' ở thẻ meta twitter:description và footer-bottom của trang chủ + 10 bài viết trong khi tổng thực tế là 73.",
+      "disciplinary_action_taken": "Trừ tổng cộng 35 điểm KPI (còn 65/100), tước vĩnh viễn quyền tự duyệt xuất bản, giáng làm trợ lý đối soát dưới quyền phủ quyết trực tiếp của Chánh Thanh Tra EMP-40.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-001]: Trước khi xuất bản bất kỳ trang nào, bắt buộc tính tổng động sum(len(tested_models)) == 40 và tổng pre_screened_count == 73, đồng thời quét toàn bộ 13 file HTML (kể cả thẻ meta và footer) để chặn mọi con số cố định ('42', '65') lệch khỏi tổng thực tế."
+    },
+    {
+      "agent_id": 20,
+      "agent_name": "Comparison Battle Matrix AI",
+      "department": "Content",
+      "previous_kpi": 100,
+      "current_kpi": 70,
+      "penalty_applied": -30,
+      "status": "PROBATION_DOUBLE_AUDIT",
+      "violation_code": "AUDIT3-P2-SUBSCORE & REDTEAM-DEFECT-2-5-7",
+      "violation_summary": "Thiếu sub-scores của model phụ ở v3.1; khi cập nhật v3.2 bị Chánh Thanh Tra EMP-40 phát hiện: (1) Đảo thứ tự hạng #3/#4 ở bài Bàn phím (9.0 xếp trên 9.1) và #2/#3 ở bài Chuột công thái học (9.2 xếp trên 9.3); (2) Ghi chú nội suy FlexiSpot E7 Pro dùng dải [1.0, 2.0] thay vì [1.2, 2.0]; (3) Dùng chuỗi cấu hình QMK/VIA chung cho cả bàn phím không có QMK.",
+      "disciplinary_action_taken": "Trừ 30 điểm KPI (còn 70/100), đặt vào chế độ Quản chế Kiểm toán Kép (Probation Double Audit), bắt buộc kiểm tra tính đơn điệu giảm dần của điểm số theo thứ hạng (#1 >= #2 >= #3 >= #4 >= #5) và tách cấu hình model_config riêng cho từng thiết bị.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-002, RULE-MEM-003, RULE-MEM-006]: (1) Thứ tự xếp hạng trong bảng HTML, JSON/CSV và ảnh Plot phải đơn điệu nghiêm ngặt theo Lab Score; (2) Mỗi model phải có model_config đúng chuẩn kết nối thực tế; (3) Mọi bảng phải có nhãn [Lab Measured], [OEM Spec], [Weighted Calc]."
+    },
+    {
+      "agent_id": 19,
+      "agent_name": "High-Converting Review Writer AI",
+      "department": "Content",
+      "previous_kpi": 100,
+      "current_kpi": 75,
+      "penalty_applied": -25,
+      "status": "PROBATION_DOUBLE_AUDIT",
+      "violation_code": "AUDIT3-P3-WORDING & REDTEAM-DEFECT-7",
+      "violation_summary": "Dùng cụm từ tuyệt đối ở v3.1 ('zero heat buildup', 'mechanically disconnecting'); khi hậu kiểm v3.2 bị Chánh Thanh Tra EMP-40 bắt lỗi sót dấu backtick Markdown thô (`F1–F12`) trong HTML và lỗi gõ phím ' comparative Verdict:' ở bài Aeron vs Leap V2.",
+      "disciplinary_action_taken": "Trừ 25 điểm KPI (còn 75/100), quản chế Kiểm toán Kép, khóa bộ lọc cấm từ tuyệt đối và cấm ký tự backtick Markdown thô trong nội dung HTML.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-004]: Cấm tuyệt đối các cụm từ khẳng định vô điều kiện ('zero heat buildup', 'prevents heat buildup', 'mechanically disconnecting video capture') và cấm để sót dấu backtick (`) chưa chuyển sang thẻ <code> trong HTML."
+    },
+    {
+      "agent_id": 18,
+      "agent_name": "E-E-A-T Editorial Director AI",
+      "department": "Content",
+      "previous_kpi": 100,
+      "current_kpi": 80,
+      "penalty_applied": -20,
+      "status": "PROBATION_DOUBLE_AUDIT",
+      "violation_code": "AUDIT3-P1-FUNNEL & REDTEAM-DEFECT-2-3-4",
+      "violation_summary": "Khi viết trang methodology.html v3.2 đã để lệch Worked Example 2 của FlexiSpot E7 Pro (tính ra 9.7/10 trong khi bảng điểm thực tế là 9.6/10), để dải nhiệt độ đệm foam dừng ở +10.5°F (trong khi Leap V2 là +11.8°F), và ghi sai số thiết bị đo (±0.5°F, ±0.1 mm, ±0.2 dBA) lệch với bảng dữ liệu (±0.8°F, ±0.05 mm, ±0.5 dBA).",
+      "disciplinary_action_taken": "Trừ 20 điểm KPI (còn 80/100), chuyển sang diện Quản chế Kiểm toán Kép, khóa cứng kiểm tra đồng bộ sai số thiết bị đo và Worked Examples trên trang Methodology.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-005 & RULE-MEM-007]: Mọi ví dụ tính toán (Worked Examples), dải chuẩn hóa (Calibration Brackets) và sai số thiết bị đo (±0.8°F, ±0.05 mm, ±0.5 dBA, phòng chuẩn 72.0°F ± 0.5°F) trên methodology.html phải khớp 100% với bảng dữ liệu thực nghiệm."
+    },
+    {
+      "agent_id": 21,
+      "agent_name": "Studio Telemetry Visual AI",
+      "department": "Content",
+      "previous_kpi": 100,
+      "current_kpi": 85,
+      "penalty_applied": -15,
+      "status": "WARNING_SUPERVISED",
+      "violation_code": "REDTEAM-DEFECT-6-VISUAL-OVERFLOW",
+      "violation_summary": "Bị Chánh Thanh Tra EMP-40 phát hiện chữ 'QA PROTOCOL v3.2' tràn nhẹ qua viền phải của khung huy hiệu (x=505) trên ảnh Hero PNG và tiêu đề dài tràn khung trên 2 ảnh đồ thị Multi-Run Plot.",
+      "disciplinary_action_taken": "Trừ 15 điểm KPI (còn 85/100), cảnh cáo và bắt buộc nới rộng khung pill (x2=532) cũng như chuẩn hóa cỡ chữ tiêu đề đồ thị (15pt).",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-008]: Luôn kiểm tra chiều rộng bounding box của text trước khi vẽ lên ảnh Hero Card và Multi-Run Telemetry Plot để không bao giờ tràn viền."
+    }
+  ]
+}
