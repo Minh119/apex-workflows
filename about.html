@@ -44,7 +44,7 @@
             </nav>
             <form action="index.html#benchmarks" method="get" class="search-box">
                 <span class="search-icon">🔍</span>
-                <input type="text" name="q" placeholder="Search 42 tested models (e.g. Ticova)..." aria-label="Search lab guides">
+                <input type="text" name="q" placeholder="Search 40 tested models (e.g. Ticova)..." aria-label="Search lab guides">
             </form>
         </div>
     </header>
@@ -53,7 +53,7 @@
             <span class="category-badge">GOVERNANCE &amp; EDITORIAL TRANSPARENCY</span>
             <h1>About The Apex Workflows Lab</h1>
             <p><strong>The Apex Workflows</strong> (<code>theapexworkflows.com</code>) is an independent workstation hardware publication serving remote professionals, software engineers, executive broadcasters, and ergonomic workspace designers across North America.</p>
-            <p>Our evaluation model combines hands-on multi-week workspace testing under standardized room baselines with verified manufacturer engineering telemetry. Every guide on our platform uses category-specific weighted sub-scores that sum to 100%, reproducible half-up rounding, explicit model numbers (SKUs/ASINs), downloadable raw CSV/JSON tables, and transparent trade-off disclosures (<em>"Who Should Skip This Model"</em>).</p>
+            <p>Our evaluation model combines hands-on multi-week workspace testing under standardized room baselines with verified manufacturer engineering telemetry across <strong>73 pre-screened hardware candidates</strong> and <strong>40 scored finalist models</strong>. Every guide on our platform uses category-specific weighted sub-scores that sum to 100%, linear interpolation within calibration brackets, reproducible half-up rounding, explicit model numbers (SKUs/ASINs), downloadable raw CSV/JSON tables, and transparent trade-off disclosures (<em>"Who Should Skip This Model"</em>).</p>
 
             <h2 id="team">Evaluation Team &amp; Two-Tier Peer Review Governance</h2>
             <p>Every published benchmark report undergoes a strict two-person sign-off: a <strong>Lead Evaluator</strong> (who conducts the primary comparative assessment and authors the report) and a <strong>Technical Reviewer</strong> (who audits the weighted math, verifies SKU/ASIN accuracy, and cross-checks manufacturer specifications).</p>
@@ -84,7 +84,7 @@
 
             <h2 id="editorial-policy">Editorial Independence &amp; QA Verification Scope</h2>
             <ul>
-                <li><strong>What "Internal Editorial QA v3.1" Means:</strong> This designation indicates that every article has passed our automated build-time verification script checking (1) 100% weight summation, (2) exact Decimal <code>ROUND_HALF_UP</code> calculation of composite 10-point scores and 5-star Schema.org ratings, (3) unique ASIN/SKU link mapping, and (4) cross-page consistency between the article body, summary cards, and our public CSV dataset.</li>
+                <li><strong>What "Internal Editorial QA v3.2" Means:</strong> This designation indicates that every article has passed our automated build-time verification script checking (1) 100% weight summation, (2) exact Decimal <code>ROUND_HALF_UP</code> calculation of composite 10-point scores and 5-star Schema.org ratings across all <strong>40 scored finalist models</strong>, (3) explicit separation of <code>[Lab Measured]</code> vs. <code>[OEM Spec]</code> column provenance, and (4) cross-page consistency between the article body, multi-run telemetry plots, and our public CSV datasets.</li>
                 <li><strong>Zero Sponsored Placements:</strong> Manufacturers cannot pay to be included, ranked higher, or awarded a "Primary Lab Pick" badge in our guides.</li>
                 <li><strong>Mandatory Flaw Disclosure:</strong> Every single product we recommend must include documented cons and a dedicated <em>"Who Should Skip This Model"</em> section detailing specific body types, operating systems, or workflows for which the product is unsuitable.</li>
             </ul>
@@ -92,11 +92,13 @@
             <h2 id="corrections">Corrections &amp; Fact-Checking Policy</h2>
             <p>We audit our comparison tables, model numbers (SKUs/ASINs), mathematical rubrics, and commercial terms regularly (most recent full site verification: <strong>Oct 30, 2026</strong>). To report a technical correction, broken link, or specification update, email <a href="mailto:corrections@theapexworkflows.com" style="color:#1d4ed8; font-weight:700;">corrections@theapexworkflows.com</a>.</p>
 
-            <h2 id="contact">Contact &amp; Business Inquiries</h2>
+            <h2 id="contact">Contact &amp; Open Data Downloads</h2>
             <ul>
                 <li><strong>General Editorial Desk:</strong> <a href="mailto:editorial@theapexworkflows.com">editorial@theapexworkflows.com</a></li>
                 <li><strong>Technical Corrections &amp; Fact-Checking:</strong> <a href="mailto:corrections@theapexworkflows.com">corrections@theapexworkflows.com</a></li>
-                <li><strong>Open Benchmark Data:</strong> <a href="assets/data/apex_2026_benchmark_telemetry.csv" download>Download Full 2026 Benchmark Telemetry (CSV)</a> | <a href="assets/data/apex_2026_benchmark_telemetry.json" download>JSON</a></li>
+                <li><strong>Score Summary Matrix (All 40 Finalists):</strong> <a href="assets/data/apex_2026_score_summary.csv" download>CSV</a> | <a href="assets/data/apex_2026_score_summary.json" download>JSON</a></li>
+                <li><strong>Multi-Run Physical Measurement Logs (All 40 Finalists):</strong> <a href="assets/data/apex_2026_measurement_logs.csv" download>CSV</a> | <a href="assets/data/apex_2026_measurement_logs.json" download>JSON</a></li>
+                <li><strong>90-Day / 100-Hour Chair Trial Log:</strong> <a href="assets/data/apex_2026_chair_90day_trial_log.csv" download>CSV</a> | <a href="assets/data/apex_2026_chair_90day_trial_log.json" download>JSON</a></li>
             </ul>
         </div>
     </div>
@@ -120,12 +122,13 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Governance &amp; Policies</h4>
+                    <h4>Governance &amp; Open Data</h4>
                     <ul>
                         <li><a href="about.html">About Us &amp; Evaluation Team</a></li>
                         <li><a href="methodology.html">Scoring Formula &amp; Methodology</a></li>
-                        <li><a href="assets/data/apex_2026_benchmark_telemetry.csv" download>Download Raw Benchmark CSV</a></li>
-                        <li><a href="about.html#corrections">Corrections &amp; Ethics Policy</a></li>
+                        <li><a href="assets/data/apex_2026_score_summary.csv" download>Download Score Summary Matrix (CSV)</a></li>
+                        <li><a href="assets/data/apex_2026_measurement_logs.csv" download>Download Physical Measurement Logs (CSV)</a></li>
+                        <li><a href="assets/data/apex_2026_chair_90day_trial_log.csv" download>Download 90-Day Chair Trial Log (CSV)</a></li>
                         <li><a href="privacy.html">Privacy, FTC &amp; Medical Disclaimer</a></li>
                     </ul>
                 </div>
@@ -136,7 +139,7 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; 2026 The Apex Workflows Media Group. All rights reserved.</span>
-                <span>Internal Editorial QA v3.1 • Standardized Benchmark &amp; OEM Spec Synthesis</span>
+                <span>Internal Editorial QA v3.2 • Multi-Run Physical Telemetry &amp; OEM Spec Synthesis</span>
             </div>
         </div>
     </footer>

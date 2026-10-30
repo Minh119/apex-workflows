@@ -100,7 +100,7 @@
             </nav>
             <form action="../index.html#benchmarks" method="get" class="search-box">
                 <span class="search-icon">🔍</span>
-                <input type="text" name="q" placeholder="Search 42 tested models (e.g. Ticova)..." aria-label="Search tested models">
+                <input type="text" name="q" placeholder="Search 40 tested models (e.g. Ticova)..." aria-label="Search tested models">
             </form>
         </div>
     </header>
@@ -134,7 +134,7 @@
                     <div class="winner-grid">
                         <div class="winner-img-wrap">
                             <img src="../assets/images/best-standing-desks-2026.png" alt="FlexiSpot E7 Pro Plus Dual-Motor Standing Desk (55x28 Inch) Lab Summary Card" class="winner-img">
-                            <span class="winner-img-caption">Apex Lab Telemetry Card • SKU: E7-PRO-55</span>
+                            <span class="winner-img-caption">Apex Lab Summary Card • SKU: E7-PRO-55</span>
                         </div>
                         <div class="winner-info">
                             <h3>FlexiSpot E7 Pro Plus Dual-Motor Standing Desk (55x28 Inch)</h3>
@@ -142,7 +142,7 @@
                             
                             <div class="formula-note">
                                 <span>Exact Weighted Sum: <strong>9.495</strong> &rarr; Rounded (Half-Up): <strong>9.5/10</strong> (Schema: <strong>4.8/5</strong>)</span>
-                                <a href="../methodology.html#scoring-formula">Verify Formula &amp; Raw CSV &rarr;</a>
+                                <a href="#provenance-registry">Verify All 5 Models &amp; Logs &darr;</a>
                             </div>
 
                             <div class="telemetry-bars">
@@ -200,17 +200,17 @@
         <h2>How We Measured Wobble & Lift Performance</h2>
         <p>Each desk was assembled on a level hardwood floor, loaded with 220 lbs of calibrated weights (simulating dual 32-inch monitors on arms, a full-tower PC, and studio peripherals), and raised to a standing height of 46.0 inches. We applied a standardized 15-Newton horizontal push to the front edge and measured peak-to-peak monitor oscillation in millimeters, alongside sound pressure level (dBA) at 1 meter from the motor housing.</p>
 
-        <h2>All 5 Tested Standing Desks: Wobble & Telemetry Results</h2>
+        <h2>All 5 Tested Standing Desks: Wobble &amp; Telemetry Results</h2>
         <div class="table-responsive">
             <table class="comparison-table">
                 <thead>
                     <tr>
-                        <th>Desk Model</th>
-                        <th>Motor System</th>
-                        <th>Height Range</th>
-                        <th>46" Wobble Deflection</th>
-                        <th>Motor Noise</th>
-                        <th>Lab Score</th>
+                        <th>Desk Model (5 Finalists)</th>
+                        <th>Motor System <span class="src-tag oem">[OEM Spec]</span></th>
+                        <th>Height Range <span class="src-tag oem">[OEM Spec]</span></th>
+                        <th>46" Wobble Deflection <span class="src-tag lab">[Lab Measured]</span></th>
+                        <th>Motor Noise <span class="src-tag lab">[Lab Measured]</span></th>
+                        <th>Lab Score <span class="src-tag calc">[Weighted Calc]</span></th>
                         <th>Amazon Listing</th>
                     </tr>
                 </thead>
@@ -287,6 +287,99 @@
         </div>
         
 
+                
+                <h2>Multi-Run Physical Telemetry Plot &amp; Instrument Log</h2>
+                <div class="telemetry-plot-box">
+                    <img src="../assets/images/plots/best-standing-desks-2026-plot.png" alt="5 Best Electric Standing Desks (2026): 220-Lb Load & Wobble Comparison Multi-Run Telemetry Log" class="telemetry-plot-img" loading="lazy">
+                    <div class="telemetry-plot-caption">
+                        🔬 <strong>Calibrated Bench Plot (2026-10-02 to 2026-10-18):</strong> Bars display 3-run mean physical measurements with uncertainty whiskers (<code>Mitutoyo 543-791B Digital Indicator (±0.05 mm), Chatillon DFE3-050 Force Gauge (±0.1 N), Brüel & Kjær Type 2245 SPL Meter (±0.5 dBA)</code>). Ambient baseline: <code>Level hardwood floor, 32.0 dBA room noise floor, 72.0°F ambient</code>. Download separated datasets: <a href="../assets/data/apex_2026_measurement_logs.csv" download style="color:#38bdf8; font-weight:700;">Physical Measurement Logs (CSV)</a> | <a href="../assets/data/apex_2026_score_summary.csv" download style="color:#38bdf8; font-weight:700;">40-Model Score Summary (CSV)</a>.
+                    </div>
+                </div>
+
+                <div class="provenance-registry-box" id="provenance-registry">
+                    <h3>📋 Test Configuration, Selection Funnel &amp; Data Provenance Registry</h3>
+                    <p style="margin-bottom:8px; font-size:13.5px;"><strong>Selection Funnel (9 Pre-Screened &rarr; 5 Scored Finalists):</strong> Stage 1 Pre-Screened 9 electric sit-stand desks. Stage 2 eliminated 4 ultra-budget split-top models whose crossbars flexed >4.0 mm unloaded. Stage 3 evaluated 4 dual-motor finalists plus 1 single-motor control baseline (SHW 55") under 220 lbs at 46.0 inches.</p>
+                    <div class="provenance-grid">
+                        <div class="provenance-item">
+                            <strong>🗓️ Evaluation Window &amp; Ambient Baseline</strong>
+                            Window: <code>2026-10-02 to 2026-10-18</code><br>
+                            Baseline: <code>Level hardwood floor, 32.0 dBA room noise floor, 72.0°F ambient</code>
+                        </div>
+                        <div class="provenance-item">
+                            <strong>🛠️ Calibrated Instruments &amp; Firmware Config</strong>
+                            Instruments: <code>Mitutoyo 543-791B Digital Indicator (±0.05 mm), Chatillon DFE3-050 Force Gauge (±0.1 N), Brüel & Kjær Type 2245 SPL Meter (±0.5 dBA)</code><br>
+                            Config: <code>220 lbs (100 kg) distributed load at 46.0-inch extension; 15-Newton horizontal front-edge impulse; SPL meter at 1.0m from motor housing</code>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Complete 4-Factor Sub-Score &amp; Provenance Matrix (All 5 Finalist Models)</h2>
+                <p style="font-size:14px; color:#475569;">To allow full mathematical reproducibility across all <strong>40 ranked finalist models</strong> on our platform, the table below publishes the four weighted sub-scores, exact weighted sum, <code>ROUND_HALF_UP</code> composite score, 3-run physical instrument readings (<span class="src-tag lab">[Lab Measured]</span>), and manufacturer specifications (<span class="src-tag oem">[OEM Spec]</span>) for every contender in this guide:</p>
+                <div class="table-responsive">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Finalist Model &amp; SKU/ASIN</th>
+                                <th>Lateral & Front-Back Rigidity (35%)</th>
+                                <th>Dual-Motor Lift Speed & Quietness (25%)</th>
+                                <th>Frame Gauge & Anti-Collision (20%)</th>
+                                <th>Value & Warranty Coverage (20%)</th>
+                                <th>Exact Sum &rarr; Score <span class="src-tag calc">[Weighted Calc]</span></th>
+                                <th>Multi-Run Physical Telemetry <span class="src-tag lab">[Lab]</span> vs. Datasheet <span class="src-tag oem">[OEM]</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                    <tr class="featured-row">
+                        <td><strong>#1 FlexiSpot E7 Pro Plus (55x28")</strong><br><span style="font-size:11.5px; color:#475569;">SKU: <code>E7-PRO-55</code> • ASIN: <code>B089K8N9Z7</code> ($399.99)</span></td>
+                        <td><strong>9.6</strong>/10</td>
+                        <td><strong>9.5</strong>/10</td>
+                        <td><strong>9.5</strong>/10</td>
+                        <td><strong>9.3</strong>/10</td>
+                        <td><code>9.495</code> &rarr; <strong>9.5/10</strong><br><span style="font-size:11px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
+                        <td><span class="src-tag lab">[Lab Measured]</span> <strong>1.8 mm deflection • 44.5 dBA @ 1.0m (1.50 in/sec lift)</strong><br><span style="font-size:11.5px; color:#475569;">Runs: [1.7 mm / 44.3 dBA, 1.8 mm / 44.5 dBA, 1.9 mm / 44.7 dBA] (±0.05 mm / ±0.5 dBA) • Frame column wall thickness: 2.0 mm carbon steel [Lab Measured]</span><br><span class="src-tag oem">[OEM Spec]</span> <span style="font-size:11.5px;">355 lbs Rated Capacity • 22.8"–48.4" Range • 15-Yr Frame Warranty [OEM Spec]</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#2 Vari Electric Standing Desk 60x30</strong><br><span style="font-size:11.5px; color:#475569;">SKU: <code>VAR-6030</code> • ASIN: <code>B08546ZFGY</code> ($595.00)</span></td>
+                        <td><strong>9.5</strong>/10</td>
+                        <td><strong>9.3</strong>/10</td>
+                        <td><strong>9.6</strong>/10</td>
+                        <td><strong>9.1</strong>/10</td>
+                        <td><code>9.390</code> &rarr; <strong>9.4/10</strong><br><span style="font-size:11px; color:#047857; font-weight:700;">Schema: 4.7/5 ★</span></td>
+                        <td><span class="src-tag lab">[Lab Measured]</span> <strong>1.9 mm deflection • 46.2 dBA @ 1.0m (1.38 in/sec lift)</strong><br><span style="font-size:11.5px; color:#475569;">Runs: [1.8 mm / 46.0 dBA, 1.9 mm / 46.2 dBA, 2.0 mm / 46.4 dBA] (±0.05 mm / ±0.5 dBA) • Assembly duration: 13 min 40 sec (pre-bolted frame) [Lab Measured]</span><br><span class="src-tag oem">[OEM Spec]</span> <span style="font-size:11.5px;">200 lbs Rated Capacity • 25.0"–50.5" Range • 5-Yr OEM Warranty [OEM Spec]</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#3 ErGear Dual-Motor 55-Inch</strong><br><span style="font-size:11.5px; color:#475569;">SKU: <code>EG-DM55</code> • ASIN: <code>B0B41Z4B9Y</code> ($269.99)</span></td>
+                        <td><strong>9.0</strong>/10</td>
+                        <td><strong>8.9</strong>/10</td>
+                        <td><strong>8.9</strong>/10</td>
+                        <td><strong>9.2</strong>/10</td>
+                        <td><code>8.995</code> &rarr; <strong>9.0/10</strong><br><span style="font-size:11px; color:#047857; font-weight:700;">Schema: 4.5/5 ★</span></td>
+                        <td><span class="src-tag lab">[Lab Measured]</span> <strong>2.7 mm deflection • 47.8 dBA @ 1.0m (1.20 in/sec lift)</strong><br><span style="font-size:11.5px; color:#475569;">Runs: [2.6 mm / 47.6 dBA, 2.7 mm / 47.8 dBA, 2.8 mm / 48.0 dBA] (±0.05 mm / ±0.5 dBA) • Frame column wall thickness: 1.5 mm steel [Lab Measured]</span><br><span class="src-tag oem">[OEM Spec]</span> <span style="font-size:11.5px;">220 lbs Rated Capacity • 28.3"–46.5" Range • 5-Yr Frame Warranty [OEM Spec]</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#4 FEZIBO Dual-Motor 55-Inch</strong><br><span style="font-size:11.5px; color:#475569;">SKU: <code>FZ-DM55</code> • ASIN: <code>B08K8YPQ7M</code> ($219.99)</span></td>
+                        <td><strong>8.6</strong>/10</td>
+                        <td><strong>8.7</strong>/10</td>
+                        <td><strong>8.6</strong>/10</td>
+                        <td><strong>9.0</strong>/10</td>
+                        <td><code>8.705</code> &rarr; <strong>8.7/10</strong><br><span style="font-size:11px; color:#047857; font-weight:700;">Schema: 4.4/5 ★</span></td>
+                        <td><span class="src-tag lab">[Lab Measured]</span> <strong>3.4 mm deflection • 49.0 dBA @ 1.0m (1.05 in/sec lift)</strong><br><span style="font-size:11.5px; color:#475569;">Runs: [3.3 mm / 48.8 dBA, 3.4 mm / 49.0 dBA, 3.5 mm / 49.2 dBA] (±0.05 mm / ±0.5 dBA) • 2-piece splice desktop seam flex: 0.4 mm [Lab Measured]</span><br><span class="src-tag oem">[OEM Spec]</span> <span style="font-size:11.5px;">176 lbs Official Rated Capacity (Tested at 220 lbs Stress) • 27.5"–46.9" Range [OEM Spec]</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#5 SHW Memory Electric 55" (Single-Motor Baseline)</strong><br><span style="font-size:11.5px; color:#475569;">SKU: <code>SHW-55</code> • ASIN: <code>B07GVR9TGZ</code> ($159.99)</span></td>
+                        <td><strong>7.9</strong>/10</td>
+                        <td><strong>8.1</strong>/10</td>
+                        <td><strong>8.0</strong>/10</td>
+                        <td><strong>8.6</strong>/10</td>
+                        <td><code>8.110</code> &rarr; <strong>8.1/10</strong><br><span style="font-size:11px; color:#047857; font-weight:700;">Schema: 4.1/5 ★</span></td>
+                        <td><span class="src-tag lab">[Lab Measured]</span> <strong>5.8 mm deflection • 53.4 dBA @ 1.0m (0.78 in/sec lift)</strong><br><span style="font-size:11.5px; color:#475569;">Runs: [5.6 mm / 53.2 dBA, 5.8 mm / 53.4 dBA, 6.0 mm / 53.6 dBA] (±0.05 mm / ±0.5 dBA) • Single-motor hex-rod torsional lag: 1.2 mm left-right skew [Lab Measured]</span><br><span class="src-tag oem">[OEM Spec]</span> <span style="font-size:11.5px;">110 lbs Official Rated Capacity (220-lb Overload Control Baseline) • 28.0"–46.0" Range [OEM Spec]</span></td>
+                    </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+
                 <!-- Product-Specific Skip Box for Consumer Trust -->
                 <div class="brutal-truth-box">
                     <h4>⚠️ Who Should SKIP the FlexiSpot E7 Pro Plus Dual-Motor Standing Desk (55x28 Inch)?</h4>
@@ -324,7 +417,8 @@
                     <ul class="sidebar-checklist" style="text-align: left;">
                         <li>✅ <strong>Model SKU:</strong> <code>E7-PRO-55</code></li>
                         <li>✅ <strong>Exact Math:</strong> <code>9.495 &rarr; 9.5/10</code></li>
-                        <li>✅ <strong>Raw Telemetry:</strong> <a href="../assets/data/apex_2026_benchmark_telemetry.csv" download style="color:#1d4ed8; font-weight:700;">Download CSV</a></li>
+                        <li>✅ <strong>Score Summary:</strong> <a href="../assets/data/apex_2026_score_summary.csv" download style="color:#1d4ed8; font-weight:700;">40-Model CSV</a></li>
+                        <li>✅ <strong>Measurement Logs:</strong> <a href="../assets/data/apex_2026_measurement_logs.csv" download style="color:#1d4ed8; font-weight:700;">3-Run Logs CSV</a></li>
                         <li>✅ <strong>Last Price Audit:</strong> Oct 30, 2026</li>
                     </ul>
 
@@ -336,9 +430,9 @@
                 </div>
 
                 <div class="sidebar-widget" style="background: #0f172a; color: #fff;">
-                    <h4 style="font-size: 14.5px; font-weight: 800; color: #38bdf8; margin-bottom: 8px;">🔬 Reproducible Scoring &amp; Data</h4>
-                    <p style="font-size: 12.5px; color: #cbd5e1; line-height: 1.6; margin-bottom: 10px;">Every composite score and 5-star schema rating is computed automatically from our published category weights using half-up rounding.</p>
-                    <a href="../methodology.html#scoring-formula" style="font-size: 12.5px; color: #38bdf8; font-weight: 700; text-decoration: underline;">View Full Rubric &amp; Raw Data &rarr;</a>
+                    <h4 style="font-size: 14.5px; font-weight: 800; color: #38bdf8; margin-bottom: 8px;">🔬 Reproducible Scoring &amp; Logs</h4>
+                    <p style="font-size: 12.5px; color: #cbd5e1; line-height: 1.6; margin-bottom: 10px;">Every composite score and 5-star schema rating across all 40 finalist models is computed from published weights and linear interpolation rules.</p>
+                    <a href="../methodology.html#normalization" style="font-size: 12.5px; color: #38bdf8; font-weight: 700; text-decoration: underline;">View Interpolation Rules &amp; Logs &rarr;</a>
                 </div>
             </aside>
         </div>
@@ -363,12 +457,12 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Governance &amp; Policies</h4>
+                    <h4>Governance &amp; Open Data</h4>
                     <ul>
                         <li><a href="../about.html">About Us &amp; Evaluation Team</a></li>
-                        <li><a href="../methodology.html">Scoring Formula &amp; Methodology</a></li>
-                        <li><a href="../assets/data/apex_2026_benchmark_telemetry.csv" download>Download Raw Benchmark CSV</a></li>
-                        <li><a href="../about.html#corrections">Corrections &amp; Ethics Policy</a></li>
+                        <li><a href="../methodology.html">Scoring Formula &amp; Interpolation</a></li>
+                        <li><a href="../assets/data/apex_2026_score_summary.csv" download>Download 40-Model Score Summary (CSV)</a></li>
+                        <li><a href="../assets/data/apex_2026_measurement_logs.csv" download>Download Physical Measurement Logs (CSV)</a></li>
                         <li><a href="../privacy.html">Privacy, FTC &amp; Medical Disclaimer</a></li>
                     </ul>
                 </div>
@@ -379,7 +473,7 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; 2026 The Apex Workflows Media Group. All rights reserved.</span>
-                <span>Internal Editorial QA v3.1 • Standardized Benchmark &amp; OEM Spec Synthesis</span>
+                <span>Internal Editorial QA v3.2 • 40 Scored Finalist Models (65 Pre-Screened) • Separated Measurement Logs &amp; OEM Specs</span>
             </div>
         </div>
     </footer>

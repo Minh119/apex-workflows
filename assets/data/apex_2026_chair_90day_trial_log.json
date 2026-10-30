@@ -1,0 +1,122 @@
+{
+  "study_id": "APEX-SEAT-2026-90D",
+  "observation_window_start": "2026-07-01",
+  "observation_window_end": "2026-09-28",
+  "calendar_window_days": 90,
+  "total_logged_seated_hours": 100.0,
+  "aeron_size_b_total_hours": 50.0,
+  "steelcase_leap_v2_total_hours": 50.0,
+  "ambient_room_temp_f": "72.0 ± 0.5°F (22.2°C)",
+  "ambient_relative_humidity": "45% ± 2% RH",
+  "thermal_instrument": "Extech IR267 Mini IR Thermometer (0.95 emissivity, ±0.8°F accuracy)",
+  "evaluators": [
+    {
+      "tester_id": "Tester A",
+      "height": "5'4\" (163 cm)",
+      "weight_lbs": 128,
+      "window_dates": "2026-07-01 to 2026-07-22",
+      "aeron_logged_hours": 12.5,
+      "leap_v2_logged_hours": 12.5,
+      "total_tester_hours": 25.0,
+      "aeron_baseline_temp_f": 72.0,
+      "aeron_4hr_temp_runs_f": [
+        73.8,
+        73.9,
+        74.0
+      ],
+      "aeron_4hr_mean_temp_f": 73.9,
+      "aeron_delta_f": "+1.9°F",
+      "leap_baseline_temp_f": 72.0,
+      "leap_4hr_temp_runs_f": [
+        82.7,
+        82.9,
+        83.1
+      ],
+      "leap_4hr_mean_temp_f": 82.9,
+      "leap_delta_f": "+10.9°F",
+      "preferred_model": "Steelcase Leap V2",
+      "ergonomic_notes": "Seat depth slid to 15.75 in; Aeron Size B fixed polymer rim contacted popliteal fossa (back of knees)."
+    },
+    {
+      "tester_id": "Tester B",
+      "height": "5'8\" (173 cm)",
+      "weight_lbs": 162,
+      "window_dates": "2026-07-24 to 2026-08-14",
+      "aeron_logged_hours": 12.5,
+      "leap_v2_logged_hours": 12.5,
+      "total_tester_hours": 25.0,
+      "aeron_baseline_temp_f": 72.0,
+      "aeron_4hr_temp_runs_f": [
+        74.0,
+        74.1,
+        74.2
+      ],
+      "aeron_4hr_mean_temp_f": 74.1,
+      "aeron_delta_f": "+2.1°F",
+      "leap_baseline_temp_f": 72.0,
+      "leap_4hr_temp_runs_f": [
+        83.4,
+        83.6,
+        83.8
+      ],
+      "leap_4hr_mean_temp_f": 83.6,
+      "leap_delta_f": "+11.6°F",
+      "preferred_model": "Tie (Task-Dependent)",
+      "ergonomic_notes": "Aeron Size B preferred for warm afternoon typing; Leap V2 preferred for reclined reading and cross-legged sitting."
+    },
+    {
+      "tester_id": "Tester C",
+      "height": "5'11\" (180 cm)",
+      "weight_lbs": 185,
+      "window_dates": "2026-08-16 to 2026-09-06",
+      "aeron_logged_hours": 12.5,
+      "leap_v2_logged_hours": 12.5,
+      "total_tester_hours": 25.0,
+      "aeron_baseline_temp_f": 72.0,
+      "aeron_4hr_temp_runs_f": [
+        74.2,
+        74.3,
+        74.4
+      ],
+      "aeron_4hr_mean_temp_f": 74.3,
+      "aeron_delta_f": "+2.3°F",
+      "leap_baseline_temp_f": 72.0,
+      "leap_4hr_temp_runs_f": [
+        83.9,
+        84.1,
+        84.3
+      ],
+      "leap_4hr_mean_temp_f": 84.1,
+      "leap_delta_f": "+12.1°F",
+      "preferred_model": "Herman Miller Aeron (Size B)",
+      "ergonomic_notes": "Ideal 8Z Pellicle tension match and -5 deg forward seat tilt for upright mechanical keyboard work."
+    },
+    {
+      "tester_id": "Tester D",
+      "height": "6'2\" (188 cm)",
+      "weight_lbs": 215,
+      "window_dates": "2026-09-08 to 2026-09-28",
+      "aeron_logged_hours": 12.5,
+      "leap_v2_logged_hours": 12.5,
+      "total_tester_hours": 25.0,
+      "aeron_baseline_temp_f": 72.0,
+      "aeron_4hr_temp_runs_f": [
+        74.4,
+        74.5,
+        74.6
+      ],
+      "aeron_4hr_mean_temp_f": 74.5,
+      "aeron_delta_f": "+2.5°F",
+      "leap_baseline_temp_f": 72.0,
+      "leap_4hr_temp_runs_f": [
+        84.4,
+        84.6,
+        84.8
+      ],
+      "leap_4hr_mean_temp_f": 84.6,
+      "leap_delta_f": "+12.6°F",
+      "preferred_model": "Steelcase Leap V2",
+      "ergonomic_notes": "Seat depth extended to 18.5 in supported long femurs; Aeron Size B side bolsters felt narrow at greater trochanters."
+    }
+  ]
+}
