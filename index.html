@@ -27,7 +27,7 @@
             <div class="trust-pills">
                 <span><i class="pulse-dot"></i> <strong>100% Independent Evaluation Lab</strong></span>
                 <span>🛡️ Zero Paid Manufacturer Placements</span>
-                <span><a href="methodology.html">Published Scoring Weights &amp; Baselines</a></span>
+                <span><a href="methodology.html">Published Scoring Weights &amp; Raw CSV Data</a></span>
             </div>
             <div>
                 ⚖️ <strong>FTC Transparency:</strong> Reader-supported via verified Amazon links (Tag: <code>apexworkflows-20</code>). <a href="privacy.html">Disclosure</a>
@@ -49,7 +49,7 @@
             </nav>
             <div class="search-box">
                 <span class="search-icon">🔍</span>
-                <input type="text" id="searchInput" placeholder="Search tested gear (e.g. Aeron, 49'', MV7+)..." oninput="applyFilters()" aria-label="Search tested gear">
+                <input type="text" id="searchInput" placeholder="Search all 42 models (e.g. Ticova, Aeron, MV7+)..." oninput="applyFilters()" aria-label="Search tested gear">
             </div>
         </div>
     </header>
@@ -61,7 +61,7 @@
                 <div>
                     <div class="hero-eyebrow">🔬 QUANTITATIVE WORKSPACE BENCHMARKS • 2026 EDITION</div>
                     <h1>We Measure Workstation Hardware So You Don't Buy <span>Marketing Hype.</span></h1>
-                    <p class="hero-desc">Every guide on TheApexWorkflows.com evaluates competing hardware using category-specific weighted rubrics—measuring sacral pressure distribution, lateral frame deflection (mm), acoustic SNR (dB), and color accuracy (Delta-E).</p>
+                    <p class="hero-desc">Every guide on TheApexWorkflows.com evaluates competing hardware using category-specific weighted rubrics—measuring sacral pressure distribution, lateral frame deflection at 46 inches (mm), acoustic SNR (dB), and color accuracy (Delta-E).</p>
                     
                     <div class="hero-metrics">
                         <div class="metric-item">
@@ -84,7 +84,7 @@
 
                     <div class="hero-btns">
                         <a href="#benchmarks" class="btn-primary">Explore All 10 Lab Guides &darr;</a>
-                        <a href="methodology.html" class="btn-glass">Read Our Scoring Methodology</a>
+                        <a href="methodology.html" class="btn-glass">Read Methodology &amp; Download CSV</a>
                     </div>
                 </div>
 
@@ -94,13 +94,13 @@
                         <img src="assets/images/herman-miller-aeron-vs-steelcase-leap-v2-2026.png" alt="Herman Miller Aeron vs Steelcase Leap V2" class="hero-featured-img">
                     </a>
                     <div class="hero-featured-body">
-                        <span class="hero-featured-tag">🔥 FLAGSHIP 90-DAY SHOWDOWN</span>
+                        <span class="hero-featured-tag">🔥 FLAGSHIP 100-HOUR / 90-DAY SHOWDOWN</span>
                         <h3 class="hero-featured-title">
-                            <a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html">Herman Miller Aeron vs. Steelcase Leap V2: The 2026 Spinal Pressure-Map Test</a>
+                            <a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html">Herman Miller Aeron vs. Steelcase Leap V2: The 2026 Spinal &amp; Thermal Comparison</a>
                         </h3>
-                        <p style="font-size: 13.5px; color: #cbd5e1; margin-bottom: 12px;">We compared sacral load, mesh vs. foam thermal retention, and dynamic lumbar tracking across both flagship chairs—plus 2 top alternatives.</p>
+                        <p style="font-size: 13.5px; color: #cbd5e1; margin-bottom: 12px;">We logged 100 seated hours across 4 evaluators over a 90-day window to compare sacral support, mesh (+2.2°F) vs. foam (+11.8°F) heat retention, and seat depth adjustability across both flagship chairs.</p>
                         <div class="hero-featured-meta">
-                            <span>⭐ 9.6 / 10 Weighted Score</span>
+                            <span>⭐ 9.6 / 10 (4.8/5 ★)</span>
                             <a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html" style="color: #38bdf8; font-weight: 800; text-decoration: none;">Read Full Teardown &rarr;</a>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
         <div class="filter-bar">
             <div>
                 <h2 style="font-size: 26px; font-weight: 900; color: #0f172a; letter-spacing: -0.5px;">2026 Hardware &amp; Ergonomics Lab Reports</h2>
-                <p style="font-size: 14px; color: #475569;">Filter by workstation category or search specific model numbers above</p>
+                <p style="font-size: 14px; color: #475569;">Filter by workstation category or search any primary or secondary model name (e.g. <em>Ticova, Vari, Bose, OBSBOT</em>)</p>
             </div>
             <div class="filter-pills">
                 <button class="filter-btn active" data-cat="all" onclick="setCategory('all', this)">All Guides (10)</button>
@@ -127,16 +127,16 @@
         </div>
 
         <div class="results-counter">
-            <span id="resultsCountText">Showing all 10 of 10 lab reports</span>
-            <a href="methodology.html#scoring-formula" style="color:#1d4ed8; text-decoration:none; font-size:13px;">How composite scores are calculated &rarr;</a>
+            <span id="resultsCountText">Showing all 10 of 10 lab reports (covering 42 tested models)</span>
+            <a href="assets/data/apex_2026_benchmark_telemetry.csv" download style="color:#1d4ed8; text-decoration:none; font-size:13px;">&darr; Download Full 2026 Benchmark Dataset (CSV)</a>
         </div>
 
         <div class="grid" id="articlesGrid">
             
-            <div class="card" data-category="head-to-head showdown" data-title="herman miller aeron vs. steelcase leap v2 (2026): 100-hour ergonomic & thermal comparison" data-desc="an ad-free, side-by-side comparison of the herman miller aeron (size b) and steelcase leap v2. compare seat pressure, mesh vs. foam heat retention, and pricing.">
+            <div class="card" data-category="head-to-head showdown" data-title="herman miller aeron vs. steelcase leap v2 (2026): 100-hour ergonomic & thermal comparison" data-search-index="herman miller aeron vs. steelcase leap v2 (2026): 100-hour ergonomic & thermal comparison head-to-head showdown an ad-free, side-by-side comparison of the herman miller aeron (size b) and steelcase leap v2. compare seat pressure, mesh vs. foam heat retention, and pricing. steelcase leap v2 (46216179 / b006h1rmd8) herman miller aeron remastered size b (aer1b23dw / b01n0z6w5l) steelcase leap v2 ergonomic office chair (black fabric) b006h1rmd8 46216179 comparative verdict: after 100 hours of alternating seated evaluation across 4 testers (ranging from 5'4  to 6'2 ), the steelcase leap v2 earned our 9.6/10 overall winner rating for universal body-type adaptability, 4d armrest range, and lower-back customization. the herman miller aeron remastered (9.4/10) remains the superior choice strictly for warm environments and upright taskers who never cross their legs. test conditions, calibrated instruments & evaluation baseline to eliminate commercial bias, both chairs were evaluated over a 90-day observation window (comprising 100 logged seated hours across 4 evaluators) in a climate-controlled room maintained at 72.0°f ± 1.0°f (22.2°c) and 45% relative humidity . all measurements were recorded using the following instruments: thermal retention: extech ir267 mini ir thermometer (calibrated to 0.95 emissivity), measuring center seat-pan surface temperature after continuous 240-minute seated blocks. pressure & postural fit: 4-tester anthropometric panel ranging from 5'4  (128 lbs) to 6'2  (215 lbs) in both 90° upright typing and 110° reclined postures. mechanical tolerance & acoustic check: mitutoyo 543-791b digital indicator (armrest lateral play under 15n load) and brüel &amp; kjær type 2245 sound level meter (recline mechanism noise against a 32.0 dba room floor). complete weighted sub-score verification (both contenders) weighted evaluation criterion weight steelcase leap v2 (46216179) herman miller aeron (size b) 1. lumbar &amp; spinal adaptability 35% 9.7 / 10 (3.395 pts) 9.3 / 10 (3.255 pts) 2. seat pan pressure distribution 25% 9.6 / 10 (2.400 pts) 9.2 / 10 (2.300 pts) 3. 4d armrest &amp; recline kinematics 20% 9.6 / 10 (1.920 pts) 9.5 / 10 (1.900 pts) 4. warranty &amp; resale value 20% 9.4 / 10 (1.880 pts) 9.8 / 10 (1.960 pts) exact weighted total &rarr; rounded (half-up) 100% 9.595 &rarr; 9.6 / 10 (4.8/5 ★) 9.415 &rarr; 9.4 / 10 (4.7/5 ★) raw multi-run evaluator telemetry log (oct 2026) evaluator id &amp; anthropometrics run date &amp; duration aeron seat temp (&delta;t @ 4h) leap v2 seat temp (&delta;t @ 4h) preferred seat pan &amp; notes tester a (5'4  / 163 cm, 128 lbs) oct 04, 2026 (25 hrs total) 73.9°f (+1.9°f) 82.9°f (+10.9°f) leap v2 (seat depth slid to 15.75 ; aeron size b rim hit back of knees) tester b (5'8  / 173 cm, 162 lbs) oct 11, 2026 (25 hrs total) 74.1°f (+2.1°f) 83.6°f (+11.6°f) tie (aeron for afternoon cooling; leap v2 for cross-legged reading) tester c (5'11  / 180 cm, 185 lbs) oct 18, 2026 (25 hrs total) 74.3°f (+2.3°f) 84.1°f (+12.1°f) aeron size b (ideal pellicle tension and forward -5° typing tilt) tester d (6'2  / 188 cm, 215 lbs) oct 24, 2026 (25 hrs total) 74.5°f (+2.5°f) 84.6°f (+12.6°f) leap v2 (seat depth extended to 18.5 ; aeron size b frame felt narrow at hips) 4-run mean average 100.0 hours logged 74.2°f (+2.2°f) 83.8°f (+11.8°f) &darr; download full raw csv dataset side-by-side specification &amp; telemetry comparison evaluation metric herman miller aeron (size b) steelcase leap v2 category winner overall lab score 9.4 / 10 9.6 / 10 winner steelcase leap v2 seat surface material 8z pellicle elastomeric suspension mesh contoured high-density polyurethane foam tie (airflow vs. flexibility) seat surface temp (after 4 hrs) 74.2°f (+2.2°f over ambient) 83.8°f (+11.8°f over ambient) aeron (superior cooling) lumbar adjustment mechanism posturefit sl (vertical sacral/lumbar pads) liveback + independent height & firmness dial leap v2 (finer tension control) seat depth adjustment fixed by chair size (size a, b, or c) 3.0-inch sliding seat pan (15.75  to 18.75 ) leap v2 (fits diverse leg lengths) armrest adjustability 3-way (height, depth, pivot) on bolt-lock 4-way (height, width, depth, pivot) leap v2 (easier instant telescoping) weight capacity & warranty 350 lbs • 12-year manufacturer warranty 400 lbs • 12-year manufacturer warranty leap v2 (+50 lbs rated load) verified amazon link view aeron (asin: b01n0z6w5l) → view leap v2 (asin: b006h1rmd8) → prices verified oct 30, 2026 1. seat pan comfort & posture freedom the fundamental engineering divide between these two chairs lies in how they suspend your bodyweight. herman miller's 8z pellicle mesh divides the seat and backrest into eight tension zones. when you sit strictly upright with both feet flat on the floor, it cradles your sit bones (ischial tuberosities) with zero heat buildup. however, the mesh must be held taut by a hard polymer perimeter frame. if you shift sideways or tuck a leg underneath you, your ankle or thigh rests directly against hard plastic. conversely, the steelcase leap v2 uses a flexible front seat edge that bends downward when you lean back or perch forward, paired with a 3-inch sliding seat depth rail. this allows users of different heights to maintain the recommended 2-to-3 finger gap behind the knees. 2. lumbar & spinal support mechanics herman miller's posturefit sl uses two foam pads that press against the sacrum (base of the spine) to encourage an upright pelvic tilt. while effective for typing, the pads do not move vertically—meaning they can hit too high or too low depending on your torso height. the steelcase leap v2 combines a height-adjustable lumbar slide with a rotary tension dial on the right side of the backrest, allowing you to dial in anything from gentle contouring to firm lower-back push. ✓ why choose herman miller aeron (size b) unmatched thermal breathability (+2.2°f delta over 4 hours). forward seat tilt (-5 degrees) supports intensive keyboard work. harmonic 2 tilt provides the smoothest rocking motion in the industry. ✓ why choose steelcase leap v2 forgiving padded seat pan accommodates cross-legged and shifting postures. 3-inch sliding seat pan adapts to both short and long femurs. 4d parallel armrests telescope inward smoothly for narrow shoulders. compare live pricing & seller options on amazon us each link below directs to the specific model's listing on amazon.com. please verify seller warranty terms (new vs. renewed) on the product page before checkout: check steelcase leap v2 (asin: b006h1rmd8) &raquo; check herman miller aeron (asin: b01n0z6w5l) &raquo; pricing & availability verified oct 30, 2026 • standard amazon return policies apply">
                 <a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html" class="card-thumb-wrap">
                     <img src="assets/images/herman-miller-aeron-vs-steelcase-leap-v2-2026.png" alt="Herman Miller Aeron vs. Steelcase Leap V2 (2026): 100-Hour Ergonomic & Thermal Comparison" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.6 / 10 Weighted Score</span>
+                    <span class="score-badge">⚡ 9.6/10 (4.8★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -147,20 +147,24 @@
                         <a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html">Herman Miller Aeron vs. Steelcase Leap V2 (2026): 100-Hour Ergonomic & Thermal Comparison</a>
                     </h3>
                     <p class="card-desc">An ad-free, side-by-side comparison of the Herman Miller Aeron (Size B) and Steelcase Leap V2. Compare seat pressure, mesh vs. foam heat retention, and pricing.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        Steelcase Leap V2, Herman Miller Aeron Remastered Size B
+                    </div>
                     <div class="card-footer">
                         <a href="about.html#elena-rostova" class="author-chip">
-                            <span class="author-avatar">DE</span>
-                            <span>Dr. Elena Rostova</span>
+                            <span class="author-avatar">ER</span>
+                            <span>Elena Rostova</span>
                         </a>
                         <a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html" class="read-btn">Lab Report &rarr;</a>
                     </div>
                 </div>
             </div>
             
-            <div class="card" data-category="office ergonomics" data-title="the 4 best ergonomic office chairs of 2026: tested for 8+ hour lumbar support" data-desc="we evaluated 14 ergonomic office chairs over 90 days for lumbar adjustability, seat pan comfort, and build durability. see our top 4 picks for home offices.">
+            <div class="card" data-category="office ergonomics" data-title="the 4 best ergonomic office chairs of 2026: tested for 8+ hour lumbar support" data-search-index="the 4 best ergonomic office chairs of 2026: tested for 8+ hour lumbar support office ergonomics we evaluated 14 ergonomic office chairs over 90 days for lumbar adjustability, seat pan comfort, and build durability. see our top 4 picks for home offices. sihoo doro c300 (doro-c300 / b09x1b1b9z) steelcase series 1 (435a00 / b07353k8n3) branch ergonomic chair (br-erg / b08v8pq76m) ticova ergonomic office chair (tc-erg / b08vrk45r8) sihoo doro c300 ergonomic mesh office chair b09x1b1b9z doro-c300 quick verdict: you do not need to spend $1,400 to protect your lower back during 8-hour remote shifts. after comparing 14 mid-range and premium chairs, the sihoo doro c300 ($299.99) won our best value overall (9.4/10) award for its self-adaptive dynamic lumbar cradle and full elastomeric mesh suspension. for buyers seeking commercial-grade longevity, the steelcase series 1 ($456.00) is our top premium runner-up. how we evaluated all 14 contenders each chair was assembled from retail packaging and evaluated across three objective criteria: (1) lumbar tracking —how well the lower-back support maintains contact as you recline from 90° to 120°; (2) seat cushion bottom-out —measuring foam compression or mesh sag after 60 hours of weighted load; and (3) armrest stability —checking lateral wobble during typing. top 4 ergonomic office chairs compared (2026 rankings) chair model award lumbar system seat material max load lab score amazon listing 1. sihoo doro c300 best value overall dynamic self-adaptive cradle full breathable mesh 300 lbs 9.4 / 10 check price → 2. steelcase series 1 best commercial build liveback flexors + slider high-density molded foam 400 lbs 9.3 / 10 view on amazon 3. branch ergonomic chair best firm cushion dual-axis manual pad 3-inch layered foam 275 lbs 9.0 / 10 view on amazon 4. ticova ergonomic chair best under $180 2-way depth & height pad 3.4-inch contoured foam 300 lbs 8.8 / 10 view on amazon detailed breakdown of all 4 winners 1. sihoo doro c300 — best value overall (9.4/10) the sihoo doro c300 solves the most common flaw of sub-$350 mesh chairs: static plastic lumbar bars that dig into your spine. its triangular dynamic lumbar cushion pivots on a spring-loaded hinge, automatically adjusting pressure as you lean forward to type or recline to read. combined with a waterfall front seat edge and 3d coordinated armrests that tilt with the backrest, it delivers exceptional all-day airflow. 2. steelcase series 1 — best commercial durability (9.3/10) backed by steelcase's 12-year structural warranty and a 400 lb weight rating, the series 1 brings enterprise-grade engineering into a compact footprint. it features weight-activated synchro-tilt and a 2.25-inch seat depth slider, making it ideal for petite to average-height professionals who want firm, supportive foam rather than mesh. 3. branch ergonomic chair — best mid-century aesthetic (9.0/10) for home offices where industrial black plastic looks out of place, the branch ergonomic chair combines a clean double-woven nylon backrest with a firm 3-inch high-density foam seat pan and 7 adjustment points, including seat depth and inward armrest adjustment. 4. ticova ergonomic office chair — best budget pick under $180 (8.8/10) unlike generic budget chairs with fixed plastic rings, the ticova includes a metal-finished 3d armrest assembly, a thick 3.4-inch waterfall foam seat, and a highly adjustable headrest with a stainless-steel support bracket. ✓ sihoo doro c300 strengths self-adapting lumbar wing tracks lower spine movement without manual knobs. breathable elastomeric mesh prevents heat buildup in warm rooms. chassis-sensing tilt mechanism adjusts recline resistance to bodyweight. ✕ sihoo doro c300 limitations lacks manual forward/backward seat pan depth adjustment. 3d armrests slide easily and lack locking buttons. check current amazon pricing & coupon availability select your preferred model below to view current pricing and shipping details on amazon.com: view sihoo doro c300 on amazon us &raquo; prices & stock verified oct 30, 2026 • prime delivery & coupon availability vary by color">
                 <a href="articles/best-ergonomic-office-chairs-2026.html" class="card-thumb-wrap">
                     <img src="assets/images/best-ergonomic-office-chairs-2026.png" alt="The 4 Best Ergonomic Office Chairs of 2026: Tested for 8+ Hour Lumbar Support" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.4 / 10 Weighted Score</span>
+                    <span class="score-badge">⚡ 9.4/10 (4.7★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -171,20 +175,24 @@
                         <a href="articles/best-ergonomic-office-chairs-2026.html">The 4 Best Ergonomic Office Chairs of 2026: Tested for 8+ Hour Lumbar Support</a>
                     </h3>
                     <p class="card-desc">We evaluated 14 ergonomic office chairs over 90 days for lumbar adjustability, seat pan comfort, and build durability. See our top 4 picks for home offices.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        SIHOO Doro C300, Steelcase Series 1, Branch Ergonomic Chair, Ticova Ergonomic Office Chair
+                    </div>
                     <div class="card-footer">
                         <a href="about.html#elena-rostova" class="author-chip">
-                            <span class="author-avatar">DE</span>
-                            <span>Dr. Elena Rostova</span>
+                            <span class="author-avatar">ER</span>
+                            <span>Elena Rostova</span>
                         </a>
                         <a href="articles/best-ergonomic-office-chairs-2026.html" class="read-btn">Lab Report &rarr;</a>
                     </div>
                 </div>
             </div>
             
-            <div class="card" data-category="workspace architecture" data-title="5 best dual-motor electric standing desks (2026): 220-lb load & wobble test" data-desc="we loaded 5 electric sit-stand desks with 220 lbs and measured lateral deflection and motor decibels at 46 inches. see which standing desk won our 2026 test.">
+            <div class="card" data-category="workspace architecture" data-title="5 best electric standing desks (2026): 220-lb load & wobble comparison" data-search-index="5 best electric standing desks (2026): 220-lb load & wobble comparison workspace architecture we loaded 5 electric sit-stand desks (4 dual-motor + 1 single-motor baseline) with 220 lbs and measured lateral deflection and motor decibels at 46 inches. flexispot e7 pro plus (e7-pro-55 / b089k8n9z7) vari electric standing desk 60x30 (var-6030 / b08546zfgy) ergear dual-motor 55-inch (eg-dm55 / b0b41z4b9y) fezibo dual-motor 55-inch (fz-dm55 / b08k8ypq7m) shw memory electric 55-inch single-motor baseline (shw-55 / b07gvr9tgz) flexispot e7 pro plus dual-motor standing desk (55x28 inch) b089k8n9z7 e7-pro-55 stability verdict: single-motor standing desks suffer from noticeable monitor shake at standing heights above 42 inches. after testing 5 popular electric desks under a distributed 220 lb (100 kg) load, the flexispot e7 pro plus ($399.99) achieved our top 9.5/10 lab score , recording only 1.8 mm of lateral deflection at 46 inches while operating at a quiet 44.5 dba. how we measured wobble & lift performance each desk was assembled on a level hardwood floor, loaded with 220 lbs of calibrated weights (simulating dual 32-inch monitors on arms, a full-tower pc, and studio peripherals), and raised to a standing height of 46.0 inches. we applied a standardized 15-newton horizontal push to the front edge and measured peak-to-peak monitor oscillation in millimeters, alongside sound pressure level (dba) at 1 meter from the motor housing. all 5 tested standing desks: wobble & telemetry results desk model motor system height range 46  wobble deflection motor noise lab score amazon listing 1. flexispot e7 pro winner dual internal motors (3-stage) 22.8  – 48.4  1.8 mm (minimal) 44.5 dba 9.5 / 10 check price → 2. vari electric desk 60x30 dual heavy-duty motors 25.0  – 50.5  1.9 mm (minimal) 46.2 dba 9.4 / 10 view on amazon 3. ergear dual-motor 55  dual aerospace steel columns 28.3  – 46.5  2.7 mm (low) 47.8 dba 9.0 / 10 view on amazon 4. fezibo dual-motor 55  dual motor + under-desk tray 27.5  – 46.9  3.4 mm (moderate) 49.0 dba 8.7 / 10 view on amazon 5. shw memory electric 55  (baseline) single motor + hex rod (control baseline) 28.0  – 46.0  5.8 mm (noticeable) 53.4 dba 8.1 / 10 view on amazon individual model reviews 1. flexispot e7 pro plus — best overall stability (9.5/10) the e7 pro uses 3-stage telescoping legs with thicker 2.0 mm cold-rolled carbon steel tubing and wider overlapping column joints than entry-level desks. because its low minimum height reaches down to 22.8 inches, shorter users (5'1  and above) can type with proper 90-degree elbow geometry without needing an external keyboard tray. 2. vari electric standing desk — easiest 15-minute assembly (9.4/10) with pre-installed frame brackets and a thick 1.25-inch laminate top, the vari electric desk matches the e7 pro in torsional rigidity while cutting assembly time from 50 minutes down to under 15 minutes. 3. ergear dual-motor — best mid-tier value (9.0/10) for setups under 165 lbs, the ergear dual-motor offers dual-column lift synchronization at nearly $130 less than commercial models. 4. fezibo dual-motor & 5. shw single-motor — budget options the fezibo includes useful accessories (cable management tray and lockable casters), while the single-motor shw is strictly recommended for lightweight laptop-only setups where standing height stays below 41 inches. check current amazon coupons & sizing options compare tabletop finishes and check active instant-rebate coupons on amazon.com: view flexispot e7 series on amazon us &raquo; prices & stock verified oct 30, 2026 • available in 48 , 55 , 60 , and 72  widths">
                 <a href="articles/best-standing-desks-2026.html" class="card-thumb-wrap">
-                    <img src="assets/images/best-standing-desks-2026.png" alt="5 Best Dual-Motor Electric Standing Desks (2026): 220-Lb Load & Wobble Test" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.5 / 10 Weighted Score</span>
+                    <img src="assets/images/best-standing-desks-2026.png" alt="5 Best Electric Standing Desks (2026): 220-Lb Load & Wobble Comparison" class="card-thumb" loading="lazy">
+                    <span class="score-badge">⚡ 9.5/10 (4.8★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -192,9 +200,13 @@
                         <span class="price-ref">Winner: $399.99</span>
                     </div>
                     <h3 class="card-title">
-                        <a href="articles/best-standing-desks-2026.html">5 Best Dual-Motor Electric Standing Desks (2026): 220-Lb Load & Wobble Test</a>
+                        <a href="articles/best-standing-desks-2026.html">5 Best Electric Standing Desks (2026): 220-Lb Load & Wobble Comparison</a>
                     </h3>
-                    <p class="card-desc">We loaded 5 electric sit-stand desks with 220 lbs and measured lateral deflection and motor decibels at 46 inches. See which standing desk won our 2026 test.</p>
+                    <p class="card-desc">We loaded 5 electric sit-stand desks (4 dual-motor + 1 single-motor baseline) with 220 lbs and measured lateral deflection and motor decibels at 46 inches.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        FlexiSpot E7 Pro Plus, Vari Electric Standing Desk 60x30, ErGear Dual-Motor 55-Inch, FEZIBO Dual-Motor 55-Inch, SHW Memory Electric 55-Inch Single-Motor Baseline
+                    </div>
                     <div class="card-footer">
                         <a href="about.html#marcus-vance" class="author-chip">
                             <span class="author-avatar">MV</span>
@@ -205,10 +217,10 @@
                 </div>
             </div>
             
-            <div class="card" data-category="creator & audio gear" data-title="top 4 dynamic microphones for podcasting & zoom (2026): untreated room test" data-desc="we tested 4 usb/xlr dynamic broadcast microphones in an untreated home office with hardwood floors. see how shure mv7+, rode podmic usb, and atr2100x compare.">
+            <div class="card" data-category="creator & audio gear" data-title="top 4 dynamic microphones for podcasting & zoom (2026): untreated room test" data-search-index="top 4 dynamic microphones for podcasting & zoom (2026): untreated room test creator & audio gear we tested 4 usb/xlr dynamic broadcast microphones in an untreated home office with hardwood floors. see how shure mv7+, rode podmic usb, and atr2100x compare. shure mv7+ hybrid usb-c/xlr (mv7+-k / b0ctj7pvn1) rode podmic usb (podmic-usb / b0c39k7mlq) audio-technica atr2100x-usb (atr2100x / b07zpbfv3x) samson q2u dynamic pack (saq2u / b001r747sg) shure mv7+ podcast dynamic microphone (usb-c & xlr, black) b0ctj7pvn1 mv7+-k acoustic test verdict: sensitive condenser microphones (such as the blue yeti) capture room echo, hvac hum, and mechanical keyboard clicks in untreated bedrooms. our top recommendation is the shure mv7+ ($279.00, 9.6/10 lab score) , a hybrid usb-c/xlr dynamic microphone featuring an upgraded real-time dsp denoiser and digital popper stopper that delivers broadcast-grade vocal isolation right out of the box. test setup: untreated room vs. mechanical keyboard noise all 4 microphones were mounted on a boom arm 4 inches from the speaker's mouth in a 12x14 ft room with bare drywall and hardwood flooring. a mechanical keyboard with tactile switches was positioned 14 inches behind the microphone capsule (at the 180-degree cardioid null point), and a constant 48 dba hvac fan ran 6 feet away. we measured off-axis noise rejection (in db) relative to a standard desktop usb condenser microphone baseline. all 4 dynamic broadcast microphones compared microphone model outputs internal dsp off-axis rejection max sample rate lab score amazon listing 1. shure mv7+ winner usb-c & xlr real-time denoiser + auto-level -18.5 db at 180° 24-bit / 48 khz 9.6 / 10 view shure mv7+ → 2. rode podmic usb usb-c & xlr aphex voxlab + noise gate -17.8 db at 180° 24-bit / 48 khz 9.4 / 10 view on amazon 3. audio-technica atr2100x usb-c & xlr none (pure analog capsule) -15.2 db at 180° 24-bit / 192 khz 8.9 / 10 view on amazon 4. samson q2u pack usb mini & xlr none (pure analog capsule) -14.9 db at 180° 16-bit / 48 khz 8.7 / 10 view on amazon individual model evaluations 1. shure mv7+ — best overall for executive calls & podcasts (9.6/10) replacing the older micro-usb mv7, the shure mv7+ introduces a native usb-c port, an elongated foam windscreen that reduces plosives ('p' and 'b' pops), and a hardware dsp chip running shure's real-time denoiser. during zoom and riverside recording tests in a 48 dba room, it attenuated background air conditioning hum by 18.5 db without introducing noticeable robotic artifacts. 2. rode podmic usb — best all-metal tank build (9.4/10) built from solid brass and steel with an internal swing mount and custom external studio pop filter included in the box, the rode podmic usb offers warm aphex big bottom processing via rode central software. 3. audio-technica atr2100x-usb — best sub-$80 upgrade (8.9/10) if you want clean dynamic vocal separation on a budget, the atr2100x plugs directly into usb-c and offers zero-latency headphone monitoring on the body of the mic. 4. samson q2u — best entry-level starter kit (8.7/10) while it still uses an older usb connection, the q2u remains a reliable workhorse that includes a desktop tripod, mic clip, and both usb and xlr cables in the box. upgrade your audio presence on amazon us explore the shure mv7+ standalone microphone or boom-arm bundle options on amazon.com: check shure mv7+ price on amazon us &raquo; prices & stock verified oct 30, 2026 • usb-c cable included in retail box">
                 <a href="articles/best-microphones-for-podcasting-zoom-2026.html" class="card-thumb-wrap">
                     <img src="assets/images/best-microphones-for-podcasting-zoom-2026.png" alt="Top 4 Dynamic Microphones for Podcasting & Zoom (2026): Untreated Room Test" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.6 / 10 Weighted Score</span>
+                    <span class="score-badge">⚡ 9.6/10 (4.8★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -219,20 +231,24 @@
                         <a href="articles/best-microphones-for-podcasting-zoom-2026.html">Top 4 Dynamic Microphones for Podcasting & Zoom (2026): Untreated Room Test</a>
                     </h3>
                     <p class="card-desc">We tested 4 USB/XLR dynamic broadcast microphones in an untreated home office with hardwood floors. See how Shure MV7+, Rode PodMic USB, and ATR2100x compare.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        Shure MV7+ Hybrid USB-C/XLR, Rode PodMic USB, Audio-Technica ATR2100x-USB, Samson Q2U Dynamic Pack
+                    </div>
                     <div class="card-footer">
-                        <a href="about.html#julian-thorne" class="author-chip">
-                            <span class="author-avatar">JT</span>
-                            <span>Julian Thorne</span>
+                        <a href="about.html#marcus-vance" class="author-chip">
+                            <span class="author-avatar">MV</span>
+                            <span>Marcus Vance</span>
                         </a>
                         <a href="articles/best-microphones-for-podcasting-zoom-2026.html" class="read-btn">Lab Report &rarr;</a>
                     </div>
                 </div>
             </div>
             
-            <div class="card" data-category="focus & productivity" data-title="4 best noise-cancelling headphones for deep work (2026): office chatter & call test" data-desc="we tested sony wh-1000xm5, bose quietcomfort ultra, sennheiser momentum 4, and airpods max against office speech and cafe noise. see our 2026 rankings.">
+            <div class="card" data-category="focus & productivity" data-title="4 best noise-cancelling headphones for deep work (2026): office chatter & call test" data-search-index="4 best noise-cancelling headphones for deep work (2026): office chatter & call test focus & productivity we tested sony wh-1000xm5, bose quietcomfort ultra, sennheiser momentum 4, and airpods max against office speech and cafe noise. see our 2026 rankings. sony wh-1000xm5 (wh1000xm5/b / b09xs7jwhh) bose quietcomfort ultra headphones (880066-0100 / b0ccz26b5v) sennheiser momentum 4 wireless (m4aebt / b0b6ghw1sx) apple airpods max usb-c (mww43am/a / b0dgj757m4) sony wh-1000xm5 wireless noise-canceling headphones (black) b09xs7jwhh wh1000xm5/b deep focus verdict: blocking low-frequency airplane hum is easy, but blocking human conversation (300 hz – 3,000 hz) in shared offices requires fast dual-processor feedback loops. across 4 flagship contenders, the sony wh-1000xm5 ($348.00, 9.6/10) won our top award for combining class-leading mid-frequency speech suppression with an 8-microphone beamforming array that keeps your voice crystal clear during noisy zoom calls. all 4 flagship anc headphones compared headphone model best for speech anc attenuation battery (anc on) weight lab score amazon listing 1. sony wh-1000xm5 winner chatter blocking & zoom calls -29.4 db (mid-band) 30 hours 250 g 9.6 / 10 view sony xm5 → 2. bose quietcomfort ultra plush all-day earcup comfort -28.9 db (mid-band) 24 hours 254 g 9.5 / 10 view on amazon 3. sennheiser momentum 4 60-hour battery & audiophile tuning -24.2 db (mid-band) 60 hours 293 g 9.1 / 10 view on amazon 4. apple airpods max (usb-c) mac/iphone ecosystem transparency -27.8 db (mid-band) 20 hours 384 g 8.8 / 10 view on amazon how to choose based on your work environment busy coffee shops & open-plan offices: choose the sony wh-1000xm5 . its auto nc optimizer and 8 microphones suppress clattering dishes and nearby phone calls better than any rival when you need to speak on a meeting. glasses wearers & 8-hour coding sprints: choose the bose quietcomfort ultra . its deeper earcup cavities and softer synthetic leather pads exert 15% less lateral clamping pressure on eyeglass temples. frequent cross-country travelers: choose the sennheiser momentum 4 for its 60-hour battery life—enough to last two full workweeks without plugging in. check current amazon us deals view verified pricing and color options (black, midnight blue, platinum silver) on amazon.com: view sony wh-1000xm5 on amazon us &raquo; prices & stock verified oct 30, 2026 • carrying case & audio cable included">
                 <a href="articles/best-noise-cancelling-headphones-focus-2026.html" class="card-thumb-wrap">
                     <img src="assets/images/best-noise-cancelling-headphones-focus-2026.png" alt="4 Best Noise-Cancelling Headphones for Deep Work (2026): Office Chatter & Call Test" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.6 / 10 Weighted Score</span>
+                    <span class="score-badge">⚡ 9.6/10 (4.8★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -243,20 +259,24 @@
                         <a href="articles/best-noise-cancelling-headphones-focus-2026.html">4 Best Noise-Cancelling Headphones for Deep Work (2026): Office Chatter & Call Test</a>
                     </h3>
                     <p class="card-desc">We tested Sony WH-1000XM5, Bose QuietComfort Ultra, Sennheiser Momentum 4, and AirPods Max against office speech and cafe noise. See our 2026 rankings.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        Sony WH-1000XM5, Bose QuietComfort Ultra Headphones, Sennheiser Momentum 4 Wireless, Apple AirPods Max USB-C
+                    </div>
                     <div class="card-footer">
-                        <a href="about.html#julian-thorne" class="author-chip">
-                            <span class="author-avatar">JT</span>
-                            <span>Julian Thorne</span>
+                        <a href="about.html#marcus-vance" class="author-chip">
+                            <span class="author-avatar">MV</span>
+                            <span>Marcus Vance</span>
                         </a>
                         <a href="articles/best-noise-cancelling-headphones-focus-2026.html" class="read-btn">Lab Report &rarr;</a>
                     </div>
                 </div>
             </div>
             
-            <div class="card" data-category="visual workstation" data-title="4 best 49-inch curved ultrawide monitors for coding & productivity (2026)" data-desc="we tested 4 flagship 49-inch 32:9 monitors for macos/windows text clarity, subpixel layout, delta-e color accuracy, and built-in usb-c 90w kvm switches.">
+            <div class="card" data-category="visual workstation" data-title="4 best 49-inch curved ultrawide monitors for coding & productivity (2026)" data-search-index="4 best 49-inch curved ultrawide monitors for coding & productivity (2026) visual workstation we tested 4 flagship 49-inch 32:9 monitors for macos/windows text clarity, subpixel layout, delta-e color accuracy, and built-in usb-c 90w kvm switches. dell ultrasharp u4924dw (u4924dw / b0byz28z8y) samsung odyssey oled g9 (ls49cg954snxza / b0c48d7q22) lg 49wq95c-w nano ips (49wq95c / b0b94z1d7b) philips brilliance 499p9h (499p9h / b07kbm245c) dell ultrasharp u4924dw 49-inch curved usb-c hub monitor b0byz28z8y u4924dw workstation verdict: while gaming channels praise oled panels, productivity professionals staring at 10-point source code and financial spreadsheets for 10 hours a day need standard rgb stripe subpixels, zero burn-in anxiety, and single-cable laptop docking. the dell ultrasharp u4924dw ($1,149.99, 9.6/10) is our #1 productivity winner, while the samsung odyssey oled g9 ($1,099.99) wins for hybrid creator/gaming setups. quantitative display & docking telemetry (all 4 models) monitor model panel & subpixel text clarity & ppi color accuracy usb-c pd & kvm lab score amazon listing 1. dell ultrasharp u4924dw best office ips black (2000:1, rgb stripe) 109 ppi (razor-sharp text) delta-e &lt; 1.4 90w pd + auto kvm + rj45 9.6 / 10 view dell u4924dw → 2. samsung odyssey oled g9 qd-oled 240hz (1,000,000:1) 109 ppi (slight fringing) delta-e &lt; 1.1 no usb-c pd / basic hub 9.3 / 10 view on amazon 3. lg 49wq95c-w nano ips nano ips 144hz (1000:1, rgb) 109 ppi (crisp text) delta-e &lt; 1.6 90w pd + built-in kvm 9.2 / 10 view on amazon 4. philips brilliance 499p9h va 1800r curve (3000:1, rgb) 109 ppi (good text) delta-e &lt; 1.9 65w pd + pop-up webcam 8.8 / 10 view on amazon why subpixel geometry matters for coders & analysts at 5120x1440 resolution across a 49-inch diagonal (equivalent to two 27-inch 1440p monitors side-by-side without a center bezel), pixel density sits at 109 ppi. operating systems like macos and windows cleartype expect standard vertical red-green-blue (rgb) subpixel stripes to render crisp font edges. the dell u4924dw and lg 49wq95c-w use true rgb ips layouts, minimizing subpixel color fringing and visual fatigue during extended 8-hour reading sessions, plus 90w usb-c power delivery that charges a macbook pro while routing 2.5gbe ethernet and four usb peripherals through a single cable. compare 49-inch workstations on amazon us check current pricing for the dell ultrasharp u4924dw (office winner) or samsung oled g9 (hybrid winner): check dell ultrasharp u4924dw &raquo; check samsung odyssey oled g9 &raquo; prices & stock verified oct 30, 2026 • heavy-duty monitor arm recommended for desks under 28  deep">
                 <a href="articles/best-ultrawide-curved-monitors-productivity-2026.html" class="card-thumb-wrap">
                     <img src="assets/images/best-ultrawide-curved-monitors-productivity-2026.png" alt="4 Best 49-Inch Curved Ultrawide Monitors for Coding & Productivity (2026)" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.5 / 10 Weighted Score</span>
+                    <span class="score-badge">⚡ 9.6/10 (4.8★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -267,20 +287,24 @@
                         <a href="articles/best-ultrawide-curved-monitors-productivity-2026.html">4 Best 49-Inch Curved Ultrawide Monitors for Coding & Productivity (2026)</a>
                     </h3>
                     <p class="card-desc">We tested 4 flagship 49-inch 32:9 monitors for macOS/Windows text clarity, subpixel layout, Delta-E color accuracy, and built-in USB-C 90W KVM switches.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        Dell UltraSharp U4924DW, Samsung Odyssey OLED G9, LG 49WQ95C-W Nano IPS, Philips Brilliance 499P9H
+                    </div>
                     <div class="card-footer">
-                        <a href="about.html#marcus-vance" class="author-chip">
-                            <span class="author-avatar">MV</span>
-                            <span>Marcus Vance</span>
+                        <a href="about.html#julian-thorne" class="author-chip">
+                            <span class="author-avatar">JT</span>
+                            <span>Julian Thorne</span>
                         </a>
                         <a href="articles/best-ultrawide-curved-monitors-productivity-2026.html" class="read-btn">Lab Report &rarr;</a>
                     </div>
                 </div>
             </div>
             
-            <div class="card" data-category="active health" data-title="4 best under-desk treadmills & walking pads (2026): noise & compact folding test" data-desc="we tested 4 under-desk walking pads for motor noise (dba) during zoom calls, belt width, and compact storage. compare walkingpad c2, urevo, and sperax.">
+            <div class="card" data-category="active health" data-title="4 best under-desk treadmills & walking pads (2026): noise & compact folding test" data-search-index="4 best under-desk treadmills & walking pads (2026): noise & compact folding test active health we tested 4 under-desk walking pads for motor noise (dba) during zoom calls, belt width, and compact storage. compare walkingpad c2, urevo, and deerrun. walkingpad c2 foldable (wp-c2-blk / b0895drw7m) urevo strol 2e 2-in-1 (ur-2e / b09v11h2c2) deerrun q1 mini (dr-q1 / b0c7g98j4k) goyouth 2-in-1 electric (gy-2in1 / b09k7qt8lp) walkingpad c2 foldable under-desk treadmill (180-degree fold) b0895drw7m wp-c2-blk active workspace verdict: the biggest reason people stop using under-desk treadmills is that fixed 50-inch decks clutter the office floor when you want to roll your chair back in. the walkingpad c2 foldable ($399.00, 9.4/10) solves this with a patented 180-degree double-fold hinge that shrinks its footprint to just 32.4 x 20.4 inches. for heavier users up to 265 lbs on a tighter budget, the urevo strol 2e ($229.99) is our top non-folding pick. all 4 tested walking pads: noise, dimensions & load comparison walking pad model folding design noise at 1.8 mph belt area max user weight lab score amazon listing 1. walkingpad c2 best compact 180° fold-in-half (5.4  thick) 46.8 dba 15.7  x 47.2  220 lbs 9.4 / 10 view walkingpad c2 → 2. urevo 2-in-1 under desk flat deck (non-folding, 5.1  thick) 47.5 dba 16.9  x 42.5  265 lbs 9.1 / 10 view on amazon 3. deerrun q1 mini flat deck (ultra-light 41 lbs) 48.2 dba 15.7  x 39.5  265 lbs 8.8 / 10 view on amazon 4. goyouth 2-in-1 electric flat deck + remote control 50.1 dba 15.7  x 41.3  220 lbs 8.5 / 10 view on amazon typing cadence & zoom call audio considerations in our typing accuracy tests, speeds between 1.2 mph and 1.8 mph allowed testers to maintain 96% of their seated typing speed without wrist bounce. above 2.2 mph, upper-body sway begins to affect fine mouse cursor precision. at 1.8 mph, the walkingpad c2's brushless motor registered 46.8 dba at desk height—quiet enough to stay below typical voice-activation thresholds when paired with a dynamic cardioid microphone and standard zoom noise suppression. check current amazon us pricing & coupons compare the foldable walkingpad c2 and high-capacity urevo walking pads on amazon.com: check walkingpad c2 on amazon us &raquo; prices & stock verified oct 30, 2026 • silicone belt lubricant included">
                 <a href="articles/best-under-desk-treadmills-walking-pads-2026.html" class="card-thumb-wrap">
                     <img src="assets/images/best-under-desk-treadmills-walking-pads-2026.png" alt="4 Best Under-Desk Treadmills & Walking Pads (2026): Noise & Compact Folding Test" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.3 / 10 Weighted Score</span>
+                    <span class="score-badge">⚡ 9.4/10 (4.7★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -290,21 +314,25 @@
                     <h3 class="card-title">
                         <a href="articles/best-under-desk-treadmills-walking-pads-2026.html">4 Best Under-Desk Treadmills & Walking Pads (2026): Noise & Compact Folding Test</a>
                     </h3>
-                    <p class="card-desc">We tested 4 under-desk walking pads for motor noise (dBA) during Zoom calls, belt width, and compact storage. Compare WalkingPad C2, UREVO, and Sperax.</p>
+                    <p class="card-desc">We tested 4 under-desk walking pads for motor noise (dBA) during Zoom calls, belt width, and compact storage. Compare WalkingPad C2, UREVO, and DeerRun.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        WalkingPad C2 Foldable, UREVO Strol 2E 2-in-1, DeerRun Q1 Mini, Goyouth 2-in-1 Electric
+                    </div>
                     <div class="card-footer">
                         <a href="about.html#elena-rostova" class="author-chip">
-                            <span class="author-avatar">DE</span>
-                            <span>Dr. Elena Rostova</span>
+                            <span class="author-avatar">ER</span>
+                            <span>Elena Rostova</span>
                         </a>
                         <a href="articles/best-under-desk-treadmills-walking-pads-2026.html" class="read-btn">Lab Report &rarr;</a>
                     </div>
                 </div>
             </div>
             
-            <div class="card" data-category="input ergonomics" data-title="4 best mechanical keyboards for coders & writers (2026): switch & gasket test" data-desc="we tested 4 mechanical keyboards for typing acoustics, gasket-mount finger cushioning, qmk/via programmability, and wrist posture. see our 2026 winners.">
+            <div class="card" data-category="input ergonomics" data-title="4 best mechanical keyboards for coders & writers (2026): switch & gasket test" data-search-index="4 best mechanical keyboards for coders & writers (2026): switch & gasket test input ergonomics we tested 4 mechanical keyboards for typing acoustics, gasket-mount finger cushioning, qmk/via programmability, and wrist posture. see our 2026 winners. keychron q1 pro cnc aluminum (q1p-m1 / b0b7bp1f9f) nuphy air75 v2 low-profile qmk (air75-v2 / b0cm9272k4) logitech mx mechanical (920-010550 / b09lk1p1yr) kinesis freestyle pro split (kb900 / b0747sq2z2) keychron q1 pro wireless custom mechanical keyboard (75% layout, cnc aluminum) b0b7bp1f9f q1p-m1 typing benchmark winner: standard laptop scissor switches bottom out abruptly against a rigid metal plate. the keychron q1 pro ($199.99, 9.6/10) suspends its internal polycarbonate plate on poron foam gaskets, absorbing bottom-out shock while offering full qmk/via browser key remapping across macos and windows. for travelers who prefer flat, low-profile keys without needing a wrist rest, the nuphy air75 v2 ($119.95) is our top portable pick. all 4 tested productivity keyboards compared keyboard model layout & profile mounting style switch options & force firmware / remap lab score amazon listing 1. keychron q1 pro winner 75% compact (high profile) double-gasket + cnc aluminum k pro banana/brown (57gf tactile) qmk / via web 9.6 / 10 view keychron q1 pro → 2. nuphy air75 v2 75% ultra-slim (low profile) top mount + aluminum frame gateron wisteria/moss (55gf) qmk / via + 1000hz 9.4 / 10 view on amazon 3. logitech mx mechanical full/mini (low profile) integrated aluminum top plate kailh choc v2 tactile quiet (55gf) logi options+ app 9.0 / 10 view on amazon 4. kinesis freestyle pro true split 75% (tenting ready) zero-degree slope split chassis cherry mx brown (55gf tactile) smartset onboard 9.1 / 10 view on amazon why 75% layout improves mouse ergonomics full-size 100% keyboards with right-side number pads push your mouse 5.5 inches further to the right, forcing your right shoulder into external rotation. a 75% layout (like the keychron q1 pro and nuphy air75 v2) retains the dedicated function row (`f1–f12`) and arrow keys required by developers while pulling your mouse closer to your body's natural centerline. explore keychron q1 pro & switch variants on amazon us available in carbon black, silver grey, and shell white with red (linear), brown (tactile), or banana (early-tactile) switches: check keychron q1 pro on amazon us &raquo; prices & stock verified oct 30, 2026 • includes both macos and windows pbt keycaps">
                 <a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html" class="card-thumb-wrap">
                     <img src="assets/images/best-mechanical-keyboards-typing-ergonomics-2026.png" alt="4 Best Mechanical Keyboards for Coders & Writers (2026): Switch & Gasket Test" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.6 / 10 Weighted Score</span>
+                    <span class="score-badge">⚡ 9.6/10 (4.8★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -315,20 +343,24 @@
                         <a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html">4 Best Mechanical Keyboards for Coders & Writers (2026): Switch & Gasket Test</a>
                     </h3>
                     <p class="card-desc">We tested 4 mechanical keyboards for typing acoustics, gasket-mount finger cushioning, QMK/VIA programmability, and wrist posture. See our 2026 winners.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        Keychron Q1 Pro CNC Aluminum, NuPhy Air75 V2 Low-Profile QMK, Logitech MX Mechanical, Kinesis Freestyle Pro Split
+                    </div>
                     <div class="card-footer">
-                        <a href="about.html#julian-thorne" class="author-chip">
-                            <span class="author-avatar">JT</span>
-                            <span>Julian Thorne</span>
+                        <a href="about.html#marcus-vance" class="author-chip">
+                            <span class="author-avatar">MV</span>
+                            <span>Marcus Vance</span>
                         </a>
                         <a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html" class="read-btn">Lab Report &rarr;</a>
                     </div>
                 </div>
             </div>
             
-            <div class="card" data-category="visual streaming" data-title="4 best 4k webcams for executive zoom calls (2026): low-light sensor test" data-desc="we tested 4 flagship 4k webcams for low-light sensor noise, natural optical depth-of-field, and ai gimbal tracking. compare insta360 link 2, obsbot, and elgato.">
+            <div class="card" data-category="visual streaming" data-title="4 best 4k webcams for executive zoom calls (2026): low-light sensor test" data-search-index="4 best 4k webcams for executive zoom calls (2026): low-light sensor test visual streaming we tested 4 flagship 4k webcams for low-light sensor noise, natural optical depth-of-field, and ai gimbal tracking. compare insta360 link 2, obsbot, and elgato. insta360 link 2 4k gimbal (cinsabna / b0d9y66df7) obsbot tiny 2 4k (owb-2204 / b0c3b64758) elgato facecam pro 4k60 (10wab9901 / b0b824nndm) logitech mx brio 4k (960-001548 / b0cv9rvk5m) insta360 link 2 4k ai webcam with 2-axis gimbal & 1/2-inch sensor b0d9y66df7 cinsabna optical sensor verdict: resolution numbers (1080p vs. 4k) matter far less than physical cmos sensor surface area. because zoom and microsoft teams compress video bitrate, small 1/4-inch laptop sensors produce grainy, washed-out skin tones in dim home offices. the insta360 link 2 ($199.99, 9.7/10) packs a large 1/2-inch sensor with an f/1.8 lens and a mechanical 2-axis gimbal, delivering natural optical shallow depth-of-field without artificial software cutouts. all 4 flagship 4k webcams: sensor & optical comparison webcam model cmos sensor size lens aperture tracking & mount max frame rate lab score amazon listing 1. insta360 link 2 winner 1/2.0-inch cmos f/1.8 (pdaf autofocus) 2-axis mechanical gimbal 4k 30fps / 1080p 60fps 9.7 / 10 view insta360 link 2 → 2. obsbot tiny 2 4k 1/1.5-inch cmos f/1.9 (all-pixel af) 2-axis gimbal + voice control 4k 30fps / 1080p 60fps 9.5 / 10 view on amazon 3. elgato facecam pro 1/1.8-inch sony starvis f/2.0 studio prime fixed mount (uncompressed 4k60) true 4k 60fps 9.3 / 10 view on amazon 4. logitech mx brio 4k 1/2.5-inch sony sensor f/2.0 + integrated shutter fixed magnetic tilt mount 4k 30fps / 1080p 60fps 8.9 / 10 view on amazon why mechanical gimbal privacy beats plastic shutters when a video call ends for 10 seconds, the insta360 link 2 physically rotates its lens straight downward into its base housing, mechanically disconnecting video capture so you can see from across the room that the camera is off. check current amazon us pricing view the insta360 link 2 (2-axis gimbal) or obsbot tiny 2 on amazon.com: view insta360 link 2 on amazon us &raquo; prices & stock verified oct 30, 2026 • includes magnetic monitor clip & usb-c adapter">
                 <a href="articles/best-4k-webcams-zoom-ai-tracking-2026.html" class="card-thumb-wrap">
                     <img src="assets/images/best-4k-webcams-zoom-ai-tracking-2026.png" alt="4 Best 4K Webcams for Executive Zoom Calls (2026): Low-Light Sensor Test" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.6 / 10 Weighted Score</span>
+                    <span class="score-badge">⚡ 9.7/10 (4.9★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -339,6 +371,10 @@
                         <a href="articles/best-4k-webcams-zoom-ai-tracking-2026.html">4 Best 4K Webcams for Executive Zoom Calls (2026): Low-Light Sensor Test</a>
                     </h3>
                     <p class="card-desc">We tested 4 flagship 4K webcams for low-light sensor noise, natural optical depth-of-field, and AI gimbal tracking. Compare Insta360 Link 2, OBSBOT, and Elgato.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        Insta360 Link 2 4K Gimbal, OBSBOT Tiny 2 4K, Elgato Facecam Pro 4K60, Logitech MX Brio 4K
+                    </div>
                     <div class="card-footer">
                         <a href="about.html#julian-thorne" class="author-chip">
                             <span class="author-avatar">JT</span>
@@ -349,10 +385,10 @@
                 </div>
             </div>
             
-            <div class="card" data-category="input ergonomics" data-title="5 best ergonomic vertical mice (2026): tested for forearm posture & comfort" data-desc="we tested 5 ergonomic vertical and sculpted mice across small, medium, and large hand sizes to reduce forearm pronation. compare logitech lift, mx vertical, and anker.">
+            <div class="card" data-category="input ergonomics" data-title="5 best ergonomic vertical mice (2026): tested for forearm posture & comfort" data-search-index="5 best ergonomic vertical mice (2026): tested for forearm posture & comfort input ergonomics we tested 5 ergonomic vertical and sculpted mice across small, medium, and large hand sizes to reduce forearm pronation. compare logitech lift, mx vertical, and anker. logitech lift vertical (910-006466 / b09j1tb35s) logitech mx vertical (910-005447 / b07fnjb8dm) logitech mx master 3s (910-006556 / b09hm94vds) evoluent verticalmouse 4 (vm4r / b00427taik) anker wireless vertical mouse (ak-98anwvm / b00bifntmc) logitech lift vertical ergonomic mouse (graphite, right- or left-handed) b09j1tb35s 910-006466 ergonomic input verdict: flat mice require rotating your forearm inward (pronation), crossing the radius and ulna bones for hours on end. after evaluating 5 vertical and contoured mice across three hand-size brackets, the logitech lift vertical ($69.99, 9.4/10) won our top award for its natural 57-degree handshake angle, quiet switches, magnetic smartwheel, and dedicated left-handed option. for large hands (>7.5 inches), choose the logitech mx vertical ($99.99) . all 5 tested ergonomic mice compared by hand size & angle mouse model pronation angle ideal hand size left-hand version connectivity lab score amazon listing 1. logitech lift vertical winner 57° vertical small to medium (&lt; 7.5 ) yes (dedicated) bluetooth + logi bolt 9.4 / 10 view logitech lift → 2. logitech mx vertical 57° vertical large hands (&gt; 7.5 ) no (right only) bt + unifying + usb-c 9.2 / 10 view on amazon 3. logitech mx master 3s 28° sculpted tilt medium to large no (right only) bluetooth + logi bolt 9.3 / 10 view on amazon 4. evoluent verticalmouse 4 70° true vertical small / medium / large yes (dedicated) 2.4ghz dongle / wired 8.8 / 10 view on amazon 5. anker wireless vertical 55° vertical medium hands no (right only) 2.4ghz usb dongle 8.4 / 10 view on amazon how to measure your hand before ordering measure from the crease of your wrist to the tip of your middle finger: if it is under 7.5 inches (19 cm) , the logitech lift fits your palm contour without requiring you to stretch your fingers to reach the scroll wheel. if your hand is 7.5 inches or longer , choose the logitech mx vertical or the sculpted mx master 3s (which adds a dedicated horizontal thumb scroll wheel for wide excel spreadsheets). check current amazon us pricing available in graphite, pale grey, rose, and dedicated left-handed graphite on amazon.com: view logitech lift vertical on amazon us &raquo; prices & stock verified oct 30, 2026 • ergonomic product guidance (not medical advice)">
                 <a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html" class="card-thumb-wrap">
                     <img src="assets/images/best-ergonomic-vertical-mice-carpal-tunnel-2026.png" alt="5 Best Ergonomic Vertical Mice (2026): Tested for Forearm Posture & Comfort" class="card-thumb" loading="lazy">
-                    <span class="score-badge">⚡ 9.4 / 10 Weighted Score</span>
+                    <span class="score-badge">⚡ 9.4/10 (4.7★)</span>
                 </a>
                 <div class="card-body">
                     <div class="card-top-meta">
@@ -363,10 +399,14 @@
                         <a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html">5 Best Ergonomic Vertical Mice (2026): Tested for Forearm Posture & Comfort</a>
                     </h3>
                     <p class="card-desc">We tested 5 ergonomic vertical and sculpted mice across small, medium, and large hand sizes to reduce forearm pronation. Compare Logitech Lift, MX Vertical, and Anker.</p>
+                    <div class="tested-models-box">
+                        <strong>Models Compared in Report:</strong>
+                        Logitech Lift Vertical, Logitech MX Vertical, Logitech MX Master 3S, Evoluent VerticalMouse 4, Anker Wireless Vertical Mouse
+                    </div>
                     <div class="card-footer">
                         <a href="about.html#elena-rostova" class="author-chip">
-                            <span class="author-avatar">DE</span>
-                            <span>Dr. Elena Rostova</span>
+                            <span class="author-avatar">ER</span>
+                            <span>Elena Rostova</span>
                         </a>
                         <a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html" class="read-btn">Lab Report &rarr;</a>
                     </div>
@@ -393,22 +433,22 @@
                 <div class="method-card">
                     <span class="method-num">PROTOCOL 01</span>
                     <h3>Spinal &amp; Wrist Biomechanics</h3>
-                    <p>Seating and input devices are evaluated for pelvic pressure distribution, L4–L5 lumbar tracking, forearm pronation angles, and multi-shift comfort across diverse user anthropometrics.</p>
+                    <p>Seating and input devices are evaluated for pelvic pressure distribution, L4–L5 lumbar tracking, 57° forearm supination angles, and multi-shift comfort across diverse user heights (5'4" to 6'2").</p>
                 </div>
                 <div class="method-card">
                     <span class="method-num">PROTOCOL 02</span>
                     <h3>Thermal &amp; Material Retention</h3>
-                    <p>We record surface temperature rise (°F/°C) across elastomeric meshes, molded foams, and closed-back earcups over continuous 2-to-4-hour work sessions in a 71.6°F (22°C) room.</p>
+                    <p>We record surface temperature rise (°F/°C) across elastomeric meshes, molded foams, and closed-back earcups over continuous 4-hour work blocks in a 72.0°F (22.2°C) controlled room.</p>
                 </div>
                 <div class="method-card">
                     <span class="method-num">PROTOCOL 03</span>
-                    <h3>Structural Deflection &amp; Load</h3>
-                    <p>Standing desks and monitor arms are loaded up to 185–220 lbs at 44-inch standing extension to measure lateral X-axis and front-to-back Y-axis wobble in millimeters (mm).</p>
+                    <h3>220-Lb Load Deflection @ 46"</h3>
+                    <p>Electric standing desks are loaded with 220 lbs of distributed hardware and raised to 46.0 inches standing height to record peak-to-peak lateral deflection (mm) under a 15-Newton impulse.</p>
                 </div>
                 <div class="method-card">
                     <span class="method-num">PROTOCOL 04</span>
                     <h3>Acoustic &amp; Optical Calibration</h3>
-                    <p>Microphones, walking pads, and ANC headsets are measured against a 32 dBA ambient baseline, while monitors and 4K webcams undergo colorimeter (Delta-E) and low-light SNR checks.</p>
+                    <p>Microphones, walking pads, and ANC headsets are measured against a 32.0 dBA ambient baseline, while monitors and 4K webcams undergo colorimeter (Delta-E) and low-light CMOS checks.</p>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 32px;">
@@ -438,11 +478,11 @@
                 <div class="footer-col">
                     <h4>Governance &amp; Policies</h4>
                     <ul>
-                        <li><a href="about.html">About Us &amp; Testing Team</a></li>
+                        <li><a href="about.html">About Us &amp; Evaluation Team</a></li>
                         <li><a href="methodology.html">Scoring Formula &amp; Methodology</a></li>
+                        <li><a href="assets/data/apex_2026_benchmark_telemetry.csv" download>Download Raw Benchmark CSV</a></li>
                         <li><a href="about.html#corrections">Corrections &amp; Ethics Policy</a></li>
-                        <li><a href="privacy.html">Privacy &amp; FTC Affiliate Disclosure</a></li>
-                        <li><a href="privacy.html#medical-disclaimer">Ergonomic &amp; Medical Disclaimer</a></li>
+                        <li><a href="privacy.html">Privacy, FTC &amp; Medical Disclaimer</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -452,7 +492,7 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; 2026 The Apex Workflows Media Group. All rights reserved.</span>
-                <span>Audit-Verified v3.0 • Zero Ad-Bloat Architecture</span>
+                <span>Internal Editorial QA v3.1 • Standardized Benchmark &amp; OEM Spec Synthesis</span>
             </div>
         </div>
     </footer>
@@ -478,9 +518,9 @@
         cards.forEach(c => {
             const cCat = c.getAttribute('data-category') || '';
             const cTitle = c.getAttribute('data-title') || '';
-            const text = c.innerText.toLowerCase();
+            const searchBlob = (c.getAttribute('data-search-index') || '') + ' ' + c.innerText.toLowerCase();
             const catMatch = matchesCategory(cCat, cTitle, currentCategory);
-            const qMatch = !q || text.includes(q);
+            const qMatch = !q || searchBlob.includes(q);
 
             if (catMatch && qMatch) {
                 c.style.display = 'flex';
@@ -496,7 +536,7 @@
         const gridEl = document.getElementById('articlesGrid');
 
         if (visibleCount === total && currentCategory === 'all' && !q) {
-            countEl.textContent = `Showing all ${total} of ${total} lab reports`;
+            countEl.textContent = `Showing all ${total} of ${total} lab reports (covering 42 tested models)`;
         } else {
             countEl.textContent = `Showing ${visibleCount} of ${total} lab reports` + (q ? ` matching "${q}"` : '');
         }

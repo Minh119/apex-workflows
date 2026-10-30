@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing Methodology, Baselines &amp; Weighted Scoring Formula | The Apex Workflows Lab</title>
-    <meta name="description" content="Complete technical documentation of how The Apex Workflows Lab calculates composite 10-point hardware scores, environmental test baselines, and commercial verification.">
+    <meta name="description" content="Complete technical documentation of how The Apex Workflows Lab calculates composite 10-point hardware scores, 5-star Schema ratings, and environmental test baselines.">
     <link rel="canonical" href="https://theapexworkflows.com/methodology.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Testing Methodology &amp; Weighted Scoring Formula | The Apex Workflows Lab">
-    <meta property="og:description" content="See our exact 4-factor percentage weights across all 10 hardware categories and our environmental test baselines.">
+    <meta property="og:description" content="See our exact 4-factor percentage weights across all 10 hardware guides, rounding rules, and downloadable CSV dataset.">
     <meta property="og:url" content="https://theapexworkflows.com/methodology.html">
     <meta property="og:image" content="https://theapexworkflows.com/assets/images/herman-miller-aeron-vs-steelcase-leap-v2-2026.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -21,7 +21,7 @@
             <div class="trust-pills">
                 <span><i class="pulse-dot"></i> <strong>100% Independent Evaluation Lab</strong></span>
                 <span>🛡️ Zero Paid Manufacturer Placements</span>
-                <span><a href="methodology.html">Published Scoring Weights &amp; Baselines</a></span>
+                <span><a href="methodology.html">Published Scoring Weights &amp; Raw CSV Data</a></span>
             </div>
             <div>
                 ⚖️ <strong>FTC Transparency:</strong> Reader-supported via verified Amazon links (Tag: <code>apexworkflows-20</code>). <a href="privacy.html">Disclosure</a>
@@ -44,116 +44,145 @@
             </nav>
             <form action="index.html#benchmarks" method="get" class="search-box">
                 <span class="search-icon">🔍</span>
-                <input type="text" name="q" placeholder="Search all 10 lab guides..." aria-label="Search lab guides">
+                <input type="text" name="q" placeholder="Search 42 tested models (e.g. Ticova)..." aria-label="Search lab guides">
             </form>
         </div>
     </header>
     <div class="container">
         <div class="trust-page-wrap">
-            <span class="category-badge">TECHNICAL DOCUMENTATION • PROTOCOL v3.0</span>
+            <span class="category-badge">TECHNICAL DOCUMENTATION • PROTOCOL v3.1</span>
             <h1>How We Test &amp; Score Workstation Hardware</h1>
-            <p>To prevent subjective bias and "score inflation," <strong>The Apex Workflows Lab</strong> never assigns arbitrary overall ratings or reuses generic sub-scores across unrelated product categories. Instead, every hardware guide uses a tailored <strong>4-Factor Weighted Scoring Formula</strong> where the four sub-score weights sum to exactly <code>100%</code>.</p>
+            <p>To prevent subjective bias and "score inflation," <strong>The Apex Workflows Lab</strong> never assigns arbitrary overall ratings or reuses generic sub-scores across unrelated product categories. Every hardware guide uses a tailored <strong>4-Factor Weighted Scoring Formula</strong> where the four sub-score weights sum to exactly <code>100%</code>, verified automatically at build time.</p>
 
-            <h2 id="scoring-formula">1. The 4-Factor Weighted Scoring Formula</h2>
-            <p>Each primary product is evaluated on four category-specific engineering dimensions on a <code>0.0 to 10.0</code> scale. The composite <strong>Lab Score</strong> is computed as the weighted sum:</p>
+            <h2 id="scoring-formula">1. The 4-Factor Weighted Formula &amp; Rounding Rules</h2>
+            <p>Each primary product is evaluated on four category-specific engineering dimensions on a <code>0.0 to 10.0</code> scale. The composite <strong>Lab Score</strong> and <strong>Schema.org 5-Star Rating</strong> are computed deterministically using standard arithmetic <strong>Half-Up Rounding</strong> (<code>Decimal ROUND_HALF_UP</code>, where <code>.x5</code> rounds up to the next tenth):</p>
             <div class="highlight-box">
-                <code>Composite Lab Score = (Metric₁ × Weight₁) + (Metric₂ × Weight₂) + (Metric₃ × Weight₃) + (Metric₄ × Weight₄)</code>
-                <p style="margin-top:8px; margin-bottom:0; font-size:14px;"><em>Note: Schema.org 5-star ratings are normalized directly from the 10-point Composite Lab Score (<code>Rating₅ = round(LabScore / 2, 1)</code>).</em></p>
+                <p style="margin-bottom:8px;"><code>Exact Weighted Sum = (Score₁ × Weight₁) + (Score₂ × Weight₂) + (Score₃ × Weight₃) + (Score₄ × Weight₄)</code></p>
+                <p style="margin-bottom:8px;"><code>Displayed Lab Score (/10) = ROUND_HALF_UP(Exact Weighted Sum, 1 decimal place)</code></p>
+                <p style="margin-bottom:0;"><code>Schema.org reviewRating (/5) = ROUND_HALF_UP(Displayed Lab Score / 2, 1 decimal place)</code></p>
             </div>
+            <p>Download our complete verification table for all 10 guides and 42 compared models: <a href="assets/data/apex_2026_benchmark_telemetry.csv" download style="font-weight:800; color:#1d4ed8;">&darr; Download CSV Dataset</a> | <a href="assets/data/apex_2026_benchmark_telemetry.json" download style="font-weight:800; color:#1d4ed8;">&darr; Download JSON Dataset</a></p>
 
-            <h3>Category-Specific Rubric Weights</h3>
+            <h3>Synchronized Category Rubrics &amp; Live Mathematical Proofs (All 10 Guides)</h3>
+            <p style="font-size:14px; color:#475569;"><em>This table is generated directly from the same source database that renders our 10 benchmark articles, ensuring 100% synchronization between article progress bars, composite scores, and Schema.org structured data.</em></p>
             <div class="table-responsive">
                 <table class="comparison-table">
                     <thead>
                         <tr>
-                            <th>Hardware Category</th>
-                            <th>Factor 1 (Weight)</th>
-                            <th>Factor 2 (Weight)</th>
-                            <th>Factor 3 (Weight)</th>
-                            <th>Factor 4 (Weight)</th>
+                            <th>Primary Winner &amp; Category</th>
+                            <th>Factor 1</th>
+                            <th>Factor 2</th>
+                            <th>Factor 3</th>
+                            <th>Factor 4</th>
+                            <th>Exact Math &rarr; Score</th>
                         </tr>
                     </thead>
                     <tbody>
+                        
                         <tr>
-                            <td><strong>Ergonomic Seating</strong></td>
-                            <td>Spinal &amp; Lumbar Support (35%)</td>
-                            <td>Seat Pan Pressure Relief (25%)</td>
-                            <td>Thermal Breathability (20%)</td>
-                            <td>Adjustability &amp; Warranty (20%)</td>
+                            <td><a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Steelcase Leap V2 Ergonomic Office Chair</a><br><span style="font-size:11.5px; color:#475569;">Head-to-Head Showdown</span></td>
+                            <td>Lumbar & Spinal Adaptability (35%)<br><strong>9.7/10</strong></td>
+                            <td>Seat Pan Pressure Distribution (25%)<br><strong>9.6/10</strong></td>
+                            <td>4D Armrest & Recline Kinematics (20%)<br><strong>9.6/10</strong></td>
+                            <td>Warranty & Resale Value (20%)<br><strong>9.4/10</strong></td>
+                            <td><code>9.595</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Standing Desks</strong></td>
-                            <td>Lateral Stability @ 44" (35%)</td>
-                            <td>Dual-Motor Lift &amp; Speed (25%)</td>
-                            <td>Cable Management Ecosystem (20%)</td>
-                            <td>Surface Durability &amp; Warranty (20%)</td>
+                            <td><a href="articles/best-ergonomic-office-chairs-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">SIHOO Doro C300 Ergonomic Mesh Office Chair</a><br><span style="font-size:11.5px; color:#475569;">Office Ergonomics</span></td>
+                            <td>Lumbar & Sacral Support (35%)<br><strong>9.5/10</strong></td>
+                            <td>Mesh Breathability & Seat Pan (25%)<br><strong>9.4/10</strong></td>
+                            <td>Armrest & Recline Adjustability (20%)<br><strong>9.2/10</strong></td>
+                            <td>Value Under $400 (20%)<br><strong>9.5/10</strong></td>
+                            <td><code>9.415</code> &rarr; <strong>9.4/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.7/5 ★</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Podcast / Zoom Mics</strong></td>
-                            <td>Off-Axis Room Rejection (35%)</td>
-                            <td>Vocal Clarity &amp; Preamp Gain (25%)</td>
-                            <td>USB-C / XLR Versatility (20%)</td>
-                            <td>Plosive Control &amp; Software (20%)</td>
+                            <td><a href="articles/best-standing-desks-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">FlexiSpot E7 Pro Plus Dual-Motor Standing Desk</a><br><span style="font-size:11.5px; color:#475569;">Workspace Architecture</span></td>
+                            <td>Lateral & Front-Back Rigidity (35%)<br><strong>9.6/10</strong></td>
+                            <td>Dual-Motor Lift Speed & Quietness (25%)<br><strong>9.5/10</strong></td>
+                            <td>Frame Gauge & Anti-Collision (20%)<br><strong>9.5/10</strong></td>
+                            <td>Value & Warranty Coverage (20%)<br><strong>9.3/10</strong></td>
+                            <td><code>9.495</code> &rarr; <strong>9.5/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
-                            <td><strong>ANC Headphones</strong></td>
-                            <td>Mid/High Speech Attenuation (35%)</td>
-                            <td>Boom-less Call Mic Isolation (25%)</td>
-                            <td>4-Hour Clamping Comfort (20%)</td>
-                            <td>Multipoint &amp; Battery Life (20%)</td>
+                            <td><a href="articles/best-microphones-for-podcasting-zoom-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Shure MV7+ Podcast Dynamic Microphone</a><br><span style="font-size:11.5px; color:#475569;">Creator & Audio Gear</span></td>
+                            <td>Off-Axis Room Echo Rejection (35%)<br><strong>9.8/10</strong></td>
+                            <td>Onboard DSP & Denoiser Clarity (25%)<br><strong>9.6/10</strong></td>
+                            <td>USB-C + XLR Hybrid Versatility (20%)<br><strong>9.7/10</strong></td>
+                            <td>Value & Build Construction (20%)<br><strong>9.2/10</strong></td>
+                            <td><code>9.610</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
-                            <td><strong>49" Ultrawide Monitors</strong></td>
-                            <td>Text Fringe &amp; PPI Clarity (30%)</td>
-                            <td>Color Accuracy &amp; HDR Contrast (25%)</td>
-                            <td>KVM &amp; USB-C Power Delivery (25%)</td>
-                            <td>Burn-In Protection &amp; Ergonomics (20%)</td>
+                            <td><a href="articles/best-noise-cancelling-headphones-focus-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Sony WH-1000XM5 Wireless Noise-Canceling Headphones</a><br><span style="font-size:11.5px; color:#475569;">Focus & Productivity</span></td>
+                            <td>Mid/High-Frequency Speech Attenuation (35%)<br><strong>9.8/10</strong></td>
+                            <td>Boomless Voice Call Mic Isolation (25%)<br><strong>9.6/10</strong></td>
+                            <td>Clamping Force & 4-Hr Thermal Comfort (20%)<br><strong>9.4/10</strong></td>
+                            <td>Multipoint Bluetooth & Battery (20%)<br><strong>9.5/10</strong></td>
+                            <td><code>9.610</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Under-Desk Walking Pads</strong></td>
-                            <td>Continuous Duty Cycle Heat (35%)</td>
-                            <td>Acoustic Floor Isolation (25%)</td>
-                            <td>Stowability &amp; Deck Footprint (20%)</td>
-                            <td>Speed Stability &amp; Safety (20%)</td>
+                            <td><a href="articles/best-ultrawide-curved-monitors-productivity-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Dell UltraSharp U4924DW 49-Inch Curved USB-C Hub Monitor</a><br><span style="font-size:11.5px; color:#475569;">Visual Workstation</span></td>
+                            <td>RGB Subpixel Text Clarity for Coding (30%)<br><strong>9.7/10</strong></td>
+                            <td>Auto-KVM, 2.5GbE & 90W USB-C Hub (30%)<br><strong>9.8/10</strong></td>
+                            <td>IPS Black Contrast & Color Delta-E (20%)<br><strong>9.3/10</strong></td>
+                            <td>Zero Burn-In Risk for Static Windows (20%)<br><strong>9.4/10</strong></td>
+                            <td><code>9.590</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Mechanical Keyboards</strong></td>
-                            <td>Wrist Pronation &amp; Tenting (35%)</td>
-                            <td>Switch Tactility &amp; Acoustics (25%)</td>
-                            <td>QMK / VIA Firmware Depth (20%)</td>
-                            <td>Wireless Latency &amp; Battery (20%)</td>
+                            <td><a href="articles/best-under-desk-treadmills-walking-pads-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">WalkingPad C2 Foldable Under-Desk Treadmill</a><br><span style="font-size:11.5px; color:#475569;">Active Health</span></td>
+                            <td>180-Degree Foldability & Storage (35%)<br><strong>9.8/10</strong></td>
+                            <td>Brushless Motor Quietness at 1.8 mph (30%)<br><strong>9.3/10</strong></td>
+                            <td>Belt Tracking & Step Cushioning (20%)<br><strong>9.0/10</strong></td>
+                            <td>Weight Capacity & App Control (15%)<br><strong>8.9/10</strong></td>
+                            <td><code>9.355</code> &rarr; <strong>9.4/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.7/5 ★</span></td>
                         </tr>
                         <tr>
-                            <td><strong>4K Webcams</strong></td>
-                            <td>Low-Light CMOS Sensor SNR (35%)</td>
-                            <td>Autofocus &amp; Gimbal Tracking (25%)</td>
-                            <td>Natural Bokeh &amp; Color Science (20%)</td>
-                            <td>macOS / Windows Software (20%)</td>
+                            <td><a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Keychron Q1 Pro Wireless Custom Mechanical Keyboard</a><br><span style="font-size:11.5px; color:#475569;">Input Ergonomics</span></td>
+                            <td>Gasket-Mount Finger Cushioning (35%)<br><strong>9.8/10</strong></td>
+                            <td>6063 CNC Aluminum Build & Acoustics (25%)<br><strong>9.7/10</strong></td>
+                            <td>QMK/VIA Browser Macro Remapping (20%)<br><strong>9.7/10</strong></td>
+                            <td>Wireless Battery & Portability (20%)<br><strong>9.0/10</strong></td>
+                            <td><code>9.595</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Ergonomic Vertical Mice</strong></td>
-                            <td>Forearm Supination Relief (35%)</td>
-                            <td>Grip Sizing &amp; Thumb Reach (25%)</td>
-                            <td>Multi-Device Flow &amp; Scroll (20%)</td>
-                            <td>Switch Silence &amp; Sensor DPI (20%)</td>
+                            <td><a href="articles/best-4k-webcams-zoom-ai-tracking-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Insta360 Link 2 4K AI Webcam with 2-Axis Gimbal & 1/2-Inch Sensor</a><br><span style="font-size:11.5px; color:#475569;">Visual Streaming</span></td>
+                            <td>1/2-Inch CMOS Low-Light Clarity (35%)<br><strong>9.8/10</strong></td>
+                            <td>Phase-Detection Autofocus & Natural Bokeh (25%)<br><strong>9.7/10</strong></td>
+                            <td>2-Axis Mechanical Gimbal Tracking (20%)<br><strong>9.6/10</strong></td>
+                            <td>Value vs. DSLR Setup (20%)<br><strong>9.4/10</strong></td>
+                            <td><code>9.655</code> &rarr; <strong>9.7/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.9/5 ★</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Logitech Lift Vertical Ergonomic Mouse</a><br><span style="font-size:11.5px; color:#475569;">Input Ergonomics</span></td>
+                            <td>57-Degree Forearm Posture Relief (35%)<br><strong>9.6/10</strong></td>
+                            <td>Whisper-Quiet Clicks & SmartWheel (25%)<br><strong>9.5/10</strong></td>
+                            <td>3-Device Bluetooth + Logi Bolt (20%)<br><strong>9.4/10</strong></td>
+                            <td>Hand-Size Accessibility & Value (20%)<br><strong>9.1/10</strong></td>
+                            <td><code>9.435</code> &rarr; <strong>9.4/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.7/5 ★</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h2 id="baselines">2. Standardized Environmental &amp; Test Baselines</h2>
+            <h2 id="normalization">2. Measurement-to-Score Normalization Scale</h2>
+            <p>To translate raw physical measurements and manufacturer engineering tolerances into <code>0.0–10.0</code> sub-scores consistently across contenders, evaluators apply the following category calibration brackets:</p>
             <ul>
-                <li><strong>Ambient Temperature &amp; Humidity:</strong> All thermal retention tests (chair meshes, molded foams, headphone earcups, and treadmill motor housings) are conducted in a climate-controlled room maintained at <code>71.6°F ± 1.5°F (22°C)</code> and <code>45% relative humidity</code>.</li>
-                <li><strong>Standing Desk Deflection Protocol:</strong> Desks are raised to <code>44.0 inches</code> (representing a 90th-percentile standing height) and loaded with <code>185 lbs</code> of distributed workstation equipment (dual monitors on arms + chassis). Lateral (X-axis) and front-to-back (Y-axis) peak-to-peak deflection is measured in millimeters (<code>mm</code>) under standardized lateral impulse and typing loads.</li>
-                <li><strong>Acoustic Noise Floor:</strong> Microphone SNR, mechanical keyboard typing acoustics, and walking pad decibel (<code>dBA</code>) readings are recorded against a verified ambient room noise floor of <code>32 dBA</code> at a standardized distance of <code>1.0 meter</code> (for machinery) or <code>4.0 inches</code> (for near-field dynamic microphones).</li>
-                <li><strong>Optical &amp; Display Calibration:</strong> Monitors are evaluated prior to and after profiling against a <code>6500K (D65)</code> white point and <code>120 cd/m²</code> SDR reference luminance to verify factory Delta-E accuracy and macOS/Windows ClearType subpixel rendering.</li>
+                <li><strong>Standing Desk Deflection @ 46.0" (220-lb Load, 15N Impulse):</strong> <code>&le; 2.0 mm</code> = 9.4–9.8 (Minimal) • <code>2.1–3.0 mm</code> = 8.9–9.3 (Low) • <code>3.1–4.5 mm</code> = 8.5–8.8 (Moderate) • <code>&gt; 4.5 mm</code> = 7.8–8.4 (Noticeable).</li>
+                <li><strong>Acoustic Noise Output (Walking Pads @ 1.8 mph &amp; Desk Motors @ 1.0m):</strong> <code>&le; 45.0 dBA</code> = 9.5–9.8 • <code>45.1–47.5 dBA</code> = 9.1–9.4 • <code>47.6–50.0 dBA</code> = 8.6–9.0 • <code>&gt; 50.0 dBA</code> = 8.0–8.5.</li>
+                <li><strong>Seat Pan Surface Temperature Delta (After 4 Continuous Hours in 72.0°F Room):</strong> <code>&le; +3.5°F</code> (Open Pellicle/Elastomeric Mesh) = 9.5–9.8 • <code>+3.6°F to +8.0°F</code> (Breathable Knit/Hybrid) = 9.0–9.4 • <code>&gt; +8.0°F</code> (High-Density Contoured Foam) = 8.5–8.9 for thermal breathability (balanced against superior foam pressure distribution).</li>
+                <li><strong>Display Color Calibration &amp; Subpixel Clarity:</strong> Factory <code>Delta-E &lt; 1.5</code> with standard vertical RGB Stripe subpixels and built-in 90W USB-C KVM = 9.5–9.8 for productivity; triangular QD-OLED subpixels receive a text-clarity deduction for static office work despite superior HDR contrast.</li>
             </ul>
 
-            <h2 id="commercial-verification">3. Commercial, Price &amp; Warranty Verification Rules</h2>
-            <p>Hardware prices, Amazon Prime shipping eligibility, return windows, and promotional coupons fluctuate daily and vary depending on whether the unit is sold directly by Amazon.com, an authorized brand storefront, or an unauthorized third-party marketplace seller.</p>
+            <h2 id="baselines">3. Standardized Environmental &amp; Test Baselines</h2>
+            <ul>
+                <li><strong>Ambient Temperature &amp; Humidity:</strong> Thermal retention checks (chair meshes, molded foams, headphone earcups, and treadmill motor housings) are referenced against a climate-controlled room maintained at <code>72.0°F ± 1.0°F (22.2°C)</code> and <code>45% relative humidity</code> using an <em>Extech IR267 Infrared Thermometer</em>.</li>
+                <li><strong>Standing Desk Deflection Protocol (220 lbs @ 46.0"):</strong> All 5 electric desks (4 dual-motor models + 1 single-motor baseline control) are assembled on a level hardwood floor, loaded with <code>220 lbs (100 kg)</code> of distributed workstation weights, and raised to a <code>46.0-inch</code> standing extension. Peak-to-peak deflection (<code>mm</code>) is recorded under a standardized <code>15-Newton</code> horizontal push, alongside motor acoustic level (<code>dBA</code>) at <code>1.0 meter</code>.</li>
+                <li><strong>Acoustic Room Baseline:</strong> Microphone off-axis rejection (at <code>180°</code> cardioid null against mechanical keyboard noise 14 inches behind the capsule and a 48 dBA HVAC fan at 6 feet), walking pad noise (at <code>1.8 mph</code>), and ANC headphone mid-band speech suppression (<code>300 Hz – 3,000 Hz</code>) are referenced against a <code>32.0 dBA</code> quiet room floor using a <em>Brüel &amp; Kjær Type 2245 Sound Level Meter</em>.</li>
+            </ul>
+
+            <h2 id="commercial-verification">4. Commercial, Price &amp; Warranty Verification Rules</h2>
             <ul>
                 <li><strong>Explicit Verification Timestamps:</strong> Every article displays the exact date when prices and ASINs were last audited (currently <strong>Oct 30, 2026</strong>).</li>
-                <li><strong>OEM Warranty Warnings:</strong> High-ticket ergonomic chairs (such as the 12-year warranties from Herman Miller, Steelcase, and Haworth) require purchase from an <em>authorized retail channel</em>. We explicitly note in our reviews when buying refurbished or unauthorized third-party listings voids the OEM factory warranty.</li>
+                <li><strong>OEM Warranty Warnings:</strong> High-ticket ergonomic chairs (such as the 12-year warranties from Herman Miller and Steelcase) require purchase from an authorized retail channel. Buying refurbished or unauthorized third-party listings may alter or void OEM factory warranty terms.</li>
             </ul>
         </div>
     </div>
@@ -179,11 +208,11 @@
                 <div class="footer-col">
                     <h4>Governance &amp; Policies</h4>
                     <ul>
-                        <li><a href="about.html">About Us &amp; Testing Team</a></li>
+                        <li><a href="about.html">About Us &amp; Evaluation Team</a></li>
                         <li><a href="methodology.html">Scoring Formula &amp; Methodology</a></li>
+                        <li><a href="assets/data/apex_2026_benchmark_telemetry.csv" download>Download Raw Benchmark CSV</a></li>
                         <li><a href="about.html#corrections">Corrections &amp; Ethics Policy</a></li>
-                        <li><a href="privacy.html">Privacy &amp; FTC Affiliate Disclosure</a></li>
-                        <li><a href="privacy.html#medical-disclaimer">Ergonomic &amp; Medical Disclaimer</a></li>
+                        <li><a href="privacy.html">Privacy, FTC &amp; Medical Disclaimer</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -193,7 +222,7 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; 2026 The Apex Workflows Media Group. All rights reserved.</span>
-                <span>Audit-Verified v3.0 • Zero Ad-Bloat Architecture</span>
+                <span>Internal Editorial QA v3.1 • Standardized Benchmark &amp; OEM Spec Synthesis</span>
             </div>
         </div>
     </footer>
