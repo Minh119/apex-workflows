@@ -1,0 +1,60 @@
+{
+  "company_name": "ApexGlobal Media & Ventures",
+  "vision": "100% Autonomous AI-driven Global Niche Affiliate & Digital Asset Network",
+  "currency": "USD",
+  "bootstrap_mode": true,
+  "live_portal_url": "https://minh119.github.io/apex-workflows/",
+  "github_repo": "https://github.com/Minh119/apex-workflows",
+  "hosting_stack": {
+    "provider": "GitHub Pages (Enterprise CDN)",
+    "cost": 0.0,
+    "ssl": "Free Automatic Let's Encrypt",
+    "cdn": "Fastly / GitHub Global CDN"
+  },
+  "target_markets": [
+    "US",
+    "UK",
+    "CA",
+    "AU"
+  ],
+  "monetization_partners": [
+    {
+      "name": "Amazon Associates US",
+      "tracking_id": "apexworkflows-20",
+      "status": "ACTIVE_VERIFIED",
+      "model": "Physical & Digital Goods (1% - 10% RevShare)",
+      "payout": "Direct Deposit / Payoneer / Gift Card"
+    },
+    {
+      "name": "SaaS Recurring Affiliate (ClickFunnels, Make, Notion, Shopify, v.v.)",
+      "model": "Recurring Monthly (20% - 40% MRR)",
+      "payout": "PayPal / Wise / Stripe"
+    },
+    {
+      "name": "ClickBank / Digistore24",
+      "model": "High-ticket Info/Software Products (40% - 75% RevShare)",
+      "payout": "Direct Bank Wire / Payoneer"
+    }
+  ],
+  "primary_niches": [
+    {
+      "id": "ai_tools_productivity",
+      "name": "AI Automation & Remote Work Tools",
+      "avg_rpm": "$45 - $80",
+      "buyer_intent": "High Commercial Intent"
+    },
+    {
+      "id": "smart_home_ergonomics",
+      "name": "Smart Home Office & Ergonomic Setup",
+      "avg_rpm": "$35 - $60",
+      "buyer_intent": "High Transactional Intent"
+    },
+    {
+      "id": "creator_economy_gear",
+      "name": "Creator Studio Gear & Podcasting Audio",
+      "avg_rpm": "$40 - $70",
+      "buyer_intent": "High Purchasing Power"
+    }
+  ]
+}
+

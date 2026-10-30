@@ -29,7 +29,7 @@ jobs:
 
       - name: Run CEO Multi-Agent Orchestrator
         run: |
-          python run_enterprise.py || true
+          python run_cloud.py
 
       - name: Commit & Deploy Updates to GitHub Pages
         run: |
@@ -37,3 +37,4 @@ jobs:
           git config user.email "bot@apexworkflows.com"
           git add -A
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-syndicate fresh review assets & update feeds" && git push)
+
