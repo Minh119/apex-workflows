@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Methodology, Baselines &amp; Weighted Scoring Formula | The Apex Workflows Lab</title>
+    <meta name="description" content="Complete technical documentation of how The Apex Workflows Lab calculates composite 10-point hardware scores, environmental test baselines, and commercial verification.">
+    <link rel="canonical" href="https://theapexworkflows.com/methodology.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Testing Methodology &amp; Weighted Scoring Formula | The Apex Workflows Lab">
+    <meta property="og:description" content="See our exact 4-factor percentage weights across all 10 hardware categories and our environmental test baselines.">
+    <meta property="og:url" content="https://theapexworkflows.com/methodology.html">
+    <meta property="og:image" content="https://theapexworkflows.com/assets/images/herman-miller-aeron-vs-steelcase-leap-v2-2026.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <div class="top-trust-bar">
+        <div class="top-trust-inner">
+            <div class="trust-pills">
+                <span><i class="pulse-dot"></i> <strong>100% Independent Evaluation Lab</strong></span>
+                <span>🛡️ Zero Paid Manufacturer Placements</span>
+                <span><a href="methodology.html">Published Scoring Weights &amp; Baselines</a></span>
+            </div>
+            <div>
+                ⚖️ <strong>FTC Transparency:</strong> Reader-supported via verified Amazon links (Tag: <code>apexworkflows-20</code>). <a href="privacy.html">Disclosure</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-wrap">
+            <a href="index.html" class="brand">
+                <span class="brand-logo">APEX LABS</span>
+                TheApex<span>Workflows</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#benchmarks">All Lab Reviews</a>
+                <a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html">Aeron vs. Leap V2</a>
+                <a href="methodology.html">Methodology</a>
+                <a href="about.html">About &amp; Team</a>
+                <a href="privacy.html">Privacy &amp; FTC</a>
+            </nav>
+            <form action="index.html#benchmarks" method="get" class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="q" placeholder="Search all 10 lab guides..." aria-label="Search lab guides">
+            </form>
+        </div>
+    </header>
+    <div class="container">
+        <div class="trust-page-wrap">
+            <span class="category-badge">TECHNICAL DOCUMENTATION • PROTOCOL v3.0</span>
+            <h1>How We Test &amp; Score Workstation Hardware</h1>
+            <p>To prevent subjective bias and "score inflation," <strong>The Apex Workflows Lab</strong> never assigns arbitrary overall ratings or reuses generic sub-scores across unrelated product categories. Instead, every hardware guide uses a tailored <strong>4-Factor Weighted Scoring Formula</strong> where the four sub-score weights sum to exactly <code>100%</code>.</p>
+
+            <h2 id="scoring-formula">1. The 4-Factor Weighted Scoring Formula</h2>
+            <p>Each primary product is evaluated on four category-specific engineering dimensions on a <code>0.0 to 10.0</code> scale. The composite <strong>Lab Score</strong> is computed as the weighted sum:</p>
+            <div class="highlight-box">
+                <code>Composite Lab Score = (Metric₁ × Weight₁) + (Metric₂ × Weight₂) + (Metric₃ × Weight₃) + (Metric₄ × Weight₄)</code>
+                <p style="margin-top:8px; margin-bottom:0; font-size:14px;"><em>Note: Schema.org 5-star ratings are normalized directly from the 10-point Composite Lab Score (<code>Rating₅ = round(LabScore / 2, 1)</code>).</em></p>
+            </div>
+
+            <h3>Category-Specific Rubric Weights</h3>
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Hardware Category</th>
+                            <th>Factor 1 (Weight)</th>
+                            <th>Factor 2 (Weight)</th>
+                            <th>Factor 3 (Weight)</th>
+                            <th>Factor 4 (Weight)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ergonomic Seating</strong></td>
+                            <td>Spinal &amp; Lumbar Support (35%)</td>
+                            <td>Seat Pan Pressure Relief (25%)</td>
+                            <td>Thermal Breathability (20%)</td>
+                            <td>Adjustability &amp; Warranty (20%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Standing Desks</strong></td>
+                            <td>Lateral Stability @ 44" (35%)</td>
+                            <td>Dual-Motor Lift &amp; Speed (25%)</td>
+                            <td>Cable Management Ecosystem (20%)</td>
+                            <td>Surface Durability &amp; Warranty (20%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Podcast / Zoom Mics</strong></td>
+                            <td>Off-Axis Room Rejection (35%)</td>
+                            <td>Vocal Clarity &amp; Preamp Gain (25%)</td>
+                            <td>USB-C / XLR Versatility (20%)</td>
+                            <td>Plosive Control &amp; Software (20%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ANC Headphones</strong></td>
+                            <td>Mid/High Speech Attenuation (35%)</td>
+                            <td>Boom-less Call Mic Isolation (25%)</td>
+                            <td>4-Hour Clamping Comfort (20%)</td>
+                            <td>Multipoint &amp; Battery Life (20%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>49" Ultrawide Monitors</strong></td>
+                            <td>Text Fringe &amp; PPI Clarity (30%)</td>
+                            <td>Color Accuracy &amp; HDR Contrast (25%)</td>
+                            <td>KVM &amp; USB-C Power Delivery (25%)</td>
+                            <td>Burn-In Protection &amp; Ergonomics (20%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Under-Desk Walking Pads</strong></td>
+                            <td>Continuous Duty Cycle Heat (35%)</td>
+                            <td>Acoustic Floor Isolation (25%)</td>
+                            <td>Stowability &amp; Deck Footprint (20%)</td>
+                            <td>Speed Stability &amp; Safety (20%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mechanical Keyboards</strong></td>
+                            <td>Wrist Pronation &amp; Tenting (35%)</td>
+                            <td>Switch Tactility &amp; Acoustics (25%)</td>
+                            <td>QMK / VIA Firmware Depth (20%)</td>
+                            <td>Wireless Latency &amp; Battery (20%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4K Webcams</strong></td>
+                            <td>Low-Light CMOS Sensor SNR (35%)</td>
+                            <td>Autofocus &amp; Gimbal Tracking (25%)</td>
+                            <td>Natural Bokeh &amp; Color Science (20%)</td>
+                            <td>macOS / Windows Software (20%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ergonomic Vertical Mice</strong></td>
+                            <td>Forearm Supination Relief (35%)</td>
+                            <td>Grip Sizing &amp; Thumb Reach (25%)</td>
+                            <td>Multi-Device Flow &amp; Scroll (20%)</td>
+                            <td>Switch Silence &amp; Sensor DPI (20%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="baselines">2. Standardized Environmental &amp; Test Baselines</h2>
+            <ul>
+                <li><strong>Ambient Temperature &amp; Humidity:</strong> All thermal retention tests (chair meshes, molded foams, headphone earcups, and treadmill motor housings) are conducted in a climate-controlled room maintained at <code>71.6°F ± 1.5°F (22°C)</code> and <code>45% relative humidity</code>.</li>
+                <li><strong>Standing Desk Deflection Protocol:</strong> Desks are raised to <code>44.0 inches</code> (representing a 90th-percentile standing height) and loaded with <code>185 lbs</code> of distributed workstation equipment (dual monitors on arms + chassis). Lateral (X-axis) and front-to-back (Y-axis) peak-to-peak deflection is measured in millimeters (<code>mm</code>) under standardized lateral impulse and typing loads.</li>
+                <li><strong>Acoustic Noise Floor:</strong> Microphone SNR, mechanical keyboard typing acoustics, and walking pad decibel (<code>dBA</code>) readings are recorded against a verified ambient room noise floor of <code>32 dBA</code> at a standardized distance of <code>1.0 meter</code> (for machinery) or <code>4.0 inches</code> (for near-field dynamic microphones).</li>
+                <li><strong>Optical &amp; Display Calibration:</strong> Monitors are evaluated prior to and after profiling against a <code>6500K (D65)</code> white point and <code>120 cd/m²</code> SDR reference luminance to verify factory Delta-E accuracy and macOS/Windows ClearType subpixel rendering.</li>
+            </ul>
+
+            <h2 id="commercial-verification">3. Commercial, Price &amp; Warranty Verification Rules</h2>
+            <p>Hardware prices, Amazon Prime shipping eligibility, return windows, and promotional coupons fluctuate daily and vary depending on whether the unit is sold directly by Amazon.com, an authorized brand storefront, or an unauthorized third-party marketplace seller.</p>
+            <ul>
+                <li><strong>Explicit Verification Timestamps:</strong> Every article displays the exact date when prices and ASINs were last audited (currently <strong>Oct 30, 2026</strong>).</li>
+                <li><strong>OEM Warranty Warnings:</strong> High-ticket ergonomic chairs (such as the 12-year warranties from Herman Miller, Steelcase, and Haworth) require purchase from an <em>authorized retail channel</em>. We explicitly note in our reviews when buying refurbished or unauthorized third-party listings voids the OEM factory warranty.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>THE APEX WORKFLOWS LAB</h4>
+                    <p style="line-height: 1.65; margin-bottom: 12px;">Independent biomechanical, acoustic, optical, and workstation hardware evaluations for remote professionals and engineering teams across North America.</p>
+                    <p style="font-size: 12px; color: #cbd5e1;">Contact: <a href="mailto:editorial@theapexworkflows.com" style="color:#38bdf8;">editorial@theapexworkflows.com</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Workstation Categories</h4>
+                    <ul>
+                        <li><a href="index.html?cat=ergonomics#benchmarks">Ergonomic Seating &amp; Input</a></li>
+                        <li><a href="index.html?cat=active#benchmarks">Standing Desks &amp; Walking Pads</a></li>
+                        <li><a href="index.html?cat=visual#benchmarks">Ultrawide Monitors &amp; 4K Webcams</a></li>
+                        <li><a href="index.html?cat=audio#benchmarks">Broadcast Microphones &amp; ANC</a></li>
+                        <li><a href="index.html?cat=showdown#benchmarks">Head-to-Head Showdowns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Governance &amp; Policies</h4>
+                    <ul>
+                        <li><a href="about.html">About Us &amp; Testing Team</a></li>
+                        <li><a href="methodology.html">Scoring Formula &amp; Methodology</a></li>
+                        <li><a href="about.html#corrections">Corrections &amp; Ethics Policy</a></li>
+                        <li><a href="privacy.html">Privacy &amp; FTC Affiliate Disclosure</a></li>
+                        <li><a href="privacy.html#medical-disclaimer">Ergonomic &amp; Medical Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FTC &amp; Amazon Disclosure</h4>
+                    <p style="font-size: 12px; line-height: 1.6; color: #cbd5e1;">TheApexWorkflows.com is a participant in the Amazon Services LLC Associates Program (Partner ID: <code>apexworkflows-20</code>). As an Amazon Associate, we earn from qualifying purchases at no extra cost to you.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 The Apex Workflows Media Group. All rights reserved.</span>
+                <span>Audit-Verified v3.0 • Zero Ad-Bloat Architecture</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
