@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>ApexWorkflows | Lab Gear & Ergonomic Reviews</title>
+    <link>https://minh119.github.io/apex-workflows</link>
+    <description>Independent workplace ergonomics and remote productivity gear tests.</description>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 30 Oct 2026 13:44:29 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[The Best Ergonomic Office Chairs of 2026: Lab Tested for 8+ Hour Lumbar Relief]]></title>
+      <link>https://minh119.github.io/apex-workflows/articles/best-ergonomic-office-chairs-2026.html</link>
+      <guid isPermaLink="true">https://minh119.github.io/apex-workflows/articles/best-ergonomic-office-chairs-2026.html</guid>
+      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+      <description><![CDATA[We spent 90 days testing 14 top ergonomic chairs for back pain, posture support, and durability. Here are our top 4 picks for home offices. Full lab review on ApexWorkflows.]]></description>
+      <enclosure url="https://minh119.github.io/apex-workflows/assets/pins/pin_ergonomic_chairs.png" type="image/png" length="102400" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://minh119.github.io/apex-workflows/assets/pins/pin_ergonomic_chairs.png" medium="image" type="image/png" />
+    </item>
+    <item>
+      <title><![CDATA[Dual-Motor Electric Standing Desks: 2026 Wobble Test & Weight Capacity Showdown]]></title>
+      <link>https://minh119.github.io/apex-workflows/articles/best-standing-desks-2026.html</link>
+      <guid isPermaLink="true">https://minh119.github.io/apex-workflows/articles/best-standing-desks-2026.html</guid>
+      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+      <description><![CDATA[We loaded 5 electric sit-stand desks with 220 lbs and measured micro-vibrations at full height extension. See which desk won our 2026 stability crown. Full lab review on ApexWorkflows.]]></description>
+      <enclosure url="https://minh119.github.io/apex-workflows/assets/pins/pin_standing_desks.png" type="image/png" length="102400" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://minh119.github.io/apex-workflows/assets/pins/pin_standing_desks.png" medium="image" type="image/png" />
+    </item>
+    <item>
+      <title><![CDATA[Top 4 Microphones for Podcasting and Remote Work: Crystal Clear Audio Without Soundproofing]]></title>
+      <link>https://minh119.github.io/apex-workflows/articles/best-microphones-for-podcasting-zoom-2026.html</link>
+      <guid isPermaLink="true">https://minh119.github.io/apex-workflows/articles/best-microphones-for-podcasting-zoom-2026.html</guid>
+      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+      <description><![CDATA[Don't waste thousands on acoustic panels. These dynamic broadcast microphones reject room echo, dog barks, and mechanical keyboard clicks. Full lab review on ApexWorkflows.]]></description>
+      <enclosure url="https://minh119.github.io/apex-workflows/assets/pins/pin_podcasting_mics.png" type="image/png" length="102400" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://minh119.github.io/apex-workflows/assets/pins/pin_podcasting_mics.png" medium="image" type="image/png" />
+    </item>
+    <item>
+      <title><![CDATA[Best Noise-Cancelling Headphones for Deep Work in 2026: Silence Chatter and Distractions]]></title>
+      <link>https://minh119.github.io/apex-workflows/articles/best-noise-cancelling-headphones-focus-2026.html</link>
+      <guid isPermaLink="true">https://minh119.github.io/apex-workflows/articles/best-noise-cancelling-headphones-focus-2026.html</guid>
+      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+      <description><![CDATA[We tested ANC performance against cafe clatter, plane rumble, and conversational frequencies. Here are the headphones that protect your flow state. Full lab review on ApexWorkflows.]]></description>
+      <enclosure url="https://minh119.github.io/apex-workflows/assets/pins/pin_anc_headphones.png" type="image/png" length="102400" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://minh119.github.io/apex-workflows/assets/pins/pin_anc_headphones.png" medium="image" type="image/png" />
+    </item>
+  </channel>
+</rss>
