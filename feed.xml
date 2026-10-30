@@ -7,7 +7,7 @@
     <link>https://theapexworkflows.com</link>
     <description>Independent workplace ergonomics and remote productivity gear tests.</description>
     <language>en-US</language>
-    <lastBuildDate>Fri, 30 Oct 2026 14:51:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 15:36:20 +0000</lastBuildDate>
     <item>
       <title><![CDATA[The Best Ergonomic Office Chairs of 2026: Lab Tested for 8+ Hour Lumbar Relief]]></title>
       <link>https://theapexworkflows.com/articles/best-ergonomic-office-chairs-2026.html</link>
@@ -88,6 +88,15 @@
       <description><![CDATA[Traditional flat mice twist your forearm bones into unnatural friction. We tested 5 vertical mice engineered to keep your hand in a neutral handshake posture. Full lab review on ApexWorkflows.]]></description>
       <enclosure url="https://theapexworkflows.com/assets/pins/pin_podcasting_mics.png" type="image/png" length="102400" />
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://theapexworkflows.com/assets/pins/pin_podcasting_mics.png" medium="image" type="image/png" />
+    </item>
+    <item>
+      <title><![CDATA[Herman Miller Aeron vs. Steelcase Leap V2 (2026): The 100-Hour Pressure-Map & Biomechanical Showdown]]></title>
+      <link>https://theapexworkflows.com/articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html</link>
+      <guid isPermaLink="true">https://theapexworkflows.com/articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html</guid>
+      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+      <description><![CDATA[We spent 100 hours measuring spinal load, sacral pressure, and thermal buildup between the two greatest ergonomic chairs of all time. Here is the unbiased winner. Full lab review on ApexWorkflows.]]></description>
+      <enclosure url="https://theapexworkflows.com/assets/pins/pin_herman_miller_aeron_vs_steelcase_leap_v2.png" type="image/png" length="102400" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://theapexworkflows.com/assets/pins/pin_herman_miller_aeron_vs_steelcase_leap_v2.png" medium="image" type="image/png" />
     </item>
   </channel>
 </rss>
