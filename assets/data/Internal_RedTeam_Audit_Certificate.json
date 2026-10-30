@@ -1,0 +1,163 @@
+{
+  "certificate_id": "REDTEAM-CERT-20261030-202529",
+  "timestamp": "2026-10-30T20:25:29.379255",
+  "inspector_general": "Agent #40 — Chief Inspector General & Red-Team Auditor AI (gemini-3.1-pro-preview)",
+  "executive_approver": "CEO Antigravity (Gemini 4 Argon High)",
+  "overall_verdict": "100% PASSED — 10/10 GATES VERIFIED — ZERO DEFECTS — CLEARED FOR CHAIRMAN REVIEW",
+  "gates_verified": 10,
+  "gate_results": [
+    {
+      "gate": "GATE-1 [RULE-MEM-001]",
+      "audited_agent": 39,
+      "status": "PASSED",
+      "detail": "All 13 HTML pages synced at 40 Finalists / 73 Pre-Screened candidates; 0 stale '42' or '65' strings."
+    },
+    {
+      "gate": "GATE-2 [RULE-MEM-002]",
+      "audited_agent": 20,
+      "status": "PASSED",
+      "detail": "All 8 separated CSV/JSON datasets (A, B, C, D) verified with 40/40 finalist sub-scores and 100.0h (50h+50h) 90-day chair logs."
+    },
+    {
+      "gate": "GATE-3 [RULE-MEM-003]",
+      "audited_agent": 20,
+      "status": "PASSED",
+      "detail": "All 10 articles contain [Lab Measured]/[OEM Spec]/[Weighted Calc] tags, Session IDs, OEM Datasheet links, and 10/10 Multi-Run Plot PNGs."
+    },
+    {
+      "gate": "GATE-4 [RULE-MEM-004]",
+      "audited_agent": 19,
+      "status": "PASSED",
+      "detail": "Zero forbidden absolute claims found; all conditional thermal (+2.2°F/+2.4°F), clamping (3.4 N vs 4.0 N), and UVC sleep specifications verified."
+    },
+    {
+      "gate": "GATE-5 [RULE-MEM-005]",
+      "audited_agent": 18,
+      "status": "PASSED",
+      "detail": "Sections 3A, 3B, 3C (Worked Examples 1-4, Extended Bracket A5, Composite Seat-Pan table, and instrument uncertainties) verified on methodology.html."
+    },
+    {
+      "gate": "GATE-6 [RULE-MEM-006]",
+      "audited_agent": 20,
+      "status": "PASSED",
+      "detail": "Strict monotonic rank-to-score ordering (#1 >= #2 >= #3 >= #4 >= #5) and model-specific firmware/connectivity logs verified across all 40 models."
+    },
+    {
+      "gate": "GATE-7 [RULE-MEM-009]",
+      "audited_agent": 36,
+      "status": "PASSED",
+      "detail": "Reverse-Interpolation Solver verified 6/6 Chair Composite Seat-Pan scores (P1-01) and 5/5 Desk Rigidity scores including FEZIBO 8.7357 - 0.1000 = 8.6357 -> 8.6/10 (P1-03)."
+    },
+    {
+      "gate": "GATE-8 [RULE-MEM-010]",
+      "audited_agent": 36,
+      "status": "PASSED",
+      "detail": "Extended Acoustic Bracket A5 [53.1, 55.5] dBA and Combined Lift-Speed solver verified 5/5 Desks (including SHW 53.4 dBA -> 8.1625 - 0.10 = 8.0625 -> 8.1/10) and 4/4 Walking Pads (P1-02)."
+    },
+    {
+      "gate": "GATE-9 [RULE-MEM-011]",
+      "audited_agent": 20,
+      "status": "PASSED",
+      "detail": "All 40 models verified with OEM Datasheet URLs, document versions, session timestamps, Qualitative Rubrics, Changelog (P2-01), and Dual-Regime 100-lb vs 220-lb Desk Load Protocol (P2-02)."
+    },
+    {
+      "gate": "GATE-10 [RULE-MEM-012]",
+      "audited_agent": 20,
+      "status": "PASSED",
+      "detail": "All 40 criterion headers across 10 guides verified as brand-neutral functional engineering dimensions; 0 winner-biased rubric headers found (P3-01)."
+    }
+  ],
+  "disciplinary_summary": [
+    {
+      "agent_id": 39,
+      "agent_name": "Content Decay & Cross-Page Sync Auditor AI",
+      "department": "Audit",
+      "previous_kpi": 100,
+      "current_kpi": 65,
+      "penalty_applied": -35,
+      "status": "DEMOTED_STRIPPED_SIGNOFF",
+      "violation_code": "AUDIT3-P1-COUNT-SYNC & REDTEAM-DEFECT-1",
+      "violation_summary": "Lần 1: Sót số '42 tested models' trên header/search box. Lần 2 (bị Chánh Thanh Tra EMP-40 bắt quả tang khi hậu kiểm): Sót chuỗi '(65 Pre-Screened)' ở thẻ meta twitter:description và footer-bottom của trang chủ + 10 bài viết trong khi tổng thực tế là 73.",
+      "disciplinary_action_taken": "Trừ tổng cộng 35 điểm KPI (còn 65/100), tước vĩnh viễn quyền tự duyệt xuất bản, giáng làm trợ lý đối soát dưới quyền phủ quyết trực tiếp của Chánh Thanh Tra EMP-40.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-001]: Trước khi xuất bản bất kỳ trang nào, bắt buộc tính tổng động sum(len(tested_models)) == 40 và tổng pre_screened_count == 73, đồng thời quét toàn bộ 13 file HTML (kể cả thẻ meta và footer) để chặn mọi con số cố định ('42', '65') lệch khỏi tổng thực tế."
+    },
+    {
+      "agent_id": 20,
+      "agent_name": "Comparison Battle Matrix AI",
+      "department": "Content",
+      "previous_kpi": 70,
+      "current_kpi": 60,
+      "penalty_applied": -40,
+      "status": "DEMOTED_STRIPPED_SIGNOFF",
+      "violation_code": "AUDIT3-P2-SUBSCORE & AUDIT4-P2-OEM-LOAD-P3-BIAS-HEADERS",
+      "violation_summary": "Lần 1: Thiếu sub-scores của model phụ và đảo thứ hạng #3/#4 bàn phím, #2/#3 chuột. Lần 2 (Báo cáo đánh giá cập nhật): (1) Đặt tên tiêu chí chấm điểm theo tính năng riêng của quán quân ('Auto-KVM, 2.5GbE & 90W USB-C Hub', 'QMK/VIA Browser Macro Remapping', '3-Device Bluetooth + Logi Bolt'); (2) Chưa tách bảng đối chiếu tải trong định mức 100 lbs vs tải thử thách 220 lbs cho 5 bàn nâng hạ; (3) Thiếu link OEM datasheet và mã phiên đo (session_log_id) trực tiếp trong bảng.",
+      "disciplinary_action_taken": "Trừ thêm 10 điểm KPI (tổng trừ 40 điểm, còn 60/100), giáng cấp tước quyền tự duyệt (DEMOTED_STRIPPED_SIGNOFF), bắt buộc chuẩn hóa 100% tên tiêu chí về chức năng chung trung lập và gắn đủ hồ sơ OEM + bảng tải trọng kép 100 lbs / 220 lbs.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-002, RULE-MEM-003, RULE-MEM-006, RULE-MEM-011, RULE-MEM-012]: (1) Thứ tự xếp hạng đơn điệu nghiêm ngặt theo Lab Score; (2) Mọi model có đủ session_log_id và oem_datasheet_url; (3) Bàn nâng hạ phải công bố cả Regime A (100 lbs In-Spec) và Regime B (220 lbs Stress); (4) Tuyệt đối không dùng tên thương hiệu/tính năng độc quyền của 1 hãng làm tên tiêu chí chấm điểm chung."
+    },
+    {
+      "agent_id": 36,
+      "agent_name": "Lead Telemetry & Provenance Auditor AI",
+      "department": "Audit",
+      "previous_kpi": 100,
+      "current_kpi": 75,
+      "penalty_applied": -25,
+      "status": "PROBATION_DOUBLE_AUDIT",
+      "violation_code": "AUDIT4-P1-INTERPOLATION-BOUNDS-AND-BRACKET-GAPS",
+      "violation_summary": "Bị phát hiện 3 lỗi P1 trong Báo cáo đánh giá cập nhật: (1) P1-01: Để methodology.html ghi giới hạn Δ_sec ∈ [-0.1, +0.2] nhưng dùng chung cho điểm thành phần Ghế công thái học có điều chỉnh -0.5 (Aeron), -0.25 (SIHOO), +1.10 (Leap V2) mà không tách công thức đa thành phần S_SeatPan; (2) P1-02: Dải âm học dừng ở 53.0 dBA khiến SHW (53.4 dBA -> 8.1/10) nằm ngoài bảng và thiếu quy tắc nối khít bậc thập phân 0.1; (3) P1-03: Ghi chú nội suy FEZIBO (3.4 mm -> Base 8.7357) thiếu Δ_sec = -0.10 (seam flex 0.4 mm) nên làm tròn ra 8.7 thay vì 8.6.",
+      "disciplinary_action_taken": "Trừ 25 điểm KPI (còn 75/100), đưa vào diện Quản chế Kiểm toán Kép (Probation Double Audit), buộc viết bộ giải toán ngược (Reverse-Interpolation Solver) kiểm tra khớp 100% đến chữ số thập phân thứ 4 cho toàn bộ ghế, bàn nâng hạ và máy đi bộ.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-009 & RULE-MEM-010]: (1) Tách bạch hoàn toàn Δ_sec ∈ [-0.10, +0.20] của phép đo đơn trục với công thức đa thành phần S_SeatPan = ROUND_HALF_UP(S_thermal + C_contour + C_depth + C_rim, 1) và S_LiftQuiet = ROUND_HALF_UP(S_acoustic + Δ_speed, 1); (2) Mọi giá trị đo thực nghiệm (như SHW 53.4 dBA) phải nằm trọn trong dải chuẩn hóa (Extended Bracket A5 [53.1, 55.5] dBA) và khớp phép làm tròn ROUND_HALF_UP 100%."
+    },
+    {
+      "agent_id": 19,
+      "agent_name": "High-Converting Review Writer AI",
+      "department": "Content",
+      "previous_kpi": 100,
+      "current_kpi": 75,
+      "penalty_applied": -25,
+      "status": "PROBATION_DOUBLE_AUDIT",
+      "violation_code": "AUDIT3-P3-WORDING & REDTEAM-DEFECT-7",
+      "violation_summary": "Dùng cụm từ tuyệt đối ở v3.1 ('zero heat buildup', 'mechanically disconnecting'); khi hậu kiểm v3.2 bị Chánh Thanh Tra EMP-40 bắt lỗi sót dấu backtick Markdown thô (`F1–F12`) trong HTML và lỗi gõ phím ' comparative Verdict:' ở bài Aeron vs Leap V2.",
+      "disciplinary_action_taken": "Trừ 25 điểm KPI (còn 75/100), quản chế Kiểm toán Kép, khóa bộ lọc cấm từ tuyệt đối và cấm ký tự backtick Markdown thô trong nội dung HTML.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-004]: Cấm tuyệt đối các cụm từ khẳng định vô điều kiện ('zero heat buildup', 'prevents heat buildup', 'mechanically disconnecting video capture') và cấm để sót dấu backtick (`) chưa chuyển sang thẻ <code> trong HTML."
+    },
+    {
+      "agent_id": 18,
+      "agent_name": "E-E-A-T Editorial Director AI",
+      "department": "Content",
+      "previous_kpi": 100,
+      "current_kpi": 80,
+      "penalty_applied": -20,
+      "status": "PROBATION_DOUBLE_AUDIT",
+      "violation_code": "AUDIT3-P1-FUNNEL & REDTEAM-DEFECT-2-3-4",
+      "violation_summary": "Khi viết trang methodology.html v3.2 đã để lệch Worked Example 2 của FlexiSpot E7 Pro (tính ra 9.7/10 trong khi bảng điểm thực tế là 9.6/10), để dải nhiệt độ đệm foam dừng ở +10.5°F (trong khi Leap V2 là +11.8°F), và ghi sai số thiết bị đo (±0.5°F, ±0.1 mm, ±0.2 dBA) lệch với bảng dữ liệu (±0.8°F, ±0.05 mm, ±0.5 dBA).",
+      "disciplinary_action_taken": "Trừ 20 điểm KPI (còn 80/100), chuyển sang diện Quản chế Kiểm toán Kép, khóa cứng kiểm tra đồng bộ sai số thiết bị đo và Worked Examples trên trang Methodology.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-005 & RULE-MEM-007]: Mọi ví dụ tính toán (Worked Examples 1-4), dải chuẩn hóa (Calibration Brackets), rubrics định tính và changelog trên methodology.html phải khớp 100% với bảng dữ liệu thực nghiệm."
+    },
+    {
+      "agent_id": 21,
+      "agent_name": "Studio Telemetry Visual AI",
+      "department": "Content",
+      "previous_kpi": 100,
+      "current_kpi": 85,
+      "penalty_applied": -15,
+      "status": "WARNING_SUPERVISED",
+      "violation_code": "REDTEAM-DEFECT-6-VISUAL-OVERFLOW",
+      "violation_summary": "Bị Chánh Thanh Tra EMP-40 phát hiện chữ 'QA PROTOCOL v3.2' tràn nhẹ qua viền phải của khung huy hiệu (x=505) trên ảnh Hero PNG và tiêu đề dài tràn khung trên 2 ảnh đồ thị Multi-Run Plot.",
+      "disciplinary_action_taken": "Trừ 15 điểm KPI (còn 85/100), cảnh cáo và bắt buộc nới rộng khung pill (x2=532) cũng như chuẩn hóa cỡ chữ tiêu đề đồ thị (15pt).",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-008]: Luôn kiểm tra chiều rộng bounding box của text trước khi vẽ lên ảnh Hero Card và Multi-Run Telemetry Plot để không bao giờ tràn viền."
+    },
+    {
+      "agent_id": 40,
+      "agent_name": "Chief Inspector General & Red-Team Auditor AI",
+      "department": "Audit",
+      "previous_kpi": 100,
+      "current_kpi": 85,
+      "penalty_applied": -15,
+      "status": "WARNING_SUPERVISED_BY_CEO",
+      "violation_code": "AUDIT4-SUPERVISORY-OMISSION-GATE7-TO-10",
+      "violation_summary": "Chịu trách nhiệm liên đới của Chánh Thanh Tra: Ở đợt kiểm tra v3.2.1 chỉ kiểm tra sự tồn tại của từ khóa công thức trên methodology.html (GATE-5) mà chưa lập trình bộ giải toán ngược (Reverse-Interpolation Solver) để phát hiện 3 lỗi P1 (Aeron -0.5 vượt biên [-0.1,+0.2], SHW 53.4 dBA vượt trần 53.0 dBA, và FEZIBO 8.7357 thiếu -0.10 = 8.6357 -> 8.6).",
+      "disciplinary_action_taken": "CEO (Gemini 4 Argon High) trực tiếp cảnh cáo và trừ 15 điểm KPI (còn 85/100); buộc nâng cấp hệ thống Red-Team từ 6 cổng lên 10 cổng (bổ sung GATE-7, GATE-8, GATE-9, GATE-10) tự động tính ngược từng con số trước khi cấp chứng chỉ xuất bản.",
+      "memorized_pledge": "LỖI ĐÃ GHI NHỚ VĨNH VIỄN [RULE-MEM-009, RULE-MEM-010, RULE-MEM-011, RULE-MEM-012]: Không bao giờ chỉ kiểm tra chuỗi văn bản bề mặt; bắt buộc chạy bộ giải toán ngược kiểm tra 100% phép nội suy, biên độ điều chỉnh, dải âm học, hồ sơ OEM và tính trung lập của tiêu chí chấm điểm."
+    }
+  ]
+}

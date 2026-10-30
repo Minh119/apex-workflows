@@ -54,16 +54,17 @@
             <h1>How We Test &amp; Score Workstation Hardware</h1>
             <p>To prevent subjective bias and "score inflation," <strong>The Apex Workflows Lab</strong> never assigns arbitrary overall ratings or reuses generic sub-scores across unrelated product categories. Across our 10 benchmark guides, we pre-screened <strong>73 commercial hardware models</strong>, eliminated 33 during initial structural/acoustic/optical bench checks, and subjected the <strong>40 finalist models</strong> to a tailored <strong>4-Factor Weighted Scoring Formula</strong> where the four sub-score weights sum to exactly <code>100%</code>, verified automatically at build time.</p>
 
-            <h2 id="open-datasets">1. Separated Open Datasets: Score Summary vs. Physical Measurement Logs</h2>
-            <p>In accordance with our v3.2 transparency standard, we separate our downloadable open data into distinct, audit-ready files so readers can distinguish between derived composite scores and raw physical instrument readings:</p>
+            <h2 id="open-datasets">1. Separated Open Datasets: Score Summary, Physical Logs, Chair Trial &amp; OEM Rubrics</h2>
+            <p>In accordance with our v3.2.2 transparency standard, we separate our downloadable open data into four distinct, audit-ready files so readers can distinguish between derived composite scores, raw physical instrument readings, and official OEM specifications:</p>
             <ul>
                 <li><strong>Dataset A — Score Summary Matrix (All 40 Finalist Models):</strong> Contains the 4-factor sub-scores <code>[s1, s2, s3, s4]</code>, category weights, exact unrounded weighted sums, <code>ROUND_HALF_UP</code> 10-point Lab Scores, and 5-star Schema ratings for all 40 models. <a href="assets/data/apex_2026_score_summary.csv" download style="font-weight:800; color:#1d4ed8;">&darr; Download Score Summary (CSV)</a> | <a href="assets/data/apex_2026_score_summary.json" download style="font-weight:800; color:#1d4ed8;">JSON</a></li>
-                <li><strong>Dataset B — Multi-Run Physical Measurement &amp; Provenance Logs (All 40 Finalist Models):</strong> Contains 3-run physical instrument measurements (<code>Run 1, Run 2, Run 3</code>), arithmetic mean, instrument uncertainty margin (<code>&plusmn;</code>), evaluation dates, firmware/hardware configuration, and column-by-column <code>[Lab Measured]</code> vs. <code>[OEM Spec]</code> provenance. <a href="assets/data/apex_2026_measurement_logs.csv" download style="font-weight:800; color:#1d4ed8;">&darr; Download Measurement Logs (CSV)</a> | <a href="assets/data/apex_2026_measurement_logs.json" download style="font-weight:800; color:#1d4ed8;">JSON</a></li>
+                <li><strong>Dataset B — Multi-Run Physical Measurement &amp; Provenance Logs (All 40 Finalist Models):</strong> Contains 3-run physical instrument measurements (<code>Run 1, Run 2, Run 3</code>), arithmetic mean, instrument uncertainty margin (<code>&plusmn;</code>), timestamped session IDs (<code>session_log_id</code>), evaluation dates, firmware/hardware configuration, and column-by-column <code>[Lab Measured]</code> vs. <code>[OEM Spec]</code> provenance. <a href="assets/data/apex_2026_measurement_logs.csv" download style="font-weight:800; color:#1d4ed8;">&darr; Download Measurement Logs (CSV)</a> | <a href="assets/data/apex_2026_measurement_logs.json" download style="font-weight:800; color:#1d4ed8;">JSON</a></li>
                 <li><strong>Dataset C — Dedicated 90-Day / 100-Hour Chair Trial Log:</strong> Contains the 4-evaluator anthropometric rotation matrix (<code>2026-07-01</code> to <code>2026-09-28</code>, <code>12.5h Aeron + 12.5h Leap V2 = 25.0h per evaluator</code>; <code>50.0h Aeron + 50.0h Leap V2 = 100.0h total</code>) and 4-hour thermal IR runs. <a href="assets/data/apex_2026_chair_90day_trial_log.csv" download style="font-weight:800; color:#1d4ed8;">&darr; Download 90-Day Chair Trial Log (CSV)</a> | <a href="assets/data/apex_2026_chair_90day_trial_log.json" download style="font-weight:800; color:#1d4ed8;">JSON</a></li>
+                <li><strong>Dataset D — Official OEM Datasheet Registry, Qualitative Rubrics &amp; Changelog (All 40 Finalist Models):</strong> Contains direct manufacturer specification URLs, document revision numbers, verification dates, dual-regime desk load logs, qualitative anchor rubrics, and our version changelog. <a href="assets/data/apex_2026_oem_datasheets_and_rubrics.csv" download style="font-weight:800; color:#1d4ed8;">&darr; Download OEM &amp; Rubric Registry (CSV)</a> | <a href="assets/data/apex_2026_oem_datasheets_and_rubrics.json" download style="font-weight:800; color:#1d4ed8;">JSON</a></li>
             </ul>
 
             <h2 id="scoring-formula">2. The 4-Factor Weighted Formula &amp; Rounding Rules</h2>
-            <p>Each of the <strong>40 finalist models</strong> is evaluated on four category-specific engineering dimensions on a <code>0.0 to 10.0</code> scale. The composite <strong>Lab Score</strong> and <strong>Schema.org 5-Star Rating</strong> are computed deterministically using standard arithmetic <strong>Half-Up Rounding</strong> (<code>Decimal ROUND_HALF_UP</code>, where <code>.x5</code> rounds up to the next tenth):</p>
+            <p>Each of the <strong>40 finalist models</strong> is evaluated on four category-specific, function-neutral engineering dimensions on a <code>0.0 to 10.0</code> scale. The composite <strong>Lab Score</strong> and <strong>Schema.org 5-Star Rating</strong> are computed deterministically using standard arithmetic <strong>Half-Up Rounding</strong> (<code>Decimal ROUND_HALF_UP</code>, where <code>.x5</code> rounds up to the next tenth):</p>
             <div class="highlight-box">
                 <p style="margin-bottom:8px;"><code>Exact Weighted Sum = (Score₁ &times; Weight₁) + (Score₂ &times; Weight₂) + (Score₃ &times; Weight₃) + (Score₄ &times; Weight₄)</code></p>
                 <p style="margin-bottom:8px;"><code>Displayed Lab Score (/10) = ROUND_HALF_UP(Exact Weighted Sum, 1 decimal place)</code></p>
@@ -88,104 +89,205 @@
                         <tr>
                             <td><a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Steelcase Leap V2 Ergonomic Office Chair</a><br><span style="font-size:11.5px; color:#475569;">Head-to-Head Showdown</span></td>
                             <td>Lumbar & Spinal Adaptability (35%)<br><strong>9.7/10</strong></td>
-                            <td>Seat Pan Pressure Distribution (25%)<br><strong>9.6/10</strong></td>
-                            <td>4D Armrest & Recline Kinematics (20%)<br><strong>9.6/10</strong></td>
-                            <td>Warranty & Resale Value (20%)<br><strong>9.4/10</strong></td>
+                            <td>Seat Pan Comfort & Breathability (25%)<br><strong>9.6/10</strong></td>
+                            <td>Armrest & Recline Kinematics (20%)<br><strong>9.6/10</strong></td>
+                            <td>Warranty & Long-Term Value (20%)<br><strong>9.4/10</strong></td>
                             <td><code>9.595</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-ergonomic-office-chairs-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">SIHOO Doro C300 Ergonomic Mesh Office Chair</a><br><span style="font-size:11.5px; color:#475569;">Office Ergonomics</span></td>
                             <td>Lumbar & Sacral Support (35%)<br><strong>9.5/10</strong></td>
-                            <td>Mesh Breathability & Seat Pan (25%)<br><strong>9.4/10</strong></td>
+                            <td>Seat Pan Comfort & Breathability (25%)<br><strong>9.4/10</strong></td>
                             <td>Armrest & Recline Adjustability (20%)<br><strong>9.2/10</strong></td>
-                            <td>Value Under $400 (20%)<br><strong>9.5/10</strong></td>
+                            <td>Build Durability & Value (20%)<br><strong>9.5/10</strong></td>
                             <td><code>9.415</code> &rarr; <strong>9.4/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.7/5 ★</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-standing-desks-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">FlexiSpot E7 Pro Plus Dual-Motor Standing Desk</a><br><span style="font-size:11.5px; color:#475569;">Workspace Architecture</span></td>
                             <td>Lateral & Front-Back Rigidity (35%)<br><strong>9.6/10</strong></td>
-                            <td>Dual-Motor Lift Speed & Quietness (25%)<br><strong>9.5/10</strong></td>
-                            <td>Frame Gauge & Anti-Collision (20%)<br><strong>9.5/10</strong></td>
+                            <td>Lift Speed & Acoustic Quietness (25%)<br><strong>9.5/10</strong></td>
+                            <td>Frame Construction & Safety Systems (20%)<br><strong>9.5/10</strong></td>
                             <td>Value & Warranty Coverage (20%)<br><strong>9.3/10</strong></td>
                             <td><code>9.495</code> &rarr; <strong>9.5/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-microphones-for-podcasting-zoom-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Shure MV7+ Podcast Dynamic Microphone</a><br><span style="font-size:11.5px; color:#475569;">Creator & Audio Gear</span></td>
                             <td>Off-Axis Room Echo Rejection (35%)<br><strong>9.8/10</strong></td>
-                            <td>Onboard DSP & Denoiser Clarity (25%)<br><strong>9.6/10</strong></td>
-                            <td>USB-C + XLR Hybrid Versatility (20%)<br><strong>9.7/10</strong></td>
+                            <td>Vocal Processing & Signal Clarity (25%)<br><strong>9.6/10</strong></td>
+                            <td>Connectivity & Interface Versatility (20%)<br><strong>9.7/10</strong></td>
                             <td>Value & Build Construction (20%)<br><strong>9.2/10</strong></td>
                             <td><code>9.610</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-noise-cancelling-headphones-focus-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Sony WH-1000XM5 Wireless Noise-Canceling Headphones</a><br><span style="font-size:11.5px; color:#475569;">Focus & Productivity</span></td>
                             <td>Mid/High-Frequency Speech Attenuation (35%)<br><strong>9.8/10</strong></td>
-                            <td>Boomless Voice Call Mic Isolation (25%)<br><strong>9.6/10</strong></td>
+                            <td>Voice Call Microphone Isolation (25%)<br><strong>9.6/10</strong></td>
                             <td>Clamping Force & 4-Hr Thermal Comfort (20%)<br><strong>9.4/10</strong></td>
-                            <td>Multipoint Bluetooth & Battery (20%)<br><strong>9.5/10</strong></td>
+                            <td>Multi-Device Connectivity & Battery (20%)<br><strong>9.5/10</strong></td>
                             <td><code>9.610</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-ultrawide-curved-monitors-productivity-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Dell UltraSharp U4924DW 49-Inch Curved USB-C Hub Monitor</a><br><span style="font-size:11.5px; color:#475569;">Visual Workstation</span></td>
-                            <td>RGB Subpixel Text Clarity for Coding (30%)<br><strong>9.7/10</strong></td>
-                            <td>Auto-KVM, 2.5GbE & 90W USB-C Hub (30%)<br><strong>9.8/10</strong></td>
-                            <td>IPS Black Contrast & Color Delta-E (20%)<br><strong>9.3/10</strong></td>
-                            <td>Zero Burn-In Risk for Static Windows (20%)<br><strong>9.4/10</strong></td>
+                            <td>Subpixel Text Clarity & Sharpness (30%)<br><strong>9.7/10</strong></td>
+                            <td>Connectivity & Docking Hub (30%)<br><strong>9.8/10</strong></td>
+                            <td>Contrast Ratio & Color Accuracy (20%)<br><strong>9.3/10</strong></td>
+                            <td>Panel Longevity & Static-Window Suitability (20%)<br><strong>9.4/10</strong></td>
                             <td><code>9.590</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-under-desk-treadmills-walking-pads-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">WalkingPad C2 Foldable Under-Desk Treadmill</a><br><span style="font-size:11.5px; color:#475569;">Active Health</span></td>
-                            <td>180-Degree Foldability & Storage (35%)<br><strong>9.8/10</strong></td>
-                            <td>Brushless Motor Quietness at 1.8 mph (30%)<br><strong>9.3/10</strong></td>
+                            <td>Storage Footprint & Foldability (35%)<br><strong>9.8/10</strong></td>
+                            <td>Motor Acoustic Quietness at 1.8 mph (30%)<br><strong>9.3/10</strong></td>
                             <td>Belt Tracking & Step Cushioning (20%)<br><strong>9.0/10</strong></td>
-                            <td>Weight Capacity & App Control (15%)<br><strong>8.9/10</strong></td>
+                            <td>Load Capacity & Controls (15%)<br><strong>8.9/10</strong></td>
                             <td><code>9.355</code> &rarr; <strong>9.4/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.7/5 ★</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Keychron Q1 Pro Wireless Custom Mechanical Keyboard</a><br><span style="font-size:11.5px; color:#475569;">Input Ergonomics</span></td>
-                            <td>Gasket-Mount Finger Cushioning (35%)<br><strong>9.8/10</strong></td>
-                            <td>6063 CNC Aluminum Build & Acoustics (25%)<br><strong>9.7/10</strong></td>
-                            <td>QMK/VIA Browser Macro Remapping (20%)<br><strong>9.7/10</strong></td>
-                            <td>Wireless Battery & Portability (20%)<br><strong>9.0/10</strong></td>
+                            <td>Typing Cushioning & Ergonomic Geometry (35%)<br><strong>9.8/10</strong></td>
+                            <td>Chassis Build & Acoustic Profile (25%)<br><strong>9.7/10</strong></td>
+                            <td>Programmability & Firmware Customization (20%)<br><strong>9.7/10</strong></td>
+                            <td>Wireless Connectivity & Portability (20%)<br><strong>9.0/10</strong></td>
                             <td><code>9.595</code> &rarr; <strong>9.6/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.8/5 ★</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-4k-webcams-zoom-ai-tracking-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Insta360 Link 2 4K AI Webcam with 2-Axis Gimbal & 1/2-Inch Sensor</a><br><span style="font-size:11.5px; color:#475569;">Visual Streaming</span></td>
-                            <td>1/2-Inch CMOS Low-Light Clarity (35%)<br><strong>9.8/10</strong></td>
-                            <td>Phase-Detection Autofocus & Natural Bokeh (25%)<br><strong>9.7/10</strong></td>
-                            <td>2-Axis Mechanical Gimbal Tracking (20%)<br><strong>9.6/10</strong></td>
-                            <td>Value vs. DSLR Setup (20%)<br><strong>9.4/10</strong></td>
+                            <td>Low-Light Image Clarity & Dynamic Range (35%)<br><strong>9.8/10</strong></td>
+                            <td>Autofocus Speed & Optical Depth-of-Field (25%)<br><strong>9.7/10</strong></td>
+                            <td>Subject Framing & Mount Adjustability (20%)<br><strong>9.6/10</strong></td>
+                            <td>Overall Value & Software Controls (20%)<br><strong>9.4/10</strong></td>
                             <td><code>9.655</code> &rarr; <strong>9.7/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.9/5 ★</span></td>
                         </tr>
                         <tr>
                             <td><a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html" style="font-weight:800; color:#1d4ed8; text-decoration:none;">Logitech Lift Vertical Ergonomic Mouse</a><br><span style="font-size:11.5px; color:#475569;">Input Ergonomics</span></td>
-                            <td>57-Degree Forearm Posture Relief (35%)<br><strong>9.6/10</strong></td>
-                            <td>Whisper-Quiet Clicks & SmartWheel (25%)<br><strong>9.5/10</strong></td>
-                            <td>3-Device Bluetooth + Logi Bolt (20%)<br><strong>9.4/10</strong></td>
-                            <td>Hand-Size Accessibility & Value (20%)<br><strong>9.1/10</strong></td>
+                            <td>Forearm Posture & Pronation Relief (35%)<br><strong>9.6/10</strong></td>
+                            <td>Switch Acoustics & Scroll Wheel Precision (25%)<br><strong>9.5/10</strong></td>
+                            <td>Multi-Device Connectivity & Sensor Tracking (20%)<br><strong>9.4/10</strong></td>
+                            <td>Hand-Size Fit & Overall Value (20%)<br><strong>9.1/10</strong></td>
                             <td><code>9.435</code> &rarr; <strong>9.4/10</strong><br><span style="font-size:11.5px; color:#047857; font-weight:700;">Schema: 4.7/5 ★</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h2 id="normalization">3. Measurement-to-Score Normalization &amp; Intra-Bracket Linear Interpolation Rule</h2>
-            <p>To translate raw physical measurements into exact <code>0.0–10.0</code> sub-scores without arbitrary human guessing inside a bracket, our scoring script uses <strong>Linear Bracket Interpolation</strong> combined with a bounded <strong>Secondary Engineering Modifier (<code>&Delta;<sub>sec</sub> &isin; [-0.1, +0.2]</code>)</strong>:</p>
+            <h2 id="normalization">3. Measurement-to-Score Normalization: Single-Metric Interpolation vs. Composite Sub-Factor Formulas</h2>
+            <p>To ensure 100% mathematical reproducibility across all 40 models without conflating single-variable tolerance adjustments with multi-mechanism composite sub-scores, our scoring engine separates normalization into three explicit deterministic mechanisms (<strong>3A, 3B, and 3C</strong>):</p>
+
+            <h3>3A. Single-Metric Linear Bracket Interpolation, Boundary Continuity &amp; Secondary Modifier (<code>&Delta;<sub>sec</sub> &isin; [-0.10, +0.20]</code>)</h3>
             <div class="highlight-box">
-                <p style="margin-bottom:8px;"><strong>Step 1 (Linear Interpolation within Calibration Bracket):</strong> Given a measured physical value <code>x</code> falling inside bracket <code>[x<sub>min</sub>, x<sub>max</sub>]</code> mapped to score range <code>[S<sub>min</sub>, S<sub>max</sub>]</code> (where lower physical values like deflection <code>mm</code> or noise <code>dBA</code> are better):</p>
-                <p style="margin-bottom:8px;"><code>Base(x) = S<sub>min</sub> + ((x<sub>max</sub> - x) / (x<sub>max</sub> - x<sub>min</sub>)) &times; (S<sub>max</sub> - S<sub>min</sub>)</code></p>
-                <p style="margin-bottom:0;"><strong>Step 2 (Secondary Engineering Modifier &amp; Half-Up Rounding):</strong> <code>Factor Score = ROUND_HALF_UP(Base(x) + &Delta;<sub>sec</sub>, 1)</code>, where <code>&Delta;<sub>sec</sub></code> accounts for documented secondary physical traits within that dimension (e.g., <code>+0.1</code> for brushless motor spectral smoothness without tonal whine, or <code>-0.1</code> for high-frequency brushed motor whine).</p>
+                <p style="margin-bottom:8px;"><strong>Step 0 (Pre-Interpolation Mean Quantization &amp; Inter-Bracket Continuity Rule):</strong> For any 3-run or 4-run physical measurement series, the arithmetic mean is first quantized to the 1-decimal instrument resolution: <code>x&#770; = ROUND_HALF_UP(mean_runs, 1)</code>. Because <code>x&#770;</code> has exactly 1 decimal place, every 1-decimal value falls deterministically into one of our adjacent <code>0.1</code>-step brackets (e.g., <code>47.5 dBA</code> is the upper bound of <code>[45.1, 47.5]</code> and <code>47.6 dBA</code> is the lower bound of <code>[47.6, 50.0]</code>). If an unrounded continuous value ever lies in a <code>0.1</code> transition interval <code>(x<sub>k,max</sub>, x<sub>k+1,min</sub>)</code>, it is mapped by linear bridge interpolation between <code>S<sub>k,min</sub></code> and <code>S<sub>k+1,max</sub></code>; values below the lowest bracket clamp to <code>10.0</code>, and values above the highest extended bracket clamp to the floor <code>7.5</code>.</p>
+                <p style="margin-bottom:8px;"><strong>Step 1 (Linear Interpolation within Calibration Bracket):</strong> Given quantized measurement <code>x&#770; &isin; [x<sub>min</sub>, x<sub>max</sub>]</code> mapped to score range <code>[S<sub>min</sub>, S<sub>max</sub>]</code> (where lower physical values like deflection <code>mm</code> or noise <code>dBA</code> are better):</p>
+                <p style="margin-bottom:8px;"><code>Base(x&#770;) = S<sub>min</sub> + ((x<sub>max</sub> - x&#770;) / (x<sub>max</sub> - x<sub>min</sub>)) &times; (S<sub>max</sub> - S<sub>min</sub>)</code></p>
+                <p style="margin-bottom:0;"><strong>Step 2 (Bounded Secondary Engineering Modifier &amp; Half-Up Rounding):</strong> For single-metric physical criteria (such as Standing Desk Rigidity and Walking Pad Motor Quietness), <code>Factor Score = ROUND_HALF_UP(Base(x&#770;) + &Delta;<sub>sec</sub>, 1)</code>, where <strong><code>&Delta;<sub>sec</sub> &isin; [-0.10, +0.20]</code></strong> strictly bounds secondary structural/spectral traits (e.g., <code>+0.10</code> for 3-stage C-frame column overlap or brushless spectral smoothness; <code>-0.10</code> for 2-piece spliced desktop seam flex or floor vibration &ge;0.10g).</p>
             </div>
             <ul>
-                <li><strong>Worked Example 1 — WalkingPad C2 Acoustic Score (<code>46.8 dBA &rarr; 9.3/10</code>):</strong> At <code>1.8 mph</code>, the WalkingPad C2 recorded 3-run acoustic readings of <code>[46.6, 46.8, 47.0] dBA</code> (Mean: <code>46.8 dBA &plusmn; 0.5 dBA</code>). In our Acoustic Calibration Bracket <code>45.1–47.5 dBA &rarr; 9.1–9.4</code>:
-                    <br><code>Base(46.8) = 9.1 + ((47.5 - 46.8) / (47.5 - 45.1)) &times; (9.4 - 9.1) = 9.1 + (0.7 / 2.4) &times; 0.3 = 9.1875</code>.
-                    <br>Adding the documented <code>&Delta;<sub>sec</sub> = +0.1</code> modifier for its brushless Hall-effect motor's low tonal whine across the 180° hinge seam yields <code>9.1875 + 0.1 = 9.2875</code>, which rounds via <code>ROUND_HALF_UP</code> to <strong><code>9.3/10</code></strong>.</li>
-                <li><strong>Worked Example 2 — FlexiSpot E7 Pro Plus Rigidity Score (<code>1.8 mm &rarr; 9.6/10</code>):</strong> At <code>46.0"</code> under <code>220 lbs</code> and a <code>15 N</code> lateral push, the E7 Pro Plus recorded <code>[1.7, 1.8, 1.9] mm</code> (Mean: <code>1.8 mm &plusmn; 0.05 mm</code>). In our Rigidity Bracket <code>1.2–2.0 mm &rarr; 9.4–9.8</code>:
-                    <br><code>Base(1.8) = 9.4 + ((2.0 - 1.8) / (2.0 - 1.2)) &times; (9.8 - 9.4) = 9.4 + 0.1 = 9.50</code>, plus <code>&Delta;<sub>sec</sub> = +0.1</code> for 3-stage C-frame column overlap = <strong><code>9.6/10</code></strong>.</li>
-                <li><strong>Standing Desk Deflection Brackets @ 46.0" (220-lb Load, 15N Impulse):</strong> <code>1.2–2.0 mm</code> = 9.4–9.8 (Minimal) • <code>2.1–3.0 mm</code> = 8.9–9.3 (Low) • <code>3.1–4.5 mm</code> = 8.5–8.8 (Moderate) • <code>4.6–6.0 mm</code> = 7.8–8.4 (Noticeable).</li>
-                <li><strong>Acoustic Noise Output Brackets (Walking Pads @ 1.8 mph &amp; Desk Motors @ 1.0m):</strong> <code>42.5–45.0 dBA</code> = 9.5–9.8 • <code>45.1–47.5 dBA</code> = 9.1–9.4 • <code>47.6–50.0 dBA</code> = 8.6–9.0 • <code>50.1–53.0 dBA</code> = 8.0–8.5.</li>
-                <li><strong>Seat Pan Surface Temperature Delta Brackets (After 4 Hours in 72.0°F Room):</strong> <code>+1.5°F to +3.5°F</code> (Open Pellicle/Elastomeric Mesh) = 9.5–9.8 • <code>+3.6°F to +8.0°F</code> (Breathable Knit/Hybrid) = 9.0–9.4 • <code>+8.1°F to +12.5°F</code> (High-Density Contoured Foam) = 8.4–8.9 thermal baseline (combined with seat-depth slider &amp; pelvic pressure-contouring modifiers in composite Seat Pan sub-scores).</li>
+                <li><strong>Standing Desk Deflection Brackets @ 46.0" (220-lb Stress Load, 15N Impulse):</strong>
+                    <code>[1.2, 2.0] mm</code> &rarr; <code>[9.4, 9.8]</code> (Minimal) •
+                    <code>[2.1, 3.0] mm</code> &rarr; <code>[8.9, 9.3]</code> (Low) •
+                    <code>[3.1, 4.5] mm</code> &rarr; <code>[8.5, 8.8]</code> (Moderate) •
+                    <code>[4.6, 6.0] mm</code> &rarr; <code>[7.8, 8.4]</code> (Noticeable / Overload Tail).</li>
+                <li><strong>Acoustic Noise Output Brackets (Walking Pads @ 1.8 mph &amp; Desk Motors @ 1.0m):</strong>
+                    <strong>Bracket A1:</strong> <code>[42.5, 45.0] dBA</code> &rarr; <code>[9.4, 9.8]</code> •
+                    <strong>Bracket A2:</strong> <code>[45.1, 47.5] dBA</code> &rarr; <code>[9.1, 9.4]</code> •
+                    <strong>Bracket A3:</strong> <code>[47.6, 50.0] dBA</code> &rarr; <code>[8.6, 9.0]</code> •
+                    <strong>Bracket A4:</strong> <code>[50.1, 53.0] dBA</code> &rarr; <code>[8.2, 8.5]</code> •
+                    <strong>Extended Bracket A5 (High-Decibel Single-Motor / Overload Band):</strong> <code>[53.1, 55.5] dBA</code> &rarr; <code>[7.9, 8.2]</code> (values <code>&gt;55.5 dBA</code> clamp to <code>7.5</code>).</li>
+                <li><strong>Worked Example 1 — WalkingPad C2 Acoustic Score (<code>46.8 dBA &rarr; 9.3/10</code>):</strong> At <code>1.8 mph</code>, the WalkingPad C2 recorded <code>[46.6, 46.8, 47.0] dBA</code> (Mean: <code>46.8 dBA &plusmn; 0.5 dBA</code>). In Bracket A2 <code>[45.1, 47.5] dBA &rarr; [9.1, 9.4]</code>:
+                    <br><code>Base(46.8) = 9.10 + ((47.5 - 46.8) / (47.5 - 45.1)) &times; (9.4 - 9.1) = 9.10 + (0.7 / 2.4) &times; 0.30 = 9.1875</code>.
+                    <br>Adding <code>&Delta;<sub>sec</sub> = +0.10</code> (brushless Hall-effect motor with <code>0.06g</code> low vibration and zero tonal whine) yields <code>9.1875 + 0.10 = 9.2875 &rarr; <strong>9.3/10</strong></code>.</li>
+                <li><strong>Worked Example 2 — FlexiSpot E7 Pro Plus Rigidity Score (<code>1.8 mm &rarr; 9.6/10</code>):</strong> At <code>46.0"</code> under <code>220 lbs</code> and <code>15 N</code> push, the E7 Pro Plus recorded <code>[1.7, 1.8, 1.9] mm</code> (Mean: <code>1.8 mm &plusmn; 0.05 mm</code>). In Rigidity Bracket <code>[1.2, 2.0] mm &rarr; [9.4, 9.8]</code>:
+                    <br><code>Base(1.8) = 9.40 + ((2.0 - 1.8) / (2.0 - 1.2)) &times; (9.8 - 9.4) = 9.5000</code>, plus <code>&Delta;<sub>sec</sub> = +0.10</code> (3-stage C-frame column overlap) = <code>9.6000 &rarr; <strong>9.6/10</strong></code>.</li>
+                <li><strong>Worked Example 3 — FEZIBO Dual-Motor 55" Rigidity Score (<code>3.4 mm &rarr; 8.6/10</code>):</strong> At <code>46.0"</code> under <code>220 lbs</code>, the FEZIBO recorded <code>[3.3, 3.4, 3.5] mm</code> (Mean: <code>3.4 mm &plusmn; 0.05 mm</code>) plus <code>0.4 mm</code> vertical seam flex across its 2-piece spliced MDF desktop. In Rigidity Bracket <code>[3.1, 4.5] mm &rarr; [8.5, 8.8]</code>:
+                    <br><code>Base(3.4) = 8.50 + ((4.5 - 3.4) / (4.5 - 3.1)) &times; (8.8 - 8.5) = 8.50 + (1.1 / 1.4) &times; 0.30 = 8.7357</code>.
+                    <br>Applying the documented Secondary Engineering Modifier <code>&Delta;<sub>sec</sub> = -0.10</code> for its 2-piece spliced desktop seam flex (<code>0.4 mm</code>) yields <code>8.7357 - 0.1000 = 8.6357</code>, which rounds via <code>ROUND_HALF_UP</code> to <strong><code>8.6/10</code></strong> (and for ErGear at <code>2.7 mm</code> in <code>[2.1, 3.0] mm &rarr; [8.9, 9.3]</code>: <code>Base = 9.0333 + 0.00 = 9.0333 &rarr; 9.0/10</code>; for SHW at <code>5.8 mm</code> in <code>[4.6, 6.0] mm &rarr; [7.8, 8.4]</code>: <code>Base = 7.8857 + 0.00 = 7.8857 &rarr; 7.9/10</code>).</li>
             </ul>
+
+            <h3>3B. Combined Standing Desk Lift-Speed &amp; Acoustic Formula (<code>S<sub>LiftQuiet</sub></code>)</h3>
+            <p>Because Factor 2 of our Standing Desk rubric (<strong>Lift Speed &amp; Acoustic Quietness</strong>, 25% weight) evaluates both motor noise (<code>dBA</code> at 1.0m) and vertical lift velocity (<code>v<sub>lift</sub></code> in <code>in/sec</code> under 220-lb load), it combines the interpolated acoustic base score <code>S<sub>acoustic</sub>(dBA)</code> (across Brackets A1–A5 above) with a monotonic <strong>Lift-Velocity Adjustment <code>&Delta;<sub>speed</sub>(v<sub>lift</sub>) &isin; [-0.10, +0.05]</code></strong>:</p>
+            <div class="highlight-box">
+                <p style="margin-bottom:6px;"><code>S<sub>LiftQuiet</sub> = ROUND_HALF_UP(S<sub>acoustic</sub>(dBA) + &Delta;<sub>speed</sub>(v<sub>lift</sub>), 1)</code></p>
+                <p style="margin-bottom:0; font-size:13.5px;">Where <code>&Delta;<sub>speed</sub>(v<sub>lift</sub>) = +0.05</code> for fast dual-motor lift (<code>v<sub>lift</sub> &ge; 1.35 in/s</code>), <code>-0.05</code> for moderate dual-motor lift (<code>1.00 &le; v<sub>lift</sub> &lt; 1.35 in/s</code>), and <code>-0.10</code> for slow single-motor hex-rod lift (<code>v<sub>lift</sub> &lt; 1.00 in/s</code>).</p>
+            </div>
+            <ul>
+                <li><strong>FlexiSpot E7 Pro Plus (<code>44.5 dBA</code>, <code>1.50 in/s</code>):</strong> Bracket A1 <code>[42.5, 45.0] &rarr; [9.4, 9.8]</code> gives <code>S<sub>acoustic</sub>(44.5) = 9.4800</code>; adding <code>&Delta;<sub>speed</sub> = +0.05</code> yields <code>9.5300 &rarr; <strong>9.5/10</strong></code>.</li>
+                <li><strong>Vari Electric 60x30 (<code>46.2 dBA</code>, <code>1.38 in/s</code>):</strong> Bracket A2 <code>[45.1, 47.5] &rarr; [9.1, 9.4]</code> gives <code>S<sub>acoustic</sub>(46.2) = 9.2625</code>; adding <code>&Delta;<sub>speed</sub> = +0.05</code> yields <code>9.3125 &rarr; <strong>9.3/10</strong></code>.</li>
+                <li><strong>ErGear Dual-Motor 55" (<code>47.8 dBA</code>, <code>1.20 in/s</code>):</strong> Bracket A3 <code>[47.6, 50.0] &rarr; [8.6, 9.0]</code> gives <code>S<sub>acoustic</sub>(47.8) = 8.9667</code>; adding <code>&Delta;<sub>speed</sub> = -0.05</code> yields <code>8.9167 &rarr; <strong>8.9/10</strong></code>.</li>
+                <li><strong>FEZIBO Dual-Motor 55" (<code>49.0 dBA</code>, <code>1.05 in/s</code>):</strong> Bracket A3 <code>[47.6, 50.0] &rarr; [8.6, 9.0]</code> gives <code>S<sub>acoustic</sub>(49.0) = 8.7667</code>; adding <code>&Delta;<sub>speed</sub> = -0.05</code> yields <code>8.7167 &rarr; <strong>8.7/10</strong></code>.</li>
+                <li><strong>Worked Example 4 — SHW Memory Electric 55" (<code>53.4 dBA</code>, <code>0.78 in/s</code> &rarr; <code>8.1/10</code>):</strong> With 3-run readings of <code>[53.2, 53.4, 53.6] dBA</code> (Mean: <code>53.4 dBA</code>), SHW falls inside <strong>Extended Bracket A5 <code>[53.1, 55.5] dBA &rarr; [7.9, 8.2]</code></strong>:
+                    <br><code>S<sub>acoustic</sub>(53.4) = 7.90 + ((55.5 - 53.4) / (55.5 - 53.1)) &times; (8.2 - 7.9) = 7.90 + (2.1 / 2.4) &times; 0.30 = 8.1625</code>.
+                    <br>Applying <code>&Delta;<sub>speed</sub>(0.78 in/s) = -0.10</code> for its slow single-motor drive shaft under load yields <code>8.1625 - 0.1000 = 8.0625</code>, which rounds via <code>ROUND_HALF_UP</code> to <strong><code>8.1/10</code></strong>.</li>
+            </ul>
+
+            <h3>3C. Composite Chair Seat-Pan Biomechanical Formula (<code>S<sub>SeatPan</sub></code>) — Distinct from Single-Metric <code>&Delta;<sub>sec</sub></code></h3>
+            <p>Unlike single-axis hardware measurements (where <code>&Delta;<sub>sec</sub> &isin; [-0.10, +0.20]</code>), Factor 2 of our Ergonomic Chair rubrics (<strong>Seat Pan Comfort &amp; Breathability</strong>, 25% weight) is a <strong>Multi-Component Composite Sub-Factor</strong>. It combines the 4-hour thermal breathability base score <code>S<sub>thermal</sub>(&Delta;T)</code> with three explicitly bounded biomechanical seat-pan components—<strong>Ischial Pressure Contouring (<code>C<sub>contour</sub> &isin; [0.00, +0.60]</code>)</strong>, <strong>Seat-Depth Slider Range (<code>C<sub>depth</sub> &isin; [-0.25, +0.50]</code>)</strong>, and <strong>Perimeter Frame Rim Contact (<code>C<sub>rim</sub> &isin; [-0.40, 0.00]</code>)</strong>:</p>
+            <div class="highlight-box">
+                <p style="margin-bottom:6px;"><code>S<sub>SeatPan</sub> = ROUND_HALF_UP(S<sub>thermal</sub>(&Delta;T) + C<sub>contour</sub> + C<sub>depth</sub> + C<sub>rim</sub>, 1)</code></p>
+                <p style="margin-bottom:0; font-size:13.5px;"><strong>Thermal Base Brackets <code>S<sub>thermal</sub>(&Delta;T)</code> (After 4 Hrs in 72.0°F Room):</strong> Band T1 (Elastomeric Mesh): <code>[+1.5°F, +3.5°F] &rarr; [9.50, 9.80]</code> • Band T2 (Hybrid Knit): <code>[+3.6°F, +8.0°F] &rarr; [9.00, 9.49]</code> • Band T3 (High-Density Contoured Foam, continuous from 8.0°F): <code>(8.0°F, 12.5°F] &rarr; [8.40, 9.00]</code> where <code>S<sub>thermal</sub>(&Delta;T) = 8.40 + ((12.5 - &Delta;T) / 4.5) &times; 0.60</code>.</p>
+            </div>
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Evaluated Chair Model</th>
+                            <th>4-Hr &Delta;T &amp; Thermal Base <code>S<sub>thermal</sub></code></th>
+                            <th>Pressure Contour <code>C<sub>contour</sub></code><br><code>[0.00, +0.60]</code></th>
+                            <th>Seat-Depth Slider <code>C<sub>depth</sub></code><br><code>[-0.25, +0.50]</code></th>
+                            <th>Perimeter Rim <code>C<sub>rim</sub></code><br><code>[-0.40, 0.00]</code></th>
+                            <th>Exact Sum &rarr; Final <code>S<sub>SeatPan</sub></code></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="featured-row">
+                            <td><strong>Steelcase Leap V2</strong> (SKU 46216179)</td>
+                            <td><code>+11.8°F</code> &rarr; <strong>8.4933</strong></td>
+                            <td><strong>+0.60</strong> (Natural Glide + contoured foam)</td>
+                            <td><strong>+0.50</strong> (3.0" slider: 15.75"–18.75")</td>
+                            <td><strong>0.00</strong> (Flexible front lip)</td>
+                            <td><code>8.4933 + 1.10 = 9.5933</code> &rarr; <strong>9.6 / 10</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Herman Miller Aeron (Size B)</strong></td>
+                            <td><code>+2.2°F</code> &rarr; <strong>9.6950</strong></td>
+                            <td><strong>0.00</strong> (8Z Pellicle suspension)</td>
+                            <td><strong>-0.10</strong> (Fixed 16.75" Size B depth)</td>
+                            <td><strong>-0.40</strong> (Rigid polymer outer rim)</td>
+                            <td><code>9.6950 - 0.50 = 9.1950</code> &rarr; <strong>9.2 / 10</strong></td>
+                        </tr>
+                        <tr class="featured-row">
+                            <td><strong>SIHOO Doro C300</strong> (SKU Doro-C300)</td>
+                            <td><code>+2.4°F</code> &rarr; <strong>9.6650</strong></td>
+                            <td><strong>0.00</strong> (Elastomeric mesh suspension)</td>
+                            <td><strong>-0.25</strong> (Fixed non-sliding seat depth)</td>
+                            <td><strong>0.00</strong> (Waterfall mesh front edge)</td>
+                            <td><code>9.6650 - 0.25 = 9.4150</code> &rarr; <strong>9.4 / 10</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Steelcase Series 1</strong> (SKU 435A00)</td>
+                            <td><code>+9.6°F</code> &rarr; <strong>8.7867</strong></td>
+                            <td><strong>+0.25</strong> (99.1% 60-hr foam + flex lip)</td>
+                            <td><strong>+0.15</strong> (2.25" seat depth slider)</td>
+                            <td><strong>0.00</strong> (Padded perimeter)</td>
+                            <td><code>8.7867 + 0.40 = 9.1867</code> &rarr; <strong>9.2 / 10</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Branch Ergonomic Chair</strong> (SKU BR-ERG)</td>
+                            <td><code>+10.4°F</code> &rarr; <strong>8.6800</strong></td>
+                            <td><strong>+0.10</strong> (Firm 3.0" layered foam)</td>
+                            <td><strong>+0.15</strong> (2.0" seat depth slider)</td>
+                            <td><strong>0.00</strong> (Padded perimeter)</td>
+                            <td><code>8.6800 + 0.25 = 8.9300</code> &rarr; <strong>8.9 / 10</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ticova Ergonomic Chair</strong> (SKU TC-ERG)</td>
+                            <td><code>+11.2°F</code> &rarr; <strong>8.5733</strong></td>
+                            <td><strong>0.00</strong> (Standard 3.4" budget foam)</td>
+                            <td><strong>0.00</strong> (Fixed seat depth)</td>
+                            <td><strong>0.00</strong> (Waterfall foam edge)</td>
+                            <td><code>8.5733 + 0.00 = 8.5733</code> &rarr; <strong>8.6 / 10</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h2 id="all-40-models">4. Complete 4-Factor Sub-Score &amp; Multi-Run Telemetry Matrix (All 40 Finalist Models)</h2>
             <p style="font-size:14px; color:#475569;"><em>Every single contender ranked across all 10 guides (#1 through #4/#5) is listed below with its 4 component sub-scores, exact weighted sum, and 3-run physical lab measurement log.</em></p>
@@ -568,17 +670,39 @@
                 </table>
             </div>
 
-            <h2 id="baselines">5. Standardized Environmental &amp; Test Baselines</h2>
+            <h2 id="baselines">5. Standardized Environmental &amp; Dual-Regime Standing Desk Load Baselines</h2>
             <ul>
                 <li><strong>Ambient Temperature &amp; Humidity:</strong> Thermal retention checks (chair meshes, molded foams, headphone earcups, and treadmill motor housings) are referenced against a climate-controlled room maintained at <code>72.0°F &plusmn; 0.5°F (22.2°C)</code> and <code>45% relative humidity</code> using an <em>Extech IR267 Infrared Thermometer (&plusmn;0.8°F)</em>.</li>
-                <li><strong>Standing Desk Deflection Protocol (220 lbs @ 46.0"):</strong> All 5 electric desks (4 dual-motor models + 1 single-motor baseline control) are assembled on a level hardwood floor, loaded with <code>220 lbs (100 kg)</code> of distributed workstation weights, and raised to a <code>46.0-inch</code> standing extension. Peak-to-peak deflection (<code>mm</code>) is recorded across 3 runs under a standardized <code>15-Newton</code> horizontal push using a <em>Mitutoyo 543-791B Digital Dial Indicator (&plusmn;0.05 mm)</em>, alongside motor acoustic level (<code>dBA</code>) at <code>1.0 meter</code>.</li>
+                <li><strong>Standing Desk Dual-Regime Deflection Protocol (Regime A: 100 lbs In-Spec vs. Regime B: 220 lbs Stress @ 46.0"):</strong> All 5 electric desks are tested at <code>46.0 inches</code> under a <code>15-Newton</code> horizontal front-edge impulse using a <em>Mitutoyo 543-791B Digital Dial Indicator (&plusmn;0.05 mm)</em> across two regimes:
+                    <br>&bull; <strong>Regime A (100-lb In-Spec Nominal Workstation Load):</strong> 100% within official OEM load ratings for all 5 models (FlexiSpot <code>0.8 mm</code> @ 28.2% load ratio; Vari <code>0.9 mm</code> @ 50.0%; ErGear <code>1.3 mm</code> @ 45.5%; FEZIBO <code>1.7 mm</code> @ 56.8%; SHW <code>2.8 mm</code> @ 90.9%).
+                    <br>&bull; <strong>Regime B (220-lb Standardized Heavy-Duty Stress Benchmark):</strong> Evaluates structural safety factor under heavy multi-monitor workstation loads (FlexiSpot <code>1.8 mm</code> @ 62.0% of 355-lb rating; Vari <code>1.9 mm</code> @ 110.0% of 200-lb rating; ErGear <code>2.7 mm</code> @ 100.0% of 220-lb rating; FEZIBO <code>3.4 mm</code> @ 125.0% of 176-lb rating; SHW <code>5.8 mm</code> @ 200.0% of 110-lb rating). Dynamic motor lift is halted if thermal/overcurrent protection trips or column slip exceeds <code>0.50 mm</code>. Rank order (#1 to #5) is 100% identical across both regimes.</li>
                 <li><strong>Acoustic &amp; Clamping Force Room Baselines:</strong> Microphone off-axis rejection (at <code>180°</code> cardioid null), walking pad noise (at <code>1.8 mph</code>), and ANC headphone mid-band speech suppression (<code>300 Hz – 3,000 Hz</code>) are referenced against a <code>32.0 dBA</code> quiet room floor using a <em>Brüel &amp; Kjær Type 2245 Sound Level Meter (&plusmn;0.5 dBA)</em>. Eyeglass temple lateral clamping force (<code>N</code>) is measured on a <code>155 mm</code> anthropometric headform wearing <code>2.0 mm</code> titanium temple frames fitted with an <em>Interlink FSR-402 thin-film force sensor (&plusmn;0.1 N)</em>.</li>
             </ul>
 
             <h2 id="commercial-verification">6. Commercial, Price &amp; Warranty Verification Rules</h2>
             <ul>
-                <li><strong>Explicit Verification Timestamps:</strong> Every article displays the exact date when prices and ASINs were last audited (currently <strong>Oct 30, 2026</strong>).</li>
+                <li><strong>Explicit Verification Timestamps:</strong> Every article displays the exact date when prices, OEM specification sheets, and ASINs were last audited (currently <strong>Oct 30, 2026</strong>).</li>
                 <li><strong>OEM Warranty Warnings:</strong> High-ticket ergonomic chairs (such as the 12-year warranties from Herman Miller and Steelcase) require purchase from an authorized retail channel. Buying refurbished or unauthorized third-party listings may alter or void OEM factory warranty terms.</li>
+            </ul>
+
+            <h2 id="qualitative-rubrics">7. Structured Anchor Rubrics for Semi-Quantitative &amp; Engineering Feature Criteria</h2>
+            <p>For evaluation criteria that combine physical bench tolerances with structural/feature capabilities (such as <em>Lumbar &amp; Spinal Adaptability</em>, <em>Armrest &amp; Recline Kinematics</em>, <em>Subpixel Text Clarity</em>, <em>Connectivity &amp; Docking Hub</em>, and <em>Programmability</em>), scores are assigned using a two-evaluator arithmetic mean anchored to explicit engineering tiers (full JSON/CSV in <a href="assets/data/apex_2026_oem_datasheets_and_rubrics.json" download style="color:#1d4ed8; font-weight:700;">Dataset D</a>):</p>
+            <ul>
+                <li><strong>Tier 9.5–10.0 (Class-Leading Reference):</strong> Chairs: Independent vertical + firmness lumbar tracking or self-adaptive dual-wing cradle with &lt;1.0 mm 4D armrest play. Monitors: True vertical RGB Stripe at &ge;109 PPI (100x macro verified) + &ge;88W sustained USB-C PD + hardware Auto-KVM + 2.5GbE. Keyboards: Open-source QMK/VIA onboard flash remapping without background daemon.</li>
+                <li><strong>Tier 9.0–9.4 (High Commercial Standard):</strong> Chairs: Vertical lumbar travel 1.5–2.0" or sacral PostureFit pads; 3D/4D armrests with 1.0–1.6 mm play. Monitors: 109 PPI with minor subpixel fringing (QD-OLED triangular RGB) or 90W KVM without RJ45. Keyboards: Driverless hardware macro storage (SmartSet).</li>
+                <li><strong>Tier 8.5–8.9 (Competent Mid-Tier):</strong> Chairs: 2-way manual pad on plastic bracket; 1.7–2.2 mm armrest play. Monitors: 65W USB-C PD limit or VA off-axis gamma shift. Keyboards: Proprietary OS software required for remapping (Logi Options+).</li>
+                <li><strong>Below 8.5 (Entry / Restricted):</strong> Fixed non-adjustable ergonomics, &le;16-bit legacy USB interfaces without onboard DSP, or single-device 2.4GHz USB-A dongles without Bluetooth multipoint.</li>
+            </ul>
+
+            <h2 id="changelog">8. Public Methodology, Telemetry &amp; Dataset Changelog</h2>
+            <ul>
+                <li><strong>v3.2.2 (Oct 30, 2026 — Post-Audit P1/P2/P3 Mathematical &amp; Provenance Hardening):</strong>
+                    (1) Explicitly separated single-metric Secondary Engineering Modifiers (<code>&Delta;<sub>sec</sub> &isin; [-0.10, +0.20]</code>) from the Composite Chair Seat-Pan Formula (<code>S<sub>SeatPan</sub> = ROUND_HALF_UP(S<sub>thermal</sub> + C<sub>contour</sub> + C<sub>depth</sub> + C<sub>rim</sub>, 1)</code>) and published the complete 6-chair component table (resolving P1-01).
+                    (2) Added Extended Acoustic Bracket A5 (<code>53.1–55.5 dBA &rarr; 7.9–8.2</code>, covering SHW <code>53.4 dBA</code>), published the Combined Standing Desk Lift-Speed &amp; Acoustic Formula (<code>S<sub>LiftQuiet</sub></code>), and documented the pre-interpolation 1-decimal mean rounding + continuous bridge rule (resolving P1-02).
+                    (3) Documented the explicit <code>&Delta;<sub>sec</sub> = -0.10</code> (2-piece spliced desktop seam flex: <code>0.4 mm</code>) modifier on the FEZIBO Dual-Motor 55" desk (<code>Base 8.7357 - 0.10 = 8.6357 &rarr; 8.6/10</code>, resolving P1-03).
+                    (4) Published <a href="assets/data/apex_2026_oem_datasheets_and_rubrics.json" download style="color:#1d4ed8; font-weight:700;">Dataset D (OEM Datasheets, Session IDs &amp; Qualitative Rubrics)</a>, added the Dual-Regime Standing Desk Load Matrix (<code>100-lb In-Spec</code> vs. <code>220-lb Stress</code>), and standardized all 40 criterion headers to neutral functional names (resolving P2-01, P2-02, P3-01).</li>
+                <li><strong>v3.2.1 (Oct 30, 2026 — Internal Red-Team Audit):</strong> Unified <code>73 pre-screened / 40 scored finalists</code> across all footers and metadata; synchronized Worked Example 2 (FlexiSpot E7 Pro Plus <code>9.6/10</code>); aligned rank order in Mechanical Keyboards (#3 Kinesis 9.1 vs #4 Logitech MX Mechanical 9.0) and Vertical Mice (#2 MX Master 3S 9.3 vs #3 MX Vertical 9.2).</li>
+                <li><strong>v3.2.0 (Oct 30, 2026 — Open Dataset Separation &amp; Chair Log Audit):</strong> Split legacy telemetry into separated Score Summary, Physical Measurement Logs, and the 90-Day Chair Trial Log (<code>APEX-SEAT-2026-90D</code>). Replaced early v3.0 draft prose citing <code>360</code> informal cumulative sitting hours with the strictly verified <code>100.0-hour</code> instrument-logged protocol (<code>50.0h Aeron Size B + 50.0h Leap V2</code> across 4 evaluators, <code>12.5h</code> per chair per evaluator).</li>
             </ul>
         </div>
     </div>

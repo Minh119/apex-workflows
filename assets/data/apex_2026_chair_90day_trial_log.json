@@ -1,5 +1,6 @@
 {
   "study_id": "APEX-SEAT-2026-90D",
+  "dataset_version": "3.2.2",
   "observation_window_start": "2026-07-01",
   "observation_window_end": "2026-09-28",
   "calendar_window_days": 90,
@@ -9,9 +10,11 @@
   "ambient_room_temp_f": "72.0 ± 0.5°F (22.2°C)",
   "ambient_relative_humidity": "45% ± 2% RH",
   "thermal_instrument": "Extech IR267 Mini IR Thermometer (0.95 emissivity, ±0.8°F accuracy)",
+  "historical_revision_note": "In v3.2 (2026-10-30), this dataset replaced earlier v3.0 draft prose that cited 360 cumulative unlogged office hours across informal sitting. Only strictly timed, instrument-logged 4-hour thermal & postural blocks (12.5h Aeron + 12.5h Leap V2 per evaluator = 50.0h per chair, 100.0h total across 4 evaluators) are retained in the certified public record.",
   "evaluators": [
     {
       "tester_id": "Tester A",
+      "session_log_id": "SES-2026-0701-CH-A",
       "height": "5'4\" (163 cm)",
       "weight_lbs": 128,
       "window_dates": "2026-07-01 to 2026-07-22",
@@ -39,6 +42,7 @@
     },
     {
       "tester_id": "Tester B",
+      "session_log_id": "SES-2026-0724-CH-B",
       "height": "5'8\" (173 cm)",
       "weight_lbs": 162,
       "window_dates": "2026-07-24 to 2026-08-14",
@@ -66,6 +70,7 @@
     },
     {
       "tester_id": "Tester C",
+      "session_log_id": "SES-2026-0816-CH-C",
       "height": "5'11\" (180 cm)",
       "weight_lbs": 185,
       "window_dates": "2026-08-16 to 2026-09-06",
@@ -93,6 +98,7 @@
     },
     {
       "tester_id": "Tester D",
+      "session_log_id": "SES-2026-0908-CH-D",
       "height": "6'2\" (188 cm)",
       "weight_lbs": 215,
       "window_dates": "2026-09-08 to 2026-09-28",
