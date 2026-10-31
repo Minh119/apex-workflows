@@ -2,19 +2,19 @@
   "queue_version": "1.0.0",
   "last_updated": "2026-10-31T07:54:33.428867",
   "total_queued": 22,
-  "total_published": 0,
+  "total_published": 1,
   "items": [
     {
       "id": "DISP-001",
       "platform": "reddit",
       "file": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\ai_affiliate_enterprise\\output\\syndication\\reddit\\00_bifma_calculator_reddit.md",
       "title": "[Free Tool] BIFMA G1-2017 & OSHA Desk Height & Ergonomics Calculator (No Ads, No Signup)",
-      "target": "r/WFH, r/Ergonomics, r/StandingDesk, r/Workspaces",
+      "target": "r/Ergonomics",
       "priority": 1,
-      "status": "QUEUED",
+      "status": "PUBLISHED_LIVE",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
-      "published_at": null,
-      "response": null
+      "published_at": "2026-10-31T08:26:50.297692",
+      "response": "Successfully published to r/Ergonomics by Chairman (u/ApexWorkflows)"
     },
     {
       "id": "DISP-012",
