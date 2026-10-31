@@ -145,6 +145,7 @@
 
         /* 2-Column Desktop Article Page v3.1 */
         .article-layout { display: grid; grid-template-columns: 1fr 340px; gap: 36px; align-items: start; margin-top: 24px; }
+        .article-layout > * { min-width: 0; }
         article.main-article { background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 42px; box-shadow: var(--shadow-sm); }
         article h1 { font-size: 33px; font-weight: 900; color: var(--text-dark); margin: 12px 0 18px; line-height: 1.22; letter-spacing: -0.7px; }
         article h2 { font-size: 23px; font-weight: 800; color: var(--text-dark); margin: 36px 0 16px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9; }

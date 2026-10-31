@@ -185,8 +185,8 @@
                     <div class="output-card">
                         <span class="output-label">Chair Seat Pan Height</span>
                         <div>
-                            <span class="output-val" id="resSeatIn">17.5"</span>
-                            <span class="output-unit" id="resSeatCm">(44.5 cm)</span>
+                            <span class="output-val" id="resSeatIn">18.2"</span>
+                            <span class="output-unit" id="resSeatCm">(46.1 cm)</span>
                         </div>
                         <p class="output-desc">Floor to popliteal fold with thighs parallel and feet planted flat.</p>
                     </div>
@@ -194,8 +194,8 @@
                     <div class="output-card">
                         <span class="output-label">Sitting Desk Surface</span>
                         <div>
-                            <span class="output-val" id="resSitIn">26.2"</span>
-                            <span class="output-unit" id="resSitCm">(66.5 cm)</span>
+                            <span class="output-val" id="resSitIn">28.3"</span>
+                            <span class="output-unit" id="resSitCm">(71.9 cm)</span>
                         </div>
                         <p class="output-desc">Resting elbow level with shoulders relaxed and forearms horizontal.</p>
                     </div>
@@ -203,8 +203,8 @@
                     <div class="output-card">
                         <span class="output-label">Standing Desk Surface</span>
                         <div>
-                            <span class="output-val" id="resStandIn">43.1"</span>
-                            <span class="output-unit" id="resStandCm">(109.5 cm)</span>
+                            <span class="output-val" id="resStandIn">45.1"</span>
+                            <span class="output-unit" id="resStandCm">(114.6 cm)</span>
                         </div>
                         <p class="output-desc">Standing elbow height with forearms at 90&deg;-100&deg; resting angle.</p>
                     </div>
@@ -212,8 +212,8 @@
                     <div class="output-card">
                         <span class="output-label">Eye-Level Screen Top</span>
                         <div>
-                            <span class="output-val" id="resEyeIn">47.8"</span>
-                            <span class="output-unit" id="resEyeCm">(121.4 cm)</span>
+                            <span class="output-val" id="resEyeIn">49.7"</span>
+                            <span class="output-unit" id="resEyeCm">(126.2 cm)</span>
                         </div>
                         <p class="output-desc">Top 1/3 of monitor level with eye line at 20"-30" viewing distance.</p>
                     </div>
@@ -243,7 +243,7 @@
                             <h4>Dell UltraSharp U4924DW 49" Curved</h4>
                             <p>3800R curved panoramic aspect prevents cervical spine rotation at your recommended viewing distance.</p>
                         </div>
-                        <a href="https://www.amazon.com/dp/B0BY2T5T35?tag=apexworkflows-20" target="_blank" rel="nofollow sponsored" class="hw-btn">View ($1,299.99) &rarr;</a>
+                        <a href="https://www.amazon.com/s?k=Dell+UltraSharp+U4924DW&amp;tag=apexworkflows-20" target="_blank" rel="nofollow sponsored" class="hw-btn">View ($1,299.99) &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -374,7 +374,7 @@
             let standDeskCm = (0.630 * heightCm) + heelCm;
             if (hasWalkpad) standDeskCm += 5.7; // 2.25 in deck offset
 
-            let eyeCm = seatCm + (0.330 * heightCm);
+            let eyeCm = seatCm + (0.450 * heightCm); // sitting eye height ~0.45 x stature
 
             // Conversions to Inches
             const seatIn = (seatCm / 2.54).toFixed(1);
