@@ -40,3 +40,4 @@ jobs:
           git config user.email "social@theapexworkflows.com"
           git add config/social_dispatch_queue.json reports/Social_Posting_Dispatch_Log.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-dispatch social queue item & sync logs" && git push)
+

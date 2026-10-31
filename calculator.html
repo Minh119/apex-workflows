@@ -397,6 +397,22 @@
             // Update Dynamic Match Spans
             document.querySelectorAll('.dynSitDesk').forEach(el => el.innerText = `${sitDeskIn}"`);
             document.querySelectorAll('.dynStandDesk').forEach(el => el.innerText = `${standDeskIn}"`);
+
+            // Debounced Telemetry Dispatch
+            clearTimeout(window._ergoCalcTimer);
+            window._ergoCalcTimer = setTimeout(function() {
+                if (window.ApexTelemetry && typeof window.ApexTelemetry.log === 'function') {
+                    window.ApexTelemetry.log('calculator_calculate', {
+                        height_cm: Math.round(heightCm),
+                        height_display: `${feet}ft ${inches}in`,
+                        heel_cm: heelCm,
+                        posture: isReclined ? 'reclined' : 'upright',
+                        walking_pad: hasWalkpad,
+                        recommended_sit_in: sitDeskIn,
+                        recommended_stand_in: standDeskIn
+                    });
+                }
+            }, 600);
         }
 
         // Initial Calculation
