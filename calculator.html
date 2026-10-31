@@ -56,6 +56,13 @@
 .calc-out .next { margin-top: 20px; border-top: 1px solid #334155; padding-top: 16px; font-size: 15px; }
 .calc-out .next a { color: #93c5fd; display: block; margin-top: 6px; }
 .formulas code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+.posture { margin-top: 22px; border-top: 1px solid var(--border); padding-top: 18px; color: #334155; }
+.posture svg { width: 100%; height: auto; display: block; }
+.posture .f { fill: #dbeafe; }
+.posture .person { color: var(--primary); }
+.posture .guide { stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 4 4; }
+.posture .lbl { fill: var(--dark); stroke: none; font: 700 13px -apple-system, "Segoe UI", sans-serif; }
+.posture figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
 @media (max-width: 820px) { .calc { grid-template-columns: 1fr; } }
 @media (max-width: 420px) { .results { grid-template-columns: 1fr; } }
 </style>
@@ -94,6 +101,33 @@
       <div class="field" style="margin-bottom: 0;">
         <label class="check"><input type="checkbox" id="walkpad" onchange="calculateErgo()"><span><strong>I use a walking pad</strong><br><span class="hint" style="margin-top:0;">Adds about 2.25 in (5.7 cm) to your standing desk height for the deck.</span></span></label>
       </div>
+      <figure class="posture">
+        <svg viewBox="0 0 320 240" role="img" aria-labelledby="postureTitle" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <title id="postureTitle">Seated posture diagram showing seat, desk and screen-top heights</title>
+          <path d="M6 226h308"/>
+          <!-- chair -->
+          <rect class="f" x="126" y="68" width="12" height="80" rx="5"/>
+          <rect class="f" x="138" y="151" width="74" height="8" rx="3"/>
+          <path d="M176 159v46M146 212h60"/><circle cx="148" cy="219" r="5"/><circle cx="204" cy="219" r="5"/>
+          <!-- desk, keyboard, monitor -->
+          <rect class="f" x="206" y="110" width="102" height="7" rx="2"/><path d="M298 117v109"/>
+          <rect x="216" y="105" width="26" height="5" rx="1"/>
+          <rect class="f" x="268" y="24" width="10" height="60" rx="2"/><path d="M273 84v26M262 110h24"/>
+          <!-- person -->
+          <g class="person">
+            <circle cx="152" cy="30" r="14"/>
+            <path d="M153 44l3 102M156 146h54M210 146l2 78h20M154 62l7 46h56"/>
+          </g>
+          <!-- guides and labels -->
+          <g class="guide">
+            <path d="M166 28h102"/><path d="M12 151h112"/>
+          </g>
+          <text class="lbl" x="12" y="144" id="lblSeat">Seat 18.2"</text>
+          <text class="lbl" x="292" y="134" text-anchor="end" id="lblSit">Desk 28.3"</text>
+          <text class="lbl" x="304" y="16" text-anchor="end" id="lblEye">Screen top 49.7"</text>
+        </svg>
+        <figcaption>Feet flat, thighs level, elbows at desk height, eyes level with the top of the screen.</figcaption>
+      </figure>
     </section>
 
     <section class="calc-out" aria-live="polite">
@@ -103,13 +137,17 @@
         <div class="res"><span class="res-label">Chair seat height</span><span class="res-val" id="seatA">18.2"</span><span class="res-alt" id="seatB">46 cm</span><p>Floor to top of seat, with thighs level and feet flat.</p></div>
         <div class="res"><span class="res-label">Sitting desk height</span><span class="res-val" id="sitA">28.3"</span><span class="res-alt" id="sitB">72 cm</span><p>Keyboard surface at relaxed elbow height.</p></div>
         <div class="res"><span class="res-label">Standing desk height</span><span class="res-val" id="standA">45.1"</span><span class="res-alt" id="standB">115 cm</span><p>Keyboard surface at standing elbow height.</p></div>
-        <div class="res"><span class="res-label">Seated eye height</span><span class="res-val" id="eyeA">49.7"</span><span class="res-alt" id="eyeB">126 cm</span><p>Put the top of your screen at or slightly below this height, about an arm's length away.</p></div>
+        <div class="res"><span class="res-label">Seated eye height</span><span class="res-val" id="eyeA">49.7"</span><span class="res-alt" id="eyeB">126 cm</span><p>Top of your screen at or slightly below this height while sitting.</p></div>
+        <div class="res"><span class="res-label">Standing eye height</span><span class="res-val" id="seyeA">66.6"</span><span class="res-alt" id="seyeB">169 cm</span><p>Top of your screen at or slightly below this height while standing.</p></div>
+        <div class="res"><span class="res-label">Screen distance</span><span class="res-val">20–30"</span><span class="res-alt">50–75 cm</span><p>About an arm's length, tilted back 10–20°. Larger screens sit further back.</p></div>
       </div>
+      <p class="hint" style="color:#94a3b8; margin-top: 12px;">Body proportions vary, so treat each number as the middle of a range of about &plusmn;1 in (2–3 cm).</p>
       <div class="next">
         Next steps:
+        <a href="articles/best-footrests-keyboard-trays-2026.html">Desk too high? Footrests and keyboard trays &rarr;</a>
+        <a href="articles/best-monitor-arms-2026.html">Get your screen to eye level with a monitor arm &rarr;</a>
         <a href="articles/best-standing-desks-2026.html">Standing desks: check the height range covers your numbers &rarr;</a>
         <a href="articles/best-ergonomic-office-chairs-2026.html">Office chairs: check the seat height range &rarr;</a>
-        <a href="articles/best-under-desk-treadmills-walking-pads-2026.html">Walking pads for your standing desk &rarr;</a>
       </div>
     </section>
   </div>
@@ -122,6 +160,7 @@
       <li>Sitting desk height &asymp; seat height + <code>0.145 &times; H</code></li>
       <li>Standing desk height &asymp; <code>0.63 &times; H</code> + footwear (+ walking pad deck)</li>
       <li>Seated eye height &asymp; seat height + <code>0.45 &times; H</code></li>
+      <li>Standing eye height &asymp; <code>0.936 &times; H</code> + footwear (+ walking pad deck)</li>
     </ul>
     <p>Real bodies vary. Long legs or a long torso can shift these numbers by an inch or two. Treat the results as a starting point, then adjust until your feet rest flat, your shoulders are relaxed, and you can see the top of your screen without tilting your head. This is general guidance, not medical advice.</p>
   </section>
@@ -162,9 +201,13 @@ function calculateErgo() {
   var sit = seat + 0.145 * h;
   var stand = 0.63 * h + shoes + (walkpad ? 5.7 : 0);
   var eye = seat + 0.45 * h; // sitting eye height above the seat is ~0.45 x stature
+  var standEye = 0.936 * h + shoes + (walkpad ? 5.7 : 0); // standing eye height ~0.936 x stature
   var totalIn = Math.round(h / 2.54);
   document.getElementById('heightDisplay').textContent = 'For a height of ' + Math.floor(totalIn / 12) + ' ft ' + (totalIn % 12) + ' in (' + Math.round(h) + ' cm)';
-  show('seat', seat); show('sit', sit); show('stand', stand); show('eye', eye);
+  show('seat', seat); show('sit', sit); show('stand', stand); show('eye', eye); show('seye', standEye);
+  document.getElementById('lblSeat').textContent = 'Seat ' + document.getElementById('seatA').textContent;
+  document.getElementById('lblSit').textContent = 'Desk ' + document.getElementById('sitA').textContent;
+  document.getElementById('lblEye').textContent = 'Screen top ' + document.getElementById('eyeA').textContent;
 }
 calculateErgo();
 </script>
@@ -178,7 +221,7 @@ calculateErgo();
     </div>
     <div>
       <p class="footer-h">Guides</p>
-      <a href="articles/best-standing-desks-2026.html">Standing Desks</a><a href="articles/best-ergonomic-office-chairs-2026.html">Office Chairs</a><a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html">Head-to-Head</a><a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html">Mice</a><a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html">Keyboards</a><a href="articles/best-microphones-for-podcasting-zoom-2026.html">Microphones</a><a href="articles/best-noise-cancelling-headphones-focus-2026.html">Headphones</a><a href="articles/best-ultrawide-curved-monitors-productivity-2026.html">Monitors</a><a href="articles/best-under-desk-treadmills-walking-pads-2026.html">Walking Pads</a><a href="articles/best-4k-webcams-zoom-ai-tracking-2026.html">Webcams</a>
+      <a href="articles/best-standing-desks-2026.html">Standing Desks</a><a href="articles/best-ergonomic-office-chairs-2026.html">Office Chairs</a><a href="articles/herman-miller-aeron-vs-steelcase-leap-v2-2026.html">Head-to-Head</a><a href="articles/best-footrests-keyboard-trays-2026.html">Footrests &amp; Trays</a><a href="articles/best-ergonomic-vertical-mice-carpal-tunnel-2026.html">Mice</a><a href="articles/best-mechanical-keyboards-typing-ergonomics-2026.html">Keyboards</a><a href="articles/best-microphones-for-podcasting-zoom-2026.html">Microphones</a><a href="articles/best-noise-cancelling-headphones-focus-2026.html">Headphones</a><a href="articles/best-ultrawide-curved-monitors-productivity-2026.html">Monitors</a><a href="articles/best-monitor-arms-2026.html">Monitor Arms</a><a href="articles/best-under-desk-treadmills-walking-pads-2026.html">Walking Pads</a><a href="articles/best-4k-webcams-zoom-ai-tracking-2026.html">Webcams</a>
     </div>
     <div>
       <p class="footer-h">Site</p>
