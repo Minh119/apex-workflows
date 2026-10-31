@@ -1,0 +1,42 @@
+name: Autonomous Social Syndication Dispatcher
+
+on:
+  schedule:
+    # Runs 4 times a day during US active hours (09:00, 13:00, 17:00, 21:00 UTC)
+    - cron: '0 9,13,17,21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auto-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Execute Autonomous Social Dispatcher
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        run: |
+          python tools/social_auto_publisher.py --action dispatch-next --live
+
+      - name: Commit Queue Updates & Logs
+        run: |
+          git config user.name "ApexGlobal-Social-Bot"
+          git config user.email "social@theapexworkflows.com"
+          git add config/social_dispatch_queue.json reports/Social_Posting_Dispatch_Log.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-dispatch social queue item & sync logs" && git push)

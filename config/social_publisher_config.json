@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "assigned_agents": {
+    "reddit": {
+      "agent_id": 29,
+      "agent_name": "Reddit Community Engager AI",
+      "model": "gemini-3.5-flash"
+    },
+    "twitter": {
+      "agent_id": 31,
+      "agent_name": "Twitter/X Thread Adapter AI",
+      "model": "gemini-3.5-flash"
+    },
+    "scheduler": {
+      "agent_id": 3,
+      "agent_name": "Workflow Scheduler AI",
+      "model": "gemini-3.1-flash-lite"
+    }
+  },
+  "dispatch_settings": {
+    "mode": "WEBHOOK_OR_API",
+    "interval_hours": 4,
+    "us_peak_hours_est": ["09:00", "13:00", "17:00", "20:00"],
+    "max_posts_per_day": 3,
+    "anti_spam_guard": true
+  },
+  "credentials": {
+    "reddit": {
+      "client_id": "${REDDIT_CLIENT_ID}",
+      "client_secret": "${REDDIT_CLIENT_SECRET}",
+      "username": "${REDDIT_USERNAME}",
+      "password": "${REDDIT_PASSWORD}",
+      "user_agent": "ApexWorkflows:v1.0 (by /u/${REDDIT_USERNAME})"
+    },
+    "twitter": {
+      "api_key": "${TWITTER_API_KEY}",
+      "api_secret": "${TWITTER_API_SECRET}",
+      "access_token": "${TWITTER_ACCESS_TOKEN}",
+      "access_token_secret": "${TWITTER_ACCESS_TOKEN_SECRET}",
+      "bearer_token": "${TWITTER_BEARER_TOKEN}"
+    },
+    "webhook_bridge": {
+      "enabled": false,
+      "provider": "zapier_or_make_or_buffer",
+      "endpoint_url": ""
+    }
+  }
+}
