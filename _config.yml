@@ -1,0 +1,14 @@
+# Internal tooling and operations files live in this repo but must not be served on the public site.
+exclude:
+  - config
+  - content
+  - core
+  - tools
+  - reports
+  - syndication
+  - run_cloud.py
+  - so_do_van_hanh.html
+  - telemetry.html
+  - assets/images/so_do_van_hanh_tap_doan.png
+  - assets/data/disciplinary_memory_ledger.json
+  - assets/data/Internal_RedTeam_Audit_Certificate.json
