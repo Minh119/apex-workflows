@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sơ đồ Vận hành Thể chế v2.0 | Tập đoàn Apex Workflows</title>
+    <title>Sơ đồ Vận hành Thể chế v2.1 | Tập đoàn Apex Workflows</title>
     <style>
         body {
             margin: 0;
@@ -94,7 +94,7 @@
         }
         .summary-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 15px;
             font-size: 13.5px;
             line-height: 1.6;
@@ -108,32 +108,36 @@
 <body>
     <div class="header">
         <div>
-            <h1>SƠ ĐỒ VẬN HÀNH THỂ CHẾ APEX WORKFLOWS <span class="badge-v2">BẢN CHUẨN HÓA V2.0</span></h1>
-            <p style="color: #94a3b8; margin: 5px 0 0 0; font-size: 13px;">Đã tích hợp Phân quyền RACI, Quyền VETO Kiểm toán &amp; Chương trình Thí điểm Mở rộng Wave 2</p>
+            <h1>SƠ ĐỒ VẬN HÀNH THỂ CHẾ APEX WORKFLOWS <span class="badge-v2">BẢN CHUẨN HÓA V2.1</span></h1>
+            <p style="color: #94a3b8; margin: 5px 0 0 0; font-size: 13px;">Khép kín luồng PASS/FAIL • Khóa phiên bản bắt buộc • Khôi phục khối Phân phối &amp; Phản hồi</p>
         </div>
-        <a href="assets/images/so_do_van_hanh_tap_doan.png" download="So_Do_Van_Hanh_Apex_Workflows_v2.png" class="btn-download">
-            ⬇️ Tải Ảnh Sơ Đồ v2.0 (Full HD PNG)
+        <a href="assets/images/so_do_van_hanh_tap_doan.png" download="So_Do_Van_Hanh_Apex_Workflows_v2.1.png" class="btn-download">
+            ⬇️ Tải Ảnh Sơ Đồ v2.1 (Full HD PNG)
         </a>
     </div>
 
     <div class="img-container">
-        <img src="assets/images/so_do_van_hanh_tap_doan.png" alt="Sơ đồ Vận hành Thể chế v2.0 Apex Workflows">
+        <img src="assets/images/so_do_van_hanh_tap_doan.png" alt="Sơ đồ Vận hành Thể chế v2.1 Apex Workflows">
     </div>
 
     <div class="summary-box">
-        <h3>Các Điểm Nâng Cấp Cốt Tử Trên Bản Sơ Đồ v2.0:</h3>
+        <h3>Các Điểm Hoàn Thiện Trọng Yếu Theo Báo Cáo Đánh Giá Ngày 31/10/2026:</h3>
         <div class="summary-grid">
             <div class="summary-item">
-                <strong>1. Phân định Rõ Chủ quyền &amp; Trách nhiệm (RACI):</strong> Chủ tịch sở hữu tối cao và quyền Kill-Switch; AI chỉ chuẩn bị bản nháp và lập trình kỹ thuật; Agent #40 giữ quyền VETO độc lập.
+                <strong>1. Khép kín Luồng Bàn Giao PASS &amp; FAIL:</strong>
+                Hồ sơ vX.Y được bàn giao sang Cổng Kiểm định. Nhánh PASS cấp "Biên bản Nghiệm thu Nội bộ" trình Chủ tịch duyệt; nhánh FAIL phân loại lỗi quay về R&amp;D hiệu chỉnh và cấp phiên bản mới vX.Y+1.
             </div>
             <div class="summary-item">
-                <strong>2. Dán nhãn Nguồn Dữ liệu Minh bạch:</strong> Tách biệt [OEM Spec], [Bench Measured], [Synthesis] và [Mathematical Modeling]; tuyệt đối không tự xưng được BIFMA/OSHA cấp chứng nhận.
+                <strong>2. Khóa Phiên Bản Bắt Buộc (Version-Locking):</strong>
+                Chặn hoàn toàn tình huống duyệt bản A nhưng triển khai bản B. Hệ thống đối chiếu mã băm SHA-256 đã duyệt trước khi deploy.
             </div>
             <div class="summary-item">
-                <strong>3. Thêm Cổng Kiểm định &amp; Luồng Sửa lỗi:</strong> Luồng dữ liệu không đi thẳng mà phải qua Cổng thẩm định 10 Gate; nếu Fail lập tức quay lại R&amp;D hiệu chỉnh.
+                <strong>3. Khôi phục Khối Phân phối &amp; Phản hồi Cộng đồng:</strong>
+                Đưa khối Phân phối mạng xã hội trở lại sơ đồ; thiết lập đường phản hồi dẫn các phản ánh dữ liệu sai từ độc giả quay thẳng vào Vòng lặp Xử lý Lỗi (Remediation).
             </div>
             <div class="summary-item">
-                <strong>4. Tái cấu trúc Wave 2 thành Thí điểm Duy nhất (Single Pilot):</strong> Dừng mở đồng loạt 5 danh mục; chỉ thí điểm Tay đỡ Màn hình Nặng (Heavy-Duty Arms) khi thỏa mãn 5 điều kiện tiên quyết.
+                <strong>4. Cơ chế Đánh giá Wave 2 theo 4 Kịch bản Dữ liệu:</strong>
+                Loại bỏ mốc cứng 30 ngày. Phân định rõ 4 kịch bản: Lỗi nghiêm trọng (Dừng ngay) &bull; Tương tác thấp (Tối ưu) &bull; Chưa có đơn (Đối soát nguồn) &bull; Thiếu dữ liệu (Giữ nguyên quan sát).
             </div>
         </div>
     </div>
