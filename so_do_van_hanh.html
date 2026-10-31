@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sơ đồ Vận hành Toàn diện Tập đoàn Apex Workflows</title>
+    <title>Sơ đồ Vận hành Thể chế v2.0 | Tập đoàn Apex Workflows</title>
     <style>
         body {
             margin: 0;
@@ -16,7 +16,7 @@
             align-items: center;
         }
         .header {
-            max-width: 1200px;
+            max-width: 1400px;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -31,6 +31,17 @@
             font-size: 22px;
             margin: 0;
             color: #38bdf8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .badge-v2 {
+            background: #10b981;
+            color: #0f172a;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 4px;
         }
         .btn-download {
             background: linear-gradient(135deg, #0284c7, #0369a1);
@@ -56,7 +67,7 @@
             background: #0f172a;
             border: 1px solid #334155;
             border-radius: 12px;
-            padding: 10px;
+            padding: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
         }
@@ -65,21 +76,66 @@
             height: auto;
             border-radius: 8px;
         }
+        .summary-box {
+            max-width: 1400px;
+            width: 100%;
+            margin-top: 25px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .summary-box h3 {
+            color: #38bdf8;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+        .summary-item strong {
+            color: #f1f5f9;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <div>
-            <h1>SƠ ĐỒ VẬN HÀNH TẬP ĐOÀN APEX WORKFLOWS</h1>
-            <p style="color: #94a3b8; margin: 5px 0 0 0; font-size: 13px;">Bản vẽ kỹ thuật 6 Tầng Điều phối Tự động &amp; Kiểm toán Red-Team</p>
+            <h1>SƠ ĐỒ VẬN HÀNH THỂ CHẾ APEX WORKFLOWS <span class="badge-v2">BẢN CHUẨN HÓA V2.0</span></h1>
+            <p style="color: #94a3b8; margin: 5px 0 0 0; font-size: 13px;">Đã tích hợp Phân quyền RACI, Quyền VETO Kiểm toán &amp; Chương trình Thí điểm Mở rộng Wave 2</p>
         </div>
-        <a href="assets/images/so_do_van_hanh_tap_doan.png" download="So_Do_Van_Hanh_Apex_Workflows.png" class="btn-download">
-            ⬇️ Tải Ảnh Sơ Đồ Về Máy (Full HD PNG)
+        <a href="assets/images/so_do_van_hanh_tap_doan.png" download="So_Do_Van_Hanh_Apex_Workflows_v2.png" class="btn-download">
+            ⬇️ Tải Ảnh Sơ Đồ v2.0 (Full HD PNG)
         </a>
     </div>
 
     <div class="img-container">
-        <img src="assets/images/so_do_van_hanh_tap_doan.png" alt="Sơ đồ Vận hành Tập đoàn Apex Workflows">
+        <img src="assets/images/so_do_van_hanh_tap_doan.png" alt="Sơ đồ Vận hành Thể chế v2.0 Apex Workflows">
+    </div>
+
+    <div class="summary-box">
+        <h3>Các Điểm Nâng Cấp Cốt Tử Trên Bản Sơ Đồ v2.0:</h3>
+        <div class="summary-grid">
+            <div class="summary-item">
+                <strong>1. Phân định Rõ Chủ quyền &amp; Trách nhiệm (RACI):</strong> Chủ tịch sở hữu tối cao và quyền Kill-Switch; AI chỉ chuẩn bị bản nháp và lập trình kỹ thuật; Agent #40 giữ quyền VETO độc lập.
+            </div>
+            <div class="summary-item">
+                <strong>2. Dán nhãn Nguồn Dữ liệu Minh bạch:</strong> Tách biệt [OEM Spec], [Bench Measured], [Synthesis] và [Mathematical Modeling]; tuyệt đối không tự xưng được BIFMA/OSHA cấp chứng nhận.
+            </div>
+            <div class="summary-item">
+                <strong>3. Thêm Cổng Kiểm định &amp; Luồng Sửa lỗi:</strong> Luồng dữ liệu không đi thẳng mà phải qua Cổng thẩm định 10 Gate; nếu Fail lập tức quay lại R&amp;D hiệu chỉnh.
+            </div>
+            <div class="summary-item">
+                <strong>4. Tái cấu trúc Wave 2 thành Thí điểm Duy nhất (Single Pilot):</strong> Dừng mở đồng loạt 5 danh mục; chỉ thí điểm Tay đỡ Màn hình Nặng (Heavy-Duty Arms) khi thỏa mãn 5 điều kiện tiên quyết.
+            </div>
+        </div>
     </div>
 </body>
 </html>
