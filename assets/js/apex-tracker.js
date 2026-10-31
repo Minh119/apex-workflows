@@ -121,12 +121,13 @@
         const href = link.getAttribute('href') || '';
         if (href.includes('amazon.com') && href.includes('tag=apexworkflows-20')) {
             const asinMatch = href.match(/\/dp\/([A-Z0-9]{10})/i);
-            const asin = asinMatch ? asinMatch[1] : 'UNKNOWN_ASIN';
+            const queryMatch = href.match(/[?&]k=([^&]+)/i);
+            const itemIdentifier = asinMatch ? asinMatch[1] : (queryMatch ? decodeURIComponent(queryMatch[1]).replace(/\+/g, ' ') : 'FEATURED_PRODUCT');
             const linkText = (link.innerText || link.getAttribute('aria-label') || 'CTA Link').trim().substring(0, 50);
             const dwellSec = Math.round((Date.now() - SESSION_START) / 1000);
 
             logTelemetryEvent('amazon_affiliate_click', {
-                asin: asin,
+                asin: itemIdentifier,
                 url: href,
                 link_text: linkText,
                 dwell_seconds: dwellSec
