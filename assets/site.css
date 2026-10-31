@@ -116,3 +116,7 @@ tr:last-child td { border-bottom: 0; }
   .nav a { font-size: 14px; }
   .hero { padding: 44px 0 40px; }
 }
+td.num { white-space: nowrap; font-weight: 700; color: var(--dark); }
+.cm { color: var(--muted); font-weight: 400; font-size: 13.5px; }
+.height-nav { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border); font-weight: 700; }
+.height-nav a { text-decoration: none; }
