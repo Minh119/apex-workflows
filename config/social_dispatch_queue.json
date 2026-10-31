@@ -23,22 +23,24 @@
       "title": "BIFMA Ergonomics & Desk Height Calculator",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 1,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-008",
       "platform": "reddit",
-      "file": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\ai_affiliate_enterprise\\output\\syndication\\reddit\\best-standing-desks-2026.md",
-      "title": "We Stress-Tested 5 Dual-Motor Desks at 100-Lb vs 220-Lb Load (FlexiSpot E7 Pro, Vari, FEZIBO): Lateral Deflection & Motor Noise Data",
+      "file": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\ai_affiliate_enterprise\\output\\syndication\\reddit\\DISP-008_r_StandingDesk_HONEST.md",
+      "title": "Before you buy a standing desk, check its height range against YOUR elbow height (quick way to estimate it)",
       "target": "r/StandingDesk",
       "priority": 2,
-      "status": "QUEUED",
+      "status": "REWRITTEN_PENDING_CHAIRMAN",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: honest rewrite; old draft claimed stress tests that never happened."
     },
     {
       "id": "DISP-011",
@@ -47,10 +49,11 @@
       "title": "Herman Miller Aeron (Size B) vs Steelcase Leap V2: 90-Day Multi-User Bench Test & Thermal Dissipation Data",
       "target": "r/OfficeChairs",
       "priority": 2,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-019",
@@ -59,10 +62,11 @@
       "title": "5 Best Electric Standing Desks (2026): 220-Lb Load & Wobble Comparison",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 2,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-022",
@@ -71,10 +75,11 @@
       "title": "Herman Miller Aeron vs. Steelcase Leap V2 (2026): 100-Hour Ergonomic & Thermal Comparison",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 2,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-002",
@@ -83,10 +88,11 @@
       "title": "Benchmarking Visual Streaming: 4 Finalists Tested Over 90 Days (Insta360 Link 2 4K AI Webcam with 2-Axis Gimbal & 1/2-Inch Sensor)",
       "target": "r/WFH",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-003",
@@ -95,10 +101,11 @@
       "title": "90-Day Seated Thermal & Lumbar Pressure Test: SIHOO Doro C300 vs Steelcase Series 1 vs Herman Miller Aeron (Full Telemetry Breakdown)",
       "target": "r/Ergonomics",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-004",
@@ -107,10 +114,11 @@
       "title": "Benchmarking Input Ergonomics: 4 Finalists Tested Over 90 Days (Logitech Lift Vertical Ergonomic Mouse (Graphite, Right- or Left-Handed))",
       "target": "r/WFH",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-005",
@@ -119,10 +127,11 @@
       "title": "Acoustic Noise & Actuation Consistency in Wireless Ergo Boards: Keychron Q1 Pro vs NuPhy Air75 vs Logitech MX Mechanical",
       "target": "r/MechanicalKeyboards",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-006",
@@ -131,10 +140,11 @@
       "title": "Benchmarking Creator & Audio Gear: 4 Finalists Tested Over 90 Days (Shure MV7+ Podcast Dynamic Microphone (USB-C & XLR, Black))",
       "target": "r/WFH",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-007",
@@ -143,10 +153,11 @@
       "title": "Benchmarking Focus & Productivity: 4 Finalists Tested Over 90 Days (Sony WH-1000XM5 Wireless Noise-Canceling Headphones (Black))",
       "target": "r/WFH",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-009",
@@ -155,10 +166,11 @@
       "title": "Benchmarking Visual Workstation: 4 Finalists Tested Over 90 Days (Dell UltraSharp U4924DW 49-Inch Curved USB-C Hub Monitor)",
       "target": "r/WFH",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-010",
@@ -167,10 +179,11 @@
       "title": "Under-Desk Treadmill Acoustic & Thermal Benchmark: 50-Hour Stress Test of WalkingPad C2, UREVO, and DeerRun",
       "target": "r/WFH",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #29 (Reddit Community Engager AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-013",
@@ -179,10 +192,11 @@
       "title": "4 Best 4K Webcams for Executive Zoom Calls (2026): Low-Light Sensor Test",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-014",
@@ -191,10 +205,11 @@
       "title": "The 4 Best Ergonomic Office Chairs of 2026: Tested for 8+ Hour Lumbar Support",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-015",
@@ -203,10 +218,11 @@
       "title": "5 Best Ergonomic Vertical Mice (2026): Tested for Forearm Posture & Comfort",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-016",
@@ -215,10 +231,11 @@
       "title": "4 Best Mechanical Keyboards for Coders & Writers (2026): Switch & Gasket Test",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-017",
@@ -227,10 +244,11 @@
       "title": "Top 4 Dynamic Microphones for Podcasting & Zoom (2026): Untreated Room Test",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-018",
@@ -239,10 +257,11 @@
       "title": "4 Best Noise-Cancelling Headphones for Deep Work (2026): Office Chatter & Call Test",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-020",
@@ -251,10 +270,11 @@
       "title": "4 Best 49-Inch Curved Ultrawide Monitors for Coding & Productivity (2026)",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     },
     {
       "id": "DISP-021",
@@ -263,10 +283,11 @@
       "title": "4 Best Under-Desk Treadmills & Walking Pads (2026): Noise & Compact Folding Test",
       "target": "@TheApexWorkflows (Twitter/X)",
       "priority": 3,
-      "status": "QUEUED",
+      "status": "ON_HOLD",
       "assigned_agent": "Agent #31 (Twitter/X Thread Adapter AI - gemini-3.5-flash)",
       "published_at": null,
-      "response": null
+      "response": null,
+      "review_note": "2026-10-31: source post claims hands-on testing/lab data that never happened. Do not publish; rewrite honestly first."
     }
   ]
 }
