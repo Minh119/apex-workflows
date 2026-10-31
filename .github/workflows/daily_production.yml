@@ -1,9 +1,8 @@
 name: Autonomous AI Enterprise Daily Pipeline
 
 on:
-  schedule:
-    # Runs daily at midnight UTC
-    - cron: '0 0 * * *'
+  # Schedule disabled 2026-10-31: site is now built locally by tools/build_site.py
+  # and social posts are reviewed by a human before publishing.
   workflow_dispatch:
 
 permissions:

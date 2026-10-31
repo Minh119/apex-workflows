@@ -9,6 +9,10 @@ exclude:
   - run_cloud.py
   - so_do_van_hanh.html
   - telemetry.html
-  - assets/images/so_do_van_hanh_tap_doan.png
-  - assets/data/disciplinary_memory_ledger.json
-  - assets/data/Internal_RedTeam_Audit_Certificate.json
+  # Retired assets: fabricated measurement datasets/plots, score-card images,
+  # product photos of unverified origin, and the local-only tracker.
+  - assets/data
+  - assets/images
+  - assets/pins
+  - assets/js
+  - assets/style.css

@@ -1,9 +1,8 @@
 name: Autonomous Social Syndication Dispatcher
 
 on:
-  schedule:
-    # Runs 4 times a day during US active hours (09:00, 13:00, 17:00, 21:00 UTC)
-    - cron: '0 9,13,17,21 * * *'
+  # Schedule disabled 2026-10-31: site is now built locally by tools/build_site.py
+  # and social posts are reviewed by a human before publishing.
   workflow_dispatch:
 
 permissions:
