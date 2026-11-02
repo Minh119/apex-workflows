@@ -126,3 +126,6 @@ td.num { white-space: nowrap; font-weight: 700; color: var(--dark); }
 .reviewers { background: #f8fafc; border-left: 3px solid var(--primary); border-radius: 6px; padding: 10px 14px; margin: 4px 0 12px; }
 .reviewers ul { font-size: 15px; margin: 4px 0 0 !important; }
 .sources { font-size: 13px; color: var(--muted); margin: 10px 0 0 !important; }
+.card-photo { padding: 0; height: auto; aspect-ratio: 3 / 2; overflow: hidden; background: #e2e8f0; }
+.card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
+.card:hover .card-photo img { transform: scale(1.03); }
