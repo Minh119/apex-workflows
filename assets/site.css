@@ -120,3 +120,9 @@ td.num { white-space: nowrap; font-weight: 700; color: var(--dark); }
 .cm { color: var(--muted); font-weight: 400; font-size: 13.5px; }
 .height-nav { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border); font-weight: 700; }
 .height-nav a { text-decoration: none; }
+.hero-photo { margin: 0 0 18px; }
+.hero-photo img { width: 100%; height: auto; border-radius: var(--radius); display: block; }
+.hero-photo figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+.reviewers { background: #f8fafc; border-left: 3px solid var(--primary); border-radius: 6px; padding: 10px 14px; margin: 4px 0 12px; }
+.reviewers ul { font-size: 15px; margin: 4px 0 0 !important; }
+.sources { font-size: 13px; color: var(--muted); margin: 10px 0 0 !important; }
