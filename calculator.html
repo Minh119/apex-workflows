@@ -100,7 +100,7 @@
         </div>
       </div>
       <div class="field" style="margin-bottom: 0;">
-        <label class="check"><input type="checkbox" id="walkpad" onchange="calculateErgo()"><span><strong>I use a walking pad</strong><br><span class="hint" style="margin-top:0;">Adds about 2.25 in (5.7 cm) to your standing desk height for the deck.</span></span></label>
+        <label class="check"><input type="checkbox" id="walkpad" onchange="calculateErgo()"><span><strong>I use a walking pad</strong><br><span class="hint" style="margin-top:0;">Adds about 4.5 in (11.4 cm) for the deck; most walking pads are 4–5 in tall.</span></span></label>
       </div>
       <figure class="posture">
         <svg viewBox="0 0 320 240" role="img" aria-labelledby="postureTitle" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -201,9 +201,9 @@ function calculateErgo() {
   var walkpad = document.getElementById('walkpad').checked;
   var seat = 0.245 * h + shoes;
   var sit = seat + 0.145 * h;
-  var stand = 0.63 * h + shoes + (walkpad ? 5.7 : 0);
+  var stand = 0.63 * h + shoes + (walkpad ? 11.4 : 0);
   var eye = seat + 0.45 * h; // sitting eye height above the seat is ~0.45 x stature
-  var standEye = 0.936 * h + shoes + (walkpad ? 5.7 : 0); // standing eye height ~0.936 x stature
+  var standEye = 0.936 * h + shoes + (walkpad ? 11.4 : 0); // standing eye height ~0.936 x stature
   var totalIn = Math.round(h / 2.54);
   document.getElementById('heightDisplay').textContent = 'For a height of ' + Math.floor(totalIn / 12) + ' ft ' + (totalIn % 12) + ' in (' + Math.round(h) + ' cm)';
   show('seat', seat); show('sit', sit); show('stand', stand); show('eye', eye); show('seye', standEye);
