@@ -167,6 +167,16 @@
     </ul>
     <p>Real bodies vary. Long legs or a long torso can shift these numbers by an inch or two. Treat the results as a starting point, then adjust until your feet rest flat, your shoulders are relaxed, and you can see the top of your screen without tilting your head. This is general guidance, not medical advice.</p>
   </section>
+
+  <section class="how" id="embed">
+    <h2 style="font-size: 22px; margin-bottom: 10px;">Embed this calculator</h2>
+    <p>Free to use on your blog, company intranet or ergonomics resource page. Paste this code where you want the calculator to appear:</p>
+    <textarea readonly rows="6" style="width:100%; font: 13px/1.5 ui-monospace, Consolas, monospace; padding: 10px; border: 1px solid var(--border); border-radius: 8px;" id="embedCode">&lt;iframe src=&quot;https://theapexworkflows.com/embed/calculator.html&quot; title=&quot;Desk and chair height calculator&quot; width=&quot;100%&quot; height=&quot;1650&quot; style=&quot;border:0;max-width:960px;&quot; loading=&quot;lazy&quot; id=&quot;apex-desk-calc&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:13px;&quot;&gt;Calculator by &lt;a href=&quot;https://theapexworkflows.com/calculator.html&quot;&gt;The Apex Workflows&lt;/a&gt;&lt;/p&gt;
+&lt;script&gt;window.addEventListener(&quot;message&quot;,function(e){if(e.origin===&quot;https://theapexworkflows.com&quot;&amp;&amp;e.data&amp;&amp;e.data.apexCalcHeight){document.getElementById(&quot;apex-desk-calc&quot;).style.height=e.data.apexCalcHeight+&quot;px&quot;;}});&lt;/script&gt;</textarea>
+    <p><button type="button" class="btn btn-sm" onclick="var t=document.getElementById('embedCode');t.select();navigator.clipboard&&navigator.clipboard.writeText(t.value);this.textContent='Copied';">Copy code</button></p>
+    <p class="hint">If your site strips scripts, the calculator still works at a fixed height. Please keep the credit line.</p>
+  </section>
 </main>
 <script>
 var unit = 'imperial';
