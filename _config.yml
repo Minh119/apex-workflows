@@ -1,4 +1,5 @@
-# Internal tooling and operations files live in this repo but must not be served on the public site.
+# This repo holds only the built site; the source lives in a separate private repo.
+# Keep the exclude list as a safety net in case internal files are ever copied here by mistake.
 exclude:
   - config
   - content
@@ -6,13 +7,3 @@ exclude:
   - tools
   - reports
   - syndication
-  - run_cloud.py
-  - so_do_van_hanh.html
-  - telemetry.html
-  # Retired assets: fabricated measurement datasets/plots, score-card images,
-  # product photos of unverified origin, and the local-only tracker.
-  - assets/data
-  - assets/images
-  - assets/pins
-  - assets/js
-  - assets/style.css
